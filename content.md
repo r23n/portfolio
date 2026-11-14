@@ -21,6 +21,7 @@ Stats:
 - 2023 - Present | University of Bahrain | Started Computer Science | Studying for a bachelor's degree in Computer Science.
 - 13 Jul 2026 - 25 Jul 2026 | Reboot01 | Selection Pool | Completed the Reboot01 selection pool and earned a place in the program.
 - 16 Aug 2026 - Present | Reboot01 | Go Phase | Learning programming fundamentals and building projects in Go.
+- Upcoming | Reboot01 | JavaScript and Rust phases | Planned through 2028.
 
 # Education
 - University of Bahrain | Computer Science | 2023 - Expected June 2028
@@ -41,3 +42,4 @@ Tools: Git, Docker, Netlify
 Email: ghareebaljurdabi@gmail.com
 GitHub: https://github.com/r23n
 LinkedIn: https://www.linkedin.com/in/ghareeb-aljurdabi
+
