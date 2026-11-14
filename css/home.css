@@ -1,6 +1,11 @@
 ﻿#home {
   min-height: calc(100svh - 88px);
   display: flex;
+  align-items: center;
+}
+
+#home > .container {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -9,41 +14,40 @@
 
 .home-title,
 .home-location {
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 0.875rem;
 }
 
 .home-title {
   display: flex;
   align-items: center;
-  gap: 12px;
-  text-transform: uppercase;
+  gap: 0;
+
   letter-spacing: 0.12em;
 }
 
-.home-title::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--accent);
-  flex-shrink: 0;
-}
-
 #home h1 {
+  font-family: var(--font-heading);
+  text-transform: none;
   font-size: clamp(3rem, 8vw, 6.5rem);
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.05em;
-  text-transform: uppercase;
+
 }
 
-.home-square {
-  display: inline-block;
-  width: 0.16em;
-  height: 0.16em;
-  margin-left: 0.15em;
+.typing-cursor {
+  width: 0.6em;
+  flex-shrink: 0;
+  height: 1em;
   background: var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .home-location {
@@ -76,3 +80,6 @@
   color: var(--text);
   text-underline-offset: 6px;
 }
+
+
+
