@@ -1,15 +1,18 @@
-# Personal
+﻿# Personal
 Name: Ghareeb Aljurdabi
 Title: Software Developer
 Location: Bahrain - Northern Governorate
 Short bio: Computer Science student at the University of Bahrain and a software development trainee at Reboot01. I learn best by building, and I bring experience from both software projects and volunteer work.
 Spoken languages: Arabic, English
 
-# About cards
-1. Developer: Turning ideas into working software.
-2. Student: Computer Science at the University of Bahrain.
-3. Builder: Web apps and backend systems in Go and JavaScript.
-4. Learner: Currently focused on AI and app development.
+# About
+Heading: I learn best by building.
+Paragraph: I study Computer Science at the University of Bahrain and train as a software developer at Reboot01. Outside of code, I volunteer at startup and community events in Bahrain.
+Stats:
+3 | Years studying Computer Science
+5 | Programming languages
+3 | Volunteer events
+2 | Spoken languages
 
 # Projects
 (pending)
