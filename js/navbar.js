@@ -12,3 +12,6 @@ navbarLinks.querySelectorAll("a").forEach(function (link) {
     navbarMenu.setAttribute("aria-expanded", "false");
   });
 });
+
+document.querySelector(".navbar").classList.add("navbar-ready");
+

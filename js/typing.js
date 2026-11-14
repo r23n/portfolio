@@ -1,10 +1,13 @@
 ﻿const titles = ["Software Developer", "Computer Science Student", "Volunteer"];
 const typingText = document.getElementById("typing-text");
+const typingMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 let titleIndex = 0;
 let characterIndex = titles[0].length;
 let deleting = true;
+let typingTimer;
 
 function typeTitle() {
+  if (typingMotion.matches) return;
   const title = titles[titleIndex];
   characterIndex += deleting ? -1 : 1;
   typingText.textContent = title.slice(0, characterIndex);
@@ -19,7 +22,19 @@ function typeTitle() {
     delay = 300;
   }
 
-  setTimeout(typeTitle, delay);
+  typingTimer = setTimeout(typeTitle, delay);
 }
 
-setTimeout(typeTitle, 1800);
+function resetTyping() {
+  clearTimeout(typingTimer);
+  typingText.textContent = titles[0];
+  titleIndex = 0;
+  characterIndex = titles[0].length;
+  deleting = true;
+  if (!typingMotion.matches) typingTimer = setTimeout(typeTitle, 1800);
+}
+
+if (typingText) {
+  typingMotion.addEventListener("change", resetTyping);
+  resetTyping();
+}

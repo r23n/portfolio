@@ -67,7 +67,7 @@ Features: Reads the map from a file | Finds the best paths | Moves all ants in t
 - College of IT Society (COITS), University of Bahrain | Volunteer Photographer | Nov 2026 | Photographed the society's event.
 
 # Skills
-Languages: Go, JavaScript, Python, SQL
+Languages: Go, Java, JavaScript, Python, SQL
 Frontend: HTML, CSS, JavaScript
 Backend: Go, SQL, Supabase
 Tools: Git, Docker, Netlify

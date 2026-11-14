@@ -1,0 +1,5 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>:root { --bg: #141A23; --text: #E6E0D6; }</style>
+  <path fill="var(--bg)" d="M0 0h64v64H0z"/>
+  <text x="32" y="44" text-anchor="middle" fill="var(--text)" font-family="monospace" font-size="48" font-weight="bold">g</text>
+</svg>
