@@ -1,0 +1,102 @@
+﻿.reboot-page {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.reboot-back,
+.reboot-label,
+.reboot-note,
+.reboot-number,
+.reboot-tech,
+.reboot-features {
+  font-family: var(--font-mono);
+}
+
+.reboot-back {
+  font-size: 0.875rem;
+  text-underline-offset: 5px;
+}
+
+.reboot-label {
+  margin-top: 48px;
+  font-size: 0.875rem;
+}
+
+.reboot-intro h1 {
+  margin-top: 24px;
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+.reboot-summary {
+  max-width: 720px;
+  margin-top: 32px;
+  font-size: 1.125rem;
+  color: var(--muted);
+}
+
+.reboot-note {
+  margin-top: 40px;
+  padding: 24px;
+  border: 1px solid var(--tag);
+  font-size: 0.875rem;
+}
+
+.reboot-list {
+  padding-top: 0;
+}
+
+.reboot-project {
+  padding-block: 48px;
+}
+
+.reboot-project + .reboot-project {
+  border-top: 1px solid var(--tag);
+}
+
+.reboot-number {
+  color: var(--muted);
+  font-size: 1.25rem;
+}
+
+.reboot-project h2 {
+  margin-top: 16px;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.reboot-description {
+  max-width: 760px;
+  margin-top: 24px;
+}
+
+.reboot-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+  list-style: none;
+  font-size: 0.875rem;
+}
+
+.reboot-tech li {
+  padding: 4px 10px;
+  background: var(--tag);
+  color: var(--text);
+}
+
+.reboot-features {
+  margin-top: 28px;
+  list-style: none;
+  font-size: 0.875rem;
+}
+
+.reboot-features li + li {
+  margin-top: 12px;
+}
+
+.reboot-features span {
+  color: var(--accent-light);
+}
