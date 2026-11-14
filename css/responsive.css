@@ -20,6 +20,17 @@ a {
 }
 
 @media (max-width: 900px) {
+  .navbar-links a {
+    padding-left: 14px;
+  }
+
+  .navbar-links a.is-active::after {
+    top: 50%;
+    bottom: auto;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
   .navbar:not(.navbar-ready) .navbar-content {
     flex-wrap: wrap;
     padding-block: 16px;
