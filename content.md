@@ -30,7 +30,7 @@ Stats:
 # Volunteering
 - StartUp Bahrain | Volunteer, Registration | May 2026 | Registered and welcomed attendees.
 - StartUp Bahrain | Volunteer, Registration and Hospitality | Sep 2026 | Registered attendees and hosted guests.
-- IT Society, University of Bahrain | Volunteer Photographer | Nov 2026 | Photographed the society's event.
+- College of IT Society (COITS), University of Bahrain | Volunteer Photographer | Nov 2026 | Photographed the society's event.
 
 # Skills
 Languages: Go, JavaScript, Python, SQL
