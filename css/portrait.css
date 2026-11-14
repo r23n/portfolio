@@ -20,7 +20,7 @@
 .portrait-square {
   position: absolute;
   inset: 15.625%;
-  background: rgba(230, 224, 214, 0.18);
+  background: var(--soft);
   border-radius: 32px;
   transform: rotate(-18deg);
   animation: portrait-rotate 30s linear infinite;

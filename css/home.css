@@ -85,7 +85,7 @@
 
 .home-actions {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
   gap: 28px;
 }

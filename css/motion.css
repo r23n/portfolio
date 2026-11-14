@@ -67,6 +67,10 @@
     display: none;
   }
 
+  .status-dot::after {
+    display: none;
+  }
+
   .status-dot {
     animation: none !important;
   }

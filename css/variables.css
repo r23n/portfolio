@@ -7,7 +7,9 @@
   --bg: #141A23;
   --text: #E6E0D6;
   --muted: rgba(230, 224, 214, 0.6);
-  --accent: #66421F;
+  --soft: rgba(230, 224, 214, 0.18);
+  --available: #4CC38A;
+  --accent: #784E25;
   --accent-light: #C8925A;
   --editor-bg: #0F141A;
   --card: #36161A;
