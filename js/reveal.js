@@ -10,7 +10,7 @@ if (!revealMotion.matches && "IntersectionObserver" in window) {
       });
     }, { threshold: 0.1 });
 
-    const revealTargets = document.querySelectorAll("section > .container, .reboot-list > .container, .about-stat, .journey-item, .volunteering-row, .projects-row, .reboot-project");
+    const revealTargets = document.querySelectorAll("section:not(#home) > .container, .reboot-list > .container, .about-stat, .journey-item, .volunteering-row, .projects-row, .reboot-project");
     document.querySelectorAll(".about-stats, .journey-timeline, .volunteering-list, #projects > .container, .reboot-list > .container").forEach(function (group) {
       const items = group.querySelectorAll(".about-stat, .journey-item, .volunteering-row, .projects-row, .reboot-project");
       items.forEach(function (item, index) {
@@ -19,6 +19,7 @@ if (!revealMotion.matches && "IntersectionObserver" in window) {
     });
 
     revealTargets.forEach(function (target) {
+      if (target.getBoundingClientRect().top < window.innerHeight) return;
       revealObserver.observe(target);
       target.classList.add("reveal");
     });
@@ -35,4 +36,5 @@ if (!revealMotion.matches && "IntersectionObserver" in window) {
     document.documentElement.classList.remove("js");
   }
 }
+
 
