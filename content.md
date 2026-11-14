@@ -77,3 +77,7 @@ Email: ghareebaljurdabi@gmail.com
 GitHub: https://github.com/r23n
 LinkedIn: https://www.linkedin.com/in/ghareeb-aljurdabi
 
+# Status
+- Currently in the Go phase at Reboot01
+- Studying Computer Science at the University of Bahrain
+- Open to internship opportunities

@@ -1,0 +1,54 @@
+﻿.status-line {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  margin-top: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--accent-light);
+}
+
+.status-label {
+  font-family: var(--font-mono);
+  color: var(--muted);
+}
+
+.status-text {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  height: 6.4em;
+  overflow: hidden;
+  font-family: var(--font-body);
+  color: var(--text);
+}
+
+.status-current,
+.status-next {
+  position: absolute;
+  inset: 0;
+}
+
+.status-next {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.status-running .status-dot {
+  animation: status-pulse 2s ease-in-out infinite;
+}
+
+@keyframes status-pulse {
+  50% {
+    opacity: 0.4;
+  }
+}
+

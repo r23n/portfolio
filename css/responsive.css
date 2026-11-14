@@ -20,7 +20,7 @@ a {
 }
 
 @media (max-width: 900px) {
-  .reboot-list {
+.reboot-list {
     padding-bottom: 72px;
   }
 
@@ -188,6 +188,10 @@ a {
 }
 
 @media (max-width: 600px) {
+  .status-line {
+    font-size: clamp(0.6rem, 2.5vw, 0.875rem);
+  }
+
   #about .about-stats {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -276,6 +280,9 @@ a {
     padding: 16px;
   }
 }
+
+
+
 
 
 

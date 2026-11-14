@@ -58,11 +58,16 @@
     color: var(--muted);
   }
 
+  .status-dot {
+    animation: none !important;
+  }
+
   .scroll-progress,
   .navbar-links a.is-active::after,
   .typing-cursor {
     display: none;
   }
 }
+
 
 
