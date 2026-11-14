@@ -31,6 +31,9 @@
   <noscript><link rel="stylesheet" href="css/footer.css"></noscript>
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/labels.css">
+  <link rel="stylesheet" href="css/hover.css">
+  <link rel="stylesheet" href="css/transitions.css">
+  <link rel="stylesheet" href="css/scroll-hint.css">
   <link rel="stylesheet" href="css/motion.css">
   <link rel="stylesheet" href="css/accessibility.css">
   <link rel="stylesheet" href="css/responsive.css?v=3">
@@ -75,8 +78,8 @@
           <p class="home-location with-icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Bahrain - Northern Governorate</p>
           <p class="home-bio">Computer Science student at the University of Bahrain and a software development trainee at Reboot01. I learn best by building, and I bring experience from both software projects and volunteer work.</p>
           <div class="home-actions">
-            <a class="home-explore with-icon" href="#projects">Explore my work<svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
-            <a class="home-cv with-icon" href="cv.pdf"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></svg>Download CV</a>
+            <a class="home-explore with-icon" href="#projects">Explore my work<svg class="icon icon-arrow-right" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
+            <a class="home-cv with-icon" href="cv.pdf"><svg class="icon icon-arrow-down" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></svg>Download CV</a>
           </div>
           </div>
         <div class="portrait-block">
@@ -87,6 +90,7 @@
           <span class="portrait-tag portrait-tag-java" aria-hidden="true">Java · SQL</span>
         </div>
       </div>
+      <a class="scroll-hint" href="#about" aria-label="Scroll to about"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
     </section>
 
     <section id="about">
@@ -178,10 +182,32 @@
               <span class="journey-badge">in progress</span>
             </li>
             <li class="journey-item journey-upcoming">
-              <p class="journey-date">Upcoming</p>
-              <h3>JavaScript and Rust phases</h3>
+              <p class="journey-label journey-next-label section-label" role="img" aria-label="// next"><span class="label-full" aria-hidden="true">// next</span></p>
+              <p class="journey-date">6 Feb 2027 - 6 Mar 2027</p>
+              <h3>JavaScript Piscine</h3>
               <span class="journey-place">Reboot01</span>
-              <p class="journey-description">Planned through 2028.</p>
+              <p class="journey-description">An intensive introduction to JavaScript.</p>
+              <span class="journey-badge">upcoming</span>
+            </li>
+            <li class="journey-item journey-upcoming">
+              <p class="journey-date">7 Mar 2027 - 11 Sep 2027</p>
+              <h3>JavaScript Phase</h3>
+              <span class="journey-place">Reboot01</span>
+              <p class="journey-description">Web projects across frontend and backend.</p>
+              <span class="journey-badge">upcoming</span>
+            </li>
+            <li class="journey-item journey-upcoming">
+              <p class="journey-date">11 Sep 2027 - 11 Oct 2027</p>
+              <h3>Rust Piscine</h3>
+              <span class="journey-place">Reboot01</span>
+              <p class="journey-description">An intensive introduction to Rust.</p>
+              <span class="journey-badge">upcoming</span>
+            </li>
+            <li class="journey-item journey-upcoming">
+              <p class="journey-date">12 Oct 2027 - 18 Mar 2028</p>
+              <h3>Rust Phase</h3>
+              <span class="journey-place">Reboot01</span>
+              <p class="journey-description">Systems and networking projects in Rust.</p>
               <span class="journey-badge">upcoming</span>
             </li>
           </ol>
@@ -274,7 +300,7 @@
           <a href="mailto:ghareebaljurdabi@gmail.com"><span class="with-icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>Email</span><span aria-hidden="true">-&gt;</span></a>
           <a href="https://github.com/r23n" target="_blank" rel="noopener noreferrer"><span class="with-icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 19c-4 1-4-2-6-2m14 4v-4c0-1-.3-1.8-1-2.3 3-.4 5-1.5 5-5a4 4 0 0 0-1-2.8 4 4 0 0 0-.1-3S18.7 3.5 16 5a11 11 0 0 0-8 0C5.3 3.5 4.1 4 4.1 4a4 4 0 0 0-.1 3A4 4 0 0 0 3 9.7c0 3.5 2 4.6 5 5-.7.5-1 1.3-1 2.3v4"/></svg>GitHub</span><span aria-hidden="true">-&gt;</span></a>
           <a href="https://www.linkedin.com/in/ghareeb-aljurdabi" target="_blank" rel="noopener noreferrer"><span class="with-icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7m0-10v.1M11 17v-7m0 3c0-4 6-4 6 0v4"/></svg>LinkedIn</span><span aria-hidden="true">-&gt;</span></a>
-          <a href="cv.pdf"><span class="with-icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></svg>Download CV</span><span aria-hidden="true">-&gt;</span></a>
+          <a href="cv.pdf"><span class="with-icon"><svg class="icon icon-arrow-down" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></svg>Download CV</span><span aria-hidden="true">-&gt;</span></a>
         </div>
       </div>
     </section>
@@ -283,7 +309,7 @@
     <div class="container footer-content">
       <p>© 2026 Ghareeb Aljurdabi</p>
       <p>Built with HTML, CSS and JavaScript</p>
-      <a href="#home" class="with-icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg>Back to top</a>
+      <a href="#home" class="with-icon"><svg class="icon icon-arrow-up" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg>Back to top</a>
     </div>
   </footer>
   <script defer src="js/typing.js"></script>
@@ -295,6 +321,8 @@
   <script defer src="js/active-link.js"></script>
   <script defer src="js/status.js"></script>
   <script defer src="js/label-typing.js"></script>
+  <script defer src="js/navbar-scroll.js"></script>
+  <script defer src="js/scroll-hint.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,52 @@
+﻿.icon-arrow-right,
+.icon-arrow-left,
+.icon-arrow-up,
+.icon-arrow-down {
+  transition: transform 0.25s;
+}
+
+a:hover .icon-arrow-right {
+  transform: translateX(4px);
+}
+
+a:hover .icon-arrow-left {
+  transform: translateX(-4px);
+}
+
+a:hover .icon-arrow-up {
+  transform: translateY(-4px);
+}
+
+a:hover .icon-arrow-down {
+  transform: translateY(4px);
+}
+
+.home-explore {
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.home-explore:hover {
+  background: var(--accent-light);
+  color: var(--dark-text);
+}
+
+.home-cv,
+.reboot-back,
+.projects-links a,
+.footer-content > a,
+.not-found a {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 0% 1px;
+  transition: background-size 0.25s;
+}
+
+.home-cv:hover,
+.reboot-back:hover,
+.projects-links a:hover,
+.footer-content > a:hover,
+.not-found a:hover {
+  background-size: 100% 1px;
+}

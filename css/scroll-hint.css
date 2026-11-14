@@ -1,0 +1,32 @@
+﻿#home {
+  position: relative;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 20px;
+  color: var(--muted);
+  transform: translateX(-50%);
+  transition: opacity 0.25s;
+}
+
+.scroll-hint svg {
+  animation: scroll-hint-bounce 2s ease-in-out infinite;
+}
+
+.scroll-hint.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes scroll-hint-bounce {
+  50% {
+    transform: translateY(3px);
+  }
+}

@@ -138,6 +138,7 @@ a {
   }
 
   .journey-timeline {
+    row-gap: 0;
     grid-template-columns: minmax(0, 1fr);
     min-width: 0;
     border-top: 0;
@@ -145,12 +146,22 @@ a {
   }
 
   .journey-item {
+    grid-column: auto;
+    border-top: 0;
     padding: 0 0 40px 28px;
   }
 
   .journey-item::before {
     top: 4px;
     left: -7px;
+  }
+
+  .journey-next-label {
+    display: none;
+  }
+
+  .journey-date {
+    min-height: 0;
   }
 
   .journey-item h3 {
@@ -203,6 +214,10 @@ a {
 }
 
 @media (max-width: 600px) {
+  .scroll-hint {
+    bottom: 36px;
+  }
+
   #home > .container > .status-line {
     position: relative;
     top: 12px;
@@ -211,7 +226,7 @@ a {
   #home {
     min-height: calc(100vh - 73px);
     min-height: calc(100svh - 73px);
-    padding-block: 16px 32px;
+    padding-block: 16px 64px;
   }
 
   #home > .container {
@@ -219,9 +234,9 @@ a {
     flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
-    min-height: calc(100vh - 121px);
-    min-height: calc(100svh - 121px);
-    gap: 8px;
+    min-height: calc(100vh - 153px);
+    min-height: calc(100svh - 153px);
+    gap: 3px;
   }
 
   .home-content {
@@ -354,6 +369,7 @@ a {
     padding: 16px;
   }
 }
+
 
 
 

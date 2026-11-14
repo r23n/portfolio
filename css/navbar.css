@@ -79,3 +79,21 @@
   border-radius: 10px;
   border: 1px solid var(--tag);
 }
+
+.navbar-scroll {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--bg) var(--navbar-top, 100%), transparent),
+    color-mix(in srgb, var(--bg) var(--navbar-bottom, 100%), transparent)
+  );
+  backdrop-filter: blur(var(--navbar-blur, 0px));
+  -webkit-backdrop-filter: blur(var(--navbar-blur, 0px));
+  border-bottom-color: color-mix(in srgb, var(--tag) var(--navbar-border, 100%), transparent);
+}
+
+.navbar:has(.navbar-links.is-open) {
+  background: var(--bg);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom-color: var(--tag);
+}
