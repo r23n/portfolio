@@ -20,6 +20,20 @@ a {
 }
 
 @media (max-width: 900px) {
+  #home > .container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .portrait-block {
+    grid-row: 2;
+    width: min(100%, 220px);
+  }
+
+  .portrait-tag {
+    padding: 5px 8px;
+    font-size: 0.625rem;
+  }
+
 .reboot-list {
     padding-bottom: 72px;
   }
@@ -280,6 +294,7 @@ a {
     padding: 16px;
   }
 }
+
 
 
 

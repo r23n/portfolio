@@ -5,6 +5,17 @@
 }
 
 #home > .container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 480px;
+  align-items: center;
+  gap: 28px 32px;
+}
+
+#home > .container > .status-line {
+  grid-column: 1 / -1;
+}
+
+.home-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,4 +101,5 @@
   color: var(--text);
   text-underline-offset: 6px;
 }
+
 
