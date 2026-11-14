@@ -18,14 +18,3 @@
   text-underline-offset: 4px;
 }
 
-@media (max-width: 800px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 16px;
-  }
-
-  .footer-content > a {
-    justify-self: center;
-  }
-}

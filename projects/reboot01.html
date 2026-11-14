@@ -3,28 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghareeb Aljurdabi</title>
+  <title>Ghareeb Aljurdabi | Software Developer</title>
+  <meta name="description" content="Ghareeb Aljurdabi | Software Developer. Computer Science student at the University of Bahrain and a software development trainee at Reboot01.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/navbar.css">
-  <link rel="stylesheet" href="../css/home.css">
-  <link rel="stylesheet" href="../css/about.css">
-  <link rel="stylesheet" href="../css/projects.css">
-  <link rel="stylesheet" href="../css/journey.css">
-  <link rel="stylesheet" href="../css/volunteering.css">
-  <link rel="stylesheet" href="../css/skills.css">
-  <link rel="stylesheet" href="../css/contact.css">
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/reboot.css">
+  <link rel="stylesheet" href="../css/responsive.css?v=2">
 </head>
 <body id="top">
   <header class="navbar">
     <nav class="container navbar-content" aria-label="Main navigation">
       <a class="navbar-logo" href="../index.html#home">ghareeb.</a>
-      <div class="navbar-links">
+      <div class="navbar-links" id="navbar-links">
         <a href="../index.html#about">About</a>
         <a href="../index.html#projects">Projects</a>
         <a href="../index.html#journey">Journey</a>
@@ -33,6 +28,11 @@
         <a href="../index.html#contact">Contact</a>
       </div>
       <a class="navbar-talk" href="../index.html#contact">Let's talk</a>
+      <button class="navbar-menu" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   </header>
   <main class="reboot-page">
@@ -133,5 +133,7 @@
       <a href="#top">Back to top</a>
     </div>
   </footer>
+  <script src="../js/navbar.js"></script>
 </body>
 </html>
+

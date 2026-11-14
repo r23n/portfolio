@@ -111,14 +111,4 @@
   text-align: right;
 }
 
-@media (max-width: 700px) {
-  .journey-education-row {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .journey-years {
-    text-align: left;
-  }
-}
 
