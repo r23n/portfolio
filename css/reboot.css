@@ -44,6 +44,7 @@
 }
 
 .reboot-list {
+  padding-bottom: 96px;
   padding-top: 0;
 }
 
@@ -100,4 +101,5 @@
 .reboot-features span {
   color: var(--accent-light);
 }
+
 

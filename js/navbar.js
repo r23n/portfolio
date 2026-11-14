@@ -15,3 +15,10 @@ navbarLinks.querySelectorAll("a").forEach(function (link) {
 
 document.querySelector(".navbar").classList.add("navbar-ready");
 
+navbarLinks.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    navbarLinks.classList.remove("is-open");
+    navbarMenu.setAttribute("aria-expanded", "false");
+    navbarMenu.focus();
+  }
+});

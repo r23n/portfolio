@@ -14,10 +14,12 @@
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/reboot.css">
   <link rel="stylesheet" href="../css/motion.css">
+  <link rel="stylesheet" href="../css/accessibility.css">
   <link rel="stylesheet" href="../css/responsive.css?v=3">
   <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
 </head>
 <body id="top">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="navbar">
     <nav class="container navbar-content" aria-label="Main navigation">
       <a class="navbar-logo" href="../index.html#home">ghareeb.</a>
@@ -31,13 +33,13 @@
       </div>
       <a class="navbar-talk" href="../index.html#contact">Let's talk</a>
       <button class="navbar-menu" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-links">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </button>
     </nav>
   </header>
-  <main class="reboot-page">
+  <main class="reboot-page" id="main-content" tabindex="-1">
     <section class="reboot-intro">
       <div class="container">
         <a class="reboot-back" href="../index.html#projects">&lt;- Back to projects</a>
@@ -48,7 +50,7 @@
       </div>
     </section>
 
-    <section class="reboot-list">
+    <div class="reboot-list">
       <div class="container">
         <article class="reboot-project">
           <p class="reboot-number">01</p>
@@ -126,7 +128,7 @@
           </ul>
         </article>
       </div>
-    </section>
+    </div>
   </main>
   <footer class="footer">
     <div class="container footer-content">
@@ -135,12 +137,13 @@
       <a href="#top">Back to top</a>
     </div>
   </footer>
-  <script src="../js/navbar.js"></script>
-  <script src="../js/reveal.js"></script>
-  <script src="../js/progress.js"></script>
-  <script src="../js/active-link.js"></script>
+  <script defer src="../js/navbar.js"></script>
+  <script defer src="../js/reveal.js"></script>
+  <script defer src="../js/progress.js"></script>
+  <script defer src="../js/active-link.js"></script>
 </body>
 </html>
+
 
 
 

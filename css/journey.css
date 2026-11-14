@@ -77,8 +77,14 @@
   color: var(--text);
 }
 
-.journey-upcoming {
-  opacity: 0.5;
+.journey-upcoming .journey-place {
+  border-style: dashed;
+}
+
+.journey-upcoming .journey-badge {
+  background: transparent;
+  border: 1px dashed var(--text);
+  color: var(--text);
 }
 
 .journey-upcoming::before {

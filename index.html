@@ -20,10 +20,12 @@
   <link rel="stylesheet" href="css/contact.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/accessibility.css">
   <link rel="stylesheet" href="css/responsive.css?v=3">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="navbar">
     <nav class="container navbar-content" aria-label="Main navigation">
       <a class="navbar-logo" href="#home">ghareeb.</a>
@@ -37,16 +39,16 @@
       </div>
       <a class="navbar-talk" href="#contact">Let's talk</a>
       <button class="navbar-menu" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-links">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </button>
     </nav>
   </header>
-  <main>
+  <main id="main-content" tabindex="-1">
     <section id="home">
       <div class="container">
-        <p class="home-title"><span aria-hidden="true">&gt;&nbsp;</span><span id="typing-text">Software Developer</span><span class="typing-cursor" aria-hidden="true"></span></p>
+        <p class="home-title" role="img" aria-label="Software Developer, Computer Science Student, Volunteer"><span aria-hidden="true">&gt;&nbsp;</span><span id="typing-text" aria-hidden="true">Software Developer</span><span class="typing-cursor" aria-hidden="true"></span></p>
         <h1>Ghareeb Aljurdabi</h1>
         <p class="home-location">Bahrain - Northern Governorate</p>
         <p class="home-bio">Computer Science student at the University of Bahrain and a software development trainee at Reboot01. I learn best by building, and I bring experience from both software projects and volunteer work.</p>
@@ -150,6 +152,7 @@
               <h3>JavaScript and Rust phases</h3>
               <span class="journey-place">Reboot01</span>
               <p class="journey-description">Planned through 2028.</p>
+              <span class="journey-badge">upcoming</span>
             </li>
           </ol>
         </div>
@@ -212,8 +215,8 @@
               <div class="skills-editor-dots" aria-hidden="true"><span></span><span></span><span></span></div>
               <span>skills.js</span>
             </div>
-            <div class="skills-code-scroll">
-              <code class="skills-code">
+            <div class="skills-code-scroll" tabindex="0" role="region" aria-label="Skills. Languages: Go, Java, JavaScript, Python, SQL. Frontend: HTML, CSS, JavaScript. Backend: Go, SQL, Supabase. Tools: Git, Docker, Netlify. Spoken languages: Arabic, English.">
+              <code class="skills-code" aria-hidden="true">
                 <span class="skills-line"><span class="skills-line-number" aria-hidden="true">1</span><span>const <span class="skills-key">skills</span> = {</span></span>
                 <span class="skills-line"><span class="skills-line-number" aria-hidden="true">2</span><span>  <span class="skills-key">languages</span>: [<span class="skills-string">"Go"</span>, <span class="skills-string">"Java"</span>, <span class="skills-string">"JavaScript"</span>, <span class="skills-string">"Python"</span>, <span class="skills-string">"SQL"</span>],</span></span>
                 <span class="skills-line"><span class="skills-line-number" aria-hidden="true">3</span><span>  <span class="skills-key">frontend</span>: [<span class="skills-string">"HTML"</span>, <span class="skills-string">"CSS"</span>, <span class="skills-string">"JavaScript"</span>],</span></span>
@@ -235,6 +238,7 @@
         <div class="contact-email-row">
           <span id="contact-email">ghareebaljurdabi@gmail.com</span>
           <button id="copy-email" type="button">copy</button>
+          <span id="copy-status" class="sr-only" aria-live="polite" aria-atomic="true"></span>
         </div>
         <div class="contact-links">
           <a href="mailto:ghareebaljurdabi@gmail.com"><span>Email</span><span aria-hidden="true">-&gt;</span></a>
@@ -252,15 +256,16 @@
       <a href="#home">Back to top</a>
     </div>
   </footer>
-  <script src="js/typing.js"></script>
-  <script src="js/counter.js"></script>
-  <script src="js/copy-email.js"></script>
-  <script src="js/navbar.js"></script>
-  <script src="js/reveal.js"></script>
-  <script src="js/progress.js"></script>
-  <script src="js/active-link.js"></script>
+  <script defer src="js/typing.js"></script>
+  <script defer src="js/counter.js"></script>
+  <script defer src="js/copy-email.js"></script>
+  <script defer src="js/navbar.js"></script>
+  <script defer src="js/reveal.js"></script>
+  <script defer src="js/progress.js"></script>
+  <script defer src="js/active-link.js"></script>
 </body>
 </html>
+
 
 
 
