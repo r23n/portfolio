@@ -22,11 +22,12 @@ a {
 @media (max-width: 900px) {
   #home > .container {
     grid-template-columns: minmax(0, 1fr);
+    row-gap: 12px;
   }
 
   .portrait-block {
     grid-row: 2;
-    width: min(100%, 220px);
+    width: min(100%, 416px);
   }
 
   .portrait-tag {

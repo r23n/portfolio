@@ -1,0 +1,35 @@
+﻿.section-label {
+  position: relative;
+  width: max-content;
+  max-width: 100%;
+  padding-right: 0.8em;
+  font-family: var(--font-mono);
+  white-space: pre;
+}
+
+.label-typing .label-full {
+  visibility: hidden;
+}
+
+.label-output {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.label-cursor {
+  position: absolute;
+  top: 0.3em;
+  left: 0;
+  width: 0.6em;
+  height: 1em;
+  background: var(--accent);
+  transform: translateX(calc(var(--label-length, 0) * 1ch));
+  animation: label-blink 1s step-end infinite;
+}
+
+@keyframes label-blink {
+  50% {
+    opacity: 0;
+  }
+}

@@ -58,6 +58,15 @@
     color: var(--muted);
   }
 
+  .label-typing .label-full {
+    visibility: visible;
+  }
+
+  .label-output,
+  .label-cursor {
+    display: none;
+  }
+
   .status-dot {
     animation: none !important;
   }
@@ -68,6 +77,7 @@
     display: none;
   }
 }
+
 
 
 

@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/not-found.css">
+  <link rel="stylesheet" href="css/labels.css">
   <link rel="stylesheet" href="css/motion.css">
   <link rel="stylesheet" href="css/accessibility.css">
   <link rel="stylesheet" href="css/responsive.css?v=3">
@@ -19,17 +21,25 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="navbar">
+    <nav class="container navbar-content" aria-label="Main navigation">
+      <a class="navbar-logo" href="index.html#home"><img src="images/portrait.jpg" width="36" height="36" alt="">ghareeb.</a>
+    </nav>
+  </header>
   <main id="main-content" tabindex="-1">
     <section class="not-found">
       <div class="container">
-        <p>// 404</p>
+        <p class="section-label" role="img" aria-label="// 404"><span class="label-full" aria-hidden="true">// 404</span></p>
         <h1>Page not found.</h1>
         <a href="index.html">Back to home</a>
       </div>
     </section>
   </main>
+  <script defer src="js/label-typing.js"></script>
 </body>
 </html>
+
+
 
 
 

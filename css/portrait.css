@@ -19,12 +19,11 @@
 
 .portrait-square {
   position: absolute;
-  inset: 12.5%;
-  background: var(--card);
-  border: 1px solid var(--tag);
+  inset: 15.625%;
+  background: rgba(230, 224, 214, 0.18);
   border-radius: 32px;
   transform: rotate(-18deg);
-  animation: portrait-drift 8s ease-in-out infinite alternate;
+  animation: portrait-rotate 30s linear infinite;
 }
 
 .portrait-tag {
@@ -57,9 +56,9 @@
   animation-duration: 6s;
 }
 
-@keyframes portrait-drift {
+@keyframes portrait-rotate {
   to {
-    transform: translate(6px, -4px) rotate(-8deg);
+    transform: rotate(342deg);
   }
 }
 
@@ -68,3 +67,4 @@
     transform: translateY(-6px);
   }
 }
+
