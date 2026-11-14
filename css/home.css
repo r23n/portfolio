@@ -1,0 +1,78 @@
+﻿#home {
+  min-height: calc(100svh - 88px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.home-title,
+.home-location {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+}
+
+.home-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.home-title::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+#home h1 {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.home-square {
+  display: inline-block;
+  width: 0.16em;
+  height: 0.16em;
+  margin-left: 0.15em;
+  background: var(--accent);
+}
+
+.home-location {
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid var(--tag);
+}
+
+.home-bio {
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 1.125rem;
+}
+
+.home-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.home-explore {
+  padding: 14px 24px;
+  background: var(--accent);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.home-cv {
+  color: var(--text);
+  text-underline-offset: 6px;
+}

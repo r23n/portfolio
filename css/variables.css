@@ -1,0 +1,10 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  --bg: #1C2430;
+  --text: #E6E0D6;
+  --muted: rgba(230, 224, 214, 0.6);
+  --accent: #8A5A2B;
+  --card: #4B1E23;
+  --tag: #6B6F4E;
+}

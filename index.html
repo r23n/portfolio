@@ -6,33 +6,65 @@
   <title>Ghareeb Aljurdabi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+  <header class="navbar">
+    <nav class="container navbar-content" aria-label="Main navigation">
+      <a class="navbar-logo" href="#home">ghareeb.</a>
+      <div class="navbar-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#journey">Journey</a>
+        <a href="#volunteering">Volunteering</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="navbar-talk" href="#contact">Let's talk</a>
+    </nav>
+  </header>
   <main class="container">
     <section id="home">
-      <h1>Home</h1>
+      <p class="home-title">Software Developer</p>
+      <h1>Ghareeb Aljurdabi<span class="home-square" aria-hidden="true"></span></h1>
+      <p class="home-location">Bahrain - Northern Governorate</p>
+      <p class="home-bio">Computer Science student at the University of Bahrain and a software development trainee at Reboot01. I learn best by building, and I bring experience from both software projects and volunteer work.</p>
+      <div class="home-actions">
+        <a class="home-explore" href="#projects">Explore my work</a>
+        <a class="home-cv" href="cv.pdf">Download CV</a>
+      </div>
     </section>
+
     <section id="about">
       <h2>About</h2>
     </section>
+
     <section id="projects">
       <h2>Projects</h2>
     </section>
+
     <section id="journey">
       <h2>Journey</h2>
     </section>
+
     <section id="volunteering">
       <h2>Volunteering</h2>
     </section>
+
     <section id="skills">
       <h2>Skills</h2>
     </section>
+
     <section id="contact">
       <h2>Contact</h2>
     </section>
   </main>
-  <script src="script.js"></script>
 </body>
 </html>
+
+
+

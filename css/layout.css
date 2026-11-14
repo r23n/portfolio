@@ -1,0 +1,21 @@
+﻿html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(100% - 40px, 1200px);
+  margin-inline: auto;
+}
+
+section {
+  padding-block: 96px;
+  scroll-margin-top: 120px;
+}
+
