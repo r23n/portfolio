@@ -11,6 +11,7 @@ function typeTitle() {
   const title = titles[titleIndex];
   characterIndex += deleting ? -1 : 1;
   typingText.textContent = title.slice(0, characterIndex);
+  typingText.parentElement.style.setProperty("--typing-length", characterIndex);
   let delay = deleting ? 50 : 100;
 
   if (!deleting && characterIndex === title.length) {
@@ -28,6 +29,7 @@ function typeTitle() {
 function resetTyping() {
   clearTimeout(typingTimer);
   typingText.textContent = titles[0];
+  typingText.parentElement.style.setProperty("--typing-length", titles[0].length);
   titleIndex = 0;
   characterIndex = titles[0].length;
   deleting = true;

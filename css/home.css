@@ -19,11 +19,18 @@
 }
 
 .home-title {
-  display: flex;
-  align-items: center;
-  gap: 0;
+  --typing-spacing: 0.12em;
+  position: relative;
+  width: 100%;
+  height: 1.6em;
+  line-height: 1.6;
+  white-space: nowrap;
+  letter-spacing: var(--typing-spacing);
+}
 
-  letter-spacing: 0.12em;
+#typing-text {
+  display: inline-block;
+  min-width: 24ch;
 }
 
 #home h1 {
@@ -37,6 +44,10 @@
 }
 
 .typing-cursor {
+  position: absolute;
+  top: 0.3em;
+  left: calc(2ch + 2 * var(--typing-spacing));
+  transform: translateX(calc(var(--typing-length, 18) * (1ch + var(--typing-spacing))));
   width: 0.6em;
   flex-shrink: 0;
   height: 1em;

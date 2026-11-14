@@ -47,6 +47,8 @@
 }
 
 .about-number {
+  min-width: 2ch;
+  font-variant-numeric: tabular-nums;
   display: block;
   font-family: var(--font-heading);
   font-size: clamp(3rem, 6vw, 5rem);

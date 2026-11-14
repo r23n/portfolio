@@ -34,6 +34,6 @@ button:focus-visible,
 
 .js .reveal:focus-within {
   opacity: 1;
-  translate: none;
+  transform: none;
   transition: none;
 }
