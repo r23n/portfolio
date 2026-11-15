@@ -93,7 +93,7 @@
 .home-explore {
   padding: 14px 24px;
   background: var(--accent);
-  color: var(--text);
+  color: var(--on-accent);
   text-decoration: none;
 }
 

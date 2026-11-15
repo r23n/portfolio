@@ -30,3 +30,8 @@
     transform: translateY(3px);
   }
 }
+@media (min-width: 901px) {
+  .scroll-hint {
+    bottom: 56px;
+  }
+}

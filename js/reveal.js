@@ -10,9 +10,9 @@ if (!revealMotion.matches && "IntersectionObserver" in window) {
       });
     }, { threshold: 0.1 });
 
-    const revealTargets = document.querySelectorAll("section:not(#home) > .container, .reboot-list > .container, .about-stat, .journey-item, .volunteering-row, .projects-row, .reboot-project");
+    const revealTargets = document.querySelectorAll("section:not(#home) > .container, .reboot-list > .container, .about-stat, .journey-item, .volunteering-row, .reboot-project");
     document.querySelectorAll(".about-stats, .journey-timeline, .volunteering-list, #projects > .container, .reboot-list > .container").forEach(function (group) {
-      const items = group.querySelectorAll(".about-stat, .journey-item, .volunteering-row, .projects-row, .reboot-project");
+      const items = group.querySelectorAll(".about-stat, .journey-item, .volunteering-row, .reboot-project");
       items.forEach(function (item, index) {
         item.style.setProperty("--reveal-delay", Math.min(index, 4) * 80 + "ms");
       });

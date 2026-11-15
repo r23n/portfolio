@@ -20,7 +20,20 @@ a {
 }
 
 @media (max-width: 900px) {
-  #home > .container {
+  .projects-collection {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .reboot-project,
+  .reboot-project:nth-child(even) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .reboot-project:nth-child(even) .project-scene {
+    order: 0;
+  }
+
+#home > .container {
     grid-template-columns: minmax(0, 1fr);
     row-gap: 12px;
   }
@@ -108,7 +121,6 @@ a {
   }
 
   #about .about-intro,
-  .projects-row,
   .journey-education-row,
   .volunteering-row,
   #skills .skills-layout {
@@ -131,13 +143,23 @@ a {
     border-left: 0;
   }
 
+  .journey-window::before,
+  .journey-window::after {
+    display: none;
+  }
+
   .journey-scroll {
+    scroll-snap-type: none;
+    padding-bottom: 0;
     overflow: visible;
     padding-top: 0;
     padding-left: 7px;
   }
 
   .journey-timeline {
+    grid-auto-flow: row;
+    grid-auto-columns: auto;
+    width: auto;
     row-gap: 0;
     grid-template-columns: minmax(0, 1fr);
     min-width: 0;
@@ -156,15 +178,11 @@ a {
     left: -7px;
   }
 
-  .journey-next-label {
-    display: none;
-  }
-
   .journey-date {
     min-height: 0;
   }
 
-  .journey-item h3 {
+  .journey-heading {
     min-height: 0;
   }
 
@@ -214,16 +232,11 @@ a {
 }
 
 @media (max-width: 600px) {
-  .scroll-hint {
+.scroll-hint {
     bottom: 36px;
   }
 
-  #home > .container > .status-line {
-    position: relative;
-    top: 12px;
-  }
-
-  #home {
+#home {
     min-height: calc(100vh - 73px);
     min-height: calc(100svh - 73px);
     padding-block: 16px 64px;
@@ -321,32 +334,24 @@ a {
     font-size: clamp(1.75rem, 7vw, 2.5rem);
   }
 
-  .about-number,
-  .projects-number {
+  .about-number {
     font-size: 3rem;
   }
 
-  .projects-details h3,
   .reboot-project h2 {
     font-size: 1.5rem;
   }
 
-  .projects-row,
   .volunteering-row {
     padding: 28px 16px;
   }
 
-  .projects-row:hover > div {
-    transform: translateX(4px);
-  }
-
-  .about-label,
+.about-label,
   .skills-label {
     margin-bottom: 28px;
   }
 
-  .projects-row,
-  .journey-scroll,
+  .journey-window,
   .volunteering-list,
   .contact-links {
     margin-top: 32px;

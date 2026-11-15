@@ -41,6 +41,14 @@
   background: var(--accent);
 }
 @media (prefers-reduced-motion: reduce) {
+.journey-upcoming .journey-badge::before {
+    display: none;
+  }
+
+  .journey-badge-dots span {
+    opacity: 1;
+  }
+
   @view-transition {
     navigation: none;
   }

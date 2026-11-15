@@ -2,18 +2,20 @@
   --font-heading: "JetBrains Mono", "Mono Fallback", monospace;
   --font-body: "IBM Plex Sans", "Body Fallback", sans-serif;
   --font-mono: "JetBrains Mono", "Mono Fallback", monospace;
-  --light-bg: #C7C1B9;
-  --dark-text: #141A23;
-  --bg: #141A23;
-  --text: #E6E0D6;
-  --muted: rgba(230, 224, 214, 0.6);
-  --soft: rgba(230, 224, 214, 0.18);
-  --available: #4CC38A;
-  --accent: #784E25;
-  --accent-light: #C8925A;
-  --editor-bg: #0F141A;
-  --card: #36161A;
-  --tag: #4F523A;
+  --light-bg: #E9EBF7;
+  --dark-text: #0F1220;
+  --bg: #0F1220;
+  --text: #E4E7F5;
+  --muted: rgba(228, 231, 245, 0.62);
+  --soft: rgba(228, 231, 245, 0.14);
+  --available: #5EE0A0;
+  --accent: #7C8CFF;
+  --accent-light: #F5A65B;
+  --editor-bg: #0A0C17;
+  --card: #1B1F3A;
+  --tag: #2A3052;
+  --on-accent: #0F1220;
+  --accent-hover: #98A5FF;
 }
 
 

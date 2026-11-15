@@ -83,8 +83,8 @@
 .navbar-scroll {
   background: linear-gradient(
     to bottom,
-    color-mix(in srgb, var(--bg) var(--navbar-top, 100%), transparent),
-    color-mix(in srgb, var(--bg) var(--navbar-bottom, 100%), transparent)
+    color-mix(in srgb, var(--bg) calc(100% - 15% * var(--navbar-scroll, 0)), transparent),
+    color-mix(in srgb, var(--bg) calc(100% - 19.5% * var(--navbar-scroll, 0)), transparent)
   );
   backdrop-filter: blur(var(--navbar-blur, 0px));
   -webkit-backdrop-filter: blur(var(--navbar-blur, 0px));

@@ -103,3 +103,8 @@
 }
 
 
+
+.reboot-project { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); align-items: center; gap: 48px; padding-block: 64px; }
+.reboot-project:nth-child(even) { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
+.reboot-project:nth-child(even) .project-scene { order: 2; }
+.reboot-copy { min-width: 0; }

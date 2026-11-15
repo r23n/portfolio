@@ -50,15 +50,15 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--card);
-}
-
-.skills-editor-dots span:nth-child(2) {
   background: var(--accent);
 }
 
+.skills-editor-dots span:nth-child(2) {
+  background: var(--accent-light);
+}
+
 .skills-editor-dots span:nth-child(3) {
-  background: var(--tag);
+  background: var(--available);
 }
 
 .skills-code-scroll {
@@ -98,3 +98,7 @@
   color: var(--accent-light);
 }
 
+
+.skills-keyword {
+  color: var(--accent);
+}

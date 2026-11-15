@@ -55,10 +55,10 @@ Features: Reads the map from a file | Finds the best paths | Moves all ants in t
 - 2023 - Present | University of Bahrain | Started Computer Science | Studying for a bachelor's degree in Computer Science.
 - 13 Jul 2026 - 25 Jul 2026 | Reboot01 | Selection Pool | Completed the Reboot01 selection pool and earned a place in the program.
 - 16 Aug 2026 - Present | Reboot01 | Go Phase | Learning programming fundamentals and building projects in Go.
-- 6 Feb 2027 - 6 Mar 2027 | Reboot01 | JavaScript Piscine | An intensive introduction to JavaScript. | upcoming
-- 7 Mar 2027 - 11 Sep 2027 | Reboot01 | JavaScript Phase | Web projects across frontend and backend. | upcoming
-- 11 Sep 2027 - 11 Oct 2027 | Reboot01 | Rust Piscine | An intensive introduction to Rust. | upcoming
-- 12 Oct 2027 - 18 Mar 2028 | Reboot01 | Rust Phase | Systems and networking projects in Rust. | upcoming
+- 6 Feb 2027 - 6 Mar 2027 | Reboot01 | JavaScript Piscine | An intensive introduction to JavaScript. | coming soon
+- 7 Mar 2027 - 11 Sep 2027 | Reboot01 | JavaScript Phase | Web projects across frontend and backend. | coming soon
+- 11 Sep 2027 - 11 Oct 2027 | Reboot01 | Rust Piscine | An intensive introduction to Rust. | coming soon
+- 12 Oct 2027 - 18 Mar 2028 | Reboot01 | Rust Phase | Systems and networking projects in Rust. | coming soon
 
 # Education
 - University of Bahrain | Computer Science | 2023 - Expected June 2028

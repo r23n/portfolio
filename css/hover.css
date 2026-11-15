@@ -26,13 +26,12 @@ a:hover .icon-arrow-down {
 }
 
 .home-explore:hover {
-  background: var(--accent-light);
-  color: var(--dark-text);
+  background: var(--accent-hover);
+  color: var(--on-accent);
 }
 
 .home-cv,
 .reboot-back,
-.projects-links a,
 .footer-content > a,
 .not-found a {
   text-decoration: none;
@@ -45,7 +44,6 @@ a:hover .icon-arrow-down {
 
 .home-cv:hover,
 .reboot-back:hover,
-.projects-links a:hover,
 .footer-content > a:hover,
 .not-found a:hover {
   background-size: 100% 1px;
