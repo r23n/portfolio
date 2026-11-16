@@ -1,4 +1,5 @@
 ﻿.not-found {
+  padding-top: 96px;
   min-height: 100svh;
   display: flex;
   align-items: center;

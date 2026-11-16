@@ -38,5 +38,9 @@ function resetTyping() {
 
 if (typingText) {
   typingMotion.addEventListener("change", resetTyping);
-  resetTyping();
+  if (document.documentElement.classList.contains("intro")) {
+    document.addEventListener("intro-end", resetTyping, { once: true });
+  } else {
+    resetTyping();
+  }
 }

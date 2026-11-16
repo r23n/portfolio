@@ -36,4 +36,8 @@ function resetStatus() {
 }
 
 statusMotion.addEventListener("change", resetStatus);
-resetStatus();
+if (document.documentElement.classList.contains("intro")) {
+  document.addEventListener("intro-end", resetStatus, { once: true });
+} else {
+  resetStatus();
+}

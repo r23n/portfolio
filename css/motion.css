@@ -22,24 +22,6 @@
   pointer-events: none;
 }
 
-.navbar-links a {
-  position: relative;
-}
-
-.navbar-links a.is-active {
-  color: var(--text);
-}
-
-.navbar-links a.is-active::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: calc(50% - 2px);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--accent);
-}
 @media (prefers-reduced-motion: reduce) {
 .journey-upcoming .journey-badge::before {
     display: none;
@@ -78,10 +60,6 @@
     transform: none;
   }
 
-  .navbar-links a.is-active:not(:hover) {
-    color: var(--muted);
-  }
-
   .label-typing .label-full {
     visibility: visible;
   }
@@ -100,7 +78,6 @@
   }
 
   .scroll-progress,
-  .navbar-links a.is-active::after,
   .typing-cursor {
     display: none;
   }

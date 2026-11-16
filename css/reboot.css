@@ -108,3 +108,5 @@
 .reboot-project:nth-child(even) { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
 .reboot-project:nth-child(even) .project-scene { order: 2; }
 .reboot-copy { min-width: 0; }
+
+.reboot-intro { padding-top: 96px; }

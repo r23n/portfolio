@@ -30,20 +30,9 @@
   <header class="navbar">
     <nav class="container navbar-content" aria-label="Main navigation">
       <a class="navbar-logo" href="../index.html#home"><img src="../images/portrait.jpg" width="36" height="36" alt="">ghareeb.</a>
-      <div class="navbar-links" id="navbar-links">
-        <a href="../index.html#about">About</a>
-        <a href="../index.html#projects">Projects</a>
-        <a href="../index.html#journey">Journey</a>
-        <a href="../index.html#volunteering">Volunteering</a>
-        <a href="../index.html#skills">Skills</a>
-        <a href="../index.html#contact">Contact</a>
-      </div>
-      <a class="navbar-talk" href="../index.html#contact">Let's talk</a>
-      <button class="navbar-menu" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-links">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </button>
+      <div class="navbar-links" id="navbar-links"><a data-section="about" href="../index.html#about">About</a><a data-section="projects" href="../index.html#projects">Projects</a><a data-section="journey" href="../index.html#journey">Journey</a><a data-section="volunteering" href="../index.html#volunteering">Volunteering</a><a data-section="skills" href="../index.html#skills">Skills</a><a data-section="contact" href="../index.html#contact">Contact</a><div class="navbar-mobile-actions"><a class="navbar-download with-icon" href="../cv.pdf"><svg class="icon icon-arrow-down" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></svg>Download CV</a><a class="navbar-talk" href="../index.html#contact">Let's talk</a></div></div>
+      <div class="navbar-actions"><a class="navbar-download with-icon" href="../cv.pdf"><svg class="icon icon-arrow-down" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></svg>Download CV</a><a class="navbar-talk" href="../index.html#contact">Let's talk</a></div>
+      <button class="navbar-menu" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-links"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
     </nav>
   </header>
   <main class="reboot-page" id="main-content" tabindex="-1">
@@ -81,7 +70,7 @@
 <div class="reboot-copy">
           <p class="reboot-number">02</p>
           <h2>ascii-art-web</h2>
-          <p class="reboot-description">A web app that turns any text into large ASCII art, with a page to type the text and choose the banner style.</p>
+          <p class="reboot-description">A web app that turns text into ASCII art and lets users choose a banner style.</p>
           <ul class="reboot-tech">
               <li>Go</li>
               <li>HTML</li>
@@ -91,7 +80,7 @@
           <ul class="reboot-features">
               <li><span aria-hidden="true">&gt;</span> Go web server</li>
               <li><span aria-hidden="true">&gt;</span> Several banner styles</li>
-              <li><span aria-hidden="true">&gt;</span> Form input with error pages</li>
+              <li><span aria-hidden="true">&gt;</span> Form input and error pages</li>
           </ul>
         </div>
 </article>
@@ -164,7 +153,6 @@
   <script defer src="../js/progress.js"></script>
   <script defer src="../js/active-link.js"></script>
   <script defer src="../js/label-typing.js"></script>
-  <script defer src="../js/navbar-scroll.js"></script>
   <script defer src="../js/project-scenes.js"></script>
 </body>
 </html>

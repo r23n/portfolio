@@ -1,4 +1,5 @@
-﻿const revealMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+﻿function startIntroReveals() {
+const revealMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 if (!revealMotion.matches && "IntersectionObserver" in window) {
   try {
@@ -38,3 +39,11 @@ if (!revealMotion.matches && "IntersectionObserver" in window) {
 }
 
 
+
+}
+
+if (document.documentElement.classList.contains("intro")) {
+  document.addEventListener("intro-end", startIntroReveals, { once: true });
+} else {
+  startIntroReveals();
+}

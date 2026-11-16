@@ -51,72 +51,12 @@ a {
 .reboot-list {
     padding-bottom: 72px;
   }
-
-  .navbar-links a {
-    padding-left: 14px;
-  }
-
-  .navbar-links a.is-active::after {
-    top: 50%;
-    bottom: auto;
-    left: 0;
-    transform: translateY(-50%);
-  }
-
-  .navbar:not(.navbar-ready) .navbar-content {
-    flex-wrap: wrap;
-    padding-block: 16px;
-  }
-
-  .navbar:not(.navbar-ready) .navbar-links {
-    width: 100%;
-    flex-direction: column;
-    gap: 12px;
-  }
   section {
     padding-block: 72px;
     scroll-margin-top: 88px;
   }
 
-  .navbar-content {
-    flex-wrap: nowrap;
-    min-height: 72px;
-  }
-
-  .navbar-ready .navbar-links,
-  .navbar .navbar-talk {
-    display: none;
-  }
-
-  .navbar-ready .navbar-menu {
-    display: flex;
-  }
-
-  .navbar-ready .navbar-links.is-open {
-    display: flex;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    max-height: calc(100svh - 72px);
-    overflow-y: auto;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 0;
-    padding: 12px 20px;
-    background: var(--bg);
-    border-bottom: 1px solid var(--tag);
-  }
-
-  .navbar-ready .navbar-links a {
-    padding-block: 12px;
-  }
-
-  #home {
-    min-height: calc(100svh - 72px);
-  }
-
-  #home h1 {
+#home h1 {
     font-size: clamp(2.25rem, 7vw, 4rem);
   }
 
@@ -237,9 +177,9 @@ a {
   }
 
 #home {
-    min-height: calc(100vh - 73px);
-    min-height: calc(100svh - 73px);
-    padding-block: 16px 64px;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-block: 96px 64px;
   }
 
   #home > .container {
@@ -247,8 +187,8 @@ a {
     flex-direction: column;
     align-items: stretch;
     justify-content: space-between;
-    min-height: calc(100vh - 153px);
-    min-height: calc(100svh - 153px);
+    min-height: calc(100vh - 160px);
+    min-height: calc(100svh - 160px);
     gap: 3px;
   }
 

@@ -1,10 +1,10 @@
 ﻿const activeMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const activeLinks = document.querySelectorAll(".navbar-links a");
+const activeLinks = document.querySelectorAll(".navbar-links a[data-section]");
 const activeSections = document.querySelectorAll("main section[id]");
 
 function updateActiveLink() {
   let current = "";
-  if (!activeMotion.matches) {
+  {
     const navbar = document.querySelector(".navbar");
     const position = navbar.offsetHeight + window.innerHeight * 0.25;
     activeSections.forEach(function (section) {
@@ -19,6 +19,7 @@ function updateActiveLink() {
     if (active) link.setAttribute("aria-current", "location");
     else link.removeAttribute("aria-current");
   });
+  document.dispatchEvent(new Event("navbar-active-change"));
 }
 
 window.addEventListener("scroll", updateActiveLink, { passive: true });

@@ -3,12 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    window.finishIntro = function () {
+      if (!document.documentElement.classList.contains("intro")) return;
+      document.documentElement.classList.remove("intro");
+      document.querySelector(".intro-screen")?.remove();
+      document.dispatchEvent(new Event("intro-end"));
+    };
+    try {
+      if (!matchMedia("(prefers-reduced-motion: reduce)").matches && !sessionStorage.getItem("portfolio-intro")) {
+        sessionStorage.setItem("portfolio-intro", "seen");
+        document.documentElement.classList.add("intro");
+        setTimeout(window.finishIntro, 4000);
+      }
+    } catch {}
+  </script>
   <title>Ghareeb Aljurdabi | Software Developer</title>
   <meta name="description" content="Ghareeb Aljurdabi | Software Developer. Computer Science student at the University of Bahrain and a software development trainee at Reboot01.">
   <link rel="preload" href="fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/ibm-plex-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/intro.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/navbar.css">
@@ -41,23 +57,18 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="intro-screen" aria-hidden="true">
+    <div class="intro-content">
+      <img class="intro-photo" src="images/portrait.jpg" width="110" height="110" alt="" fetchpriority="high">
+      <div class="intro-word"><span class="intro-name"></span><span class="intro-dot"></span><span class="intro-cursor"></span></div>
+    </div>
+  </div>
   <header class="navbar">
     <nav class="container navbar-content" aria-label="Main navigation">
       <a class="navbar-logo" href="#home"><img src="images/portrait.jpg" width="36" height="36" alt="">ghareeb.</a>
-      <div class="navbar-links" id="navbar-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#journey">Journey</a>
-        <a href="#volunteering">Volunteering</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <a class="navbar-talk" href="#contact">Let's talk</a>
-      <button class="navbar-menu" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-links">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </button>
+      <div class="navbar-links" id="navbar-links"><a data-section="about" href="#about">About</a><a data-section="projects" href="#projects">Projects</a><a data-section="journey" href="#journey">Journey</a><a data-section="volunteering" href="#volunteering">Volunteering</a><a data-section="skills" href="#skills">Skills</a><a data-section="contact" href="#contact">Contact</a><div class="navbar-mobile-actions"><a class="navbar-download with-icon" href="cv.pdf"><svg class="icon icon-arrow-down" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></svg>Download CV</a><a class="navbar-talk" href="#contact">Let's talk</a></div></div>
+      <div class="navbar-actions"><a class="navbar-download with-icon" href="cv.pdf"><svg class="icon icon-arrow-down" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></svg>Download CV</a><a class="navbar-talk" href="#contact">Let's talk</a></div>
+      <button class="navbar-menu" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-links"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
     </nav>
   </header>
   <main id="main-content" tabindex="-1">
@@ -75,7 +86,7 @@
         <div class="home-content">
           <p class="home-title" role="img" aria-label="Software Developer, Computer Science Student, Volunteer"><span aria-hidden="true">&gt;&nbsp;</span><span id="typing-text" aria-hidden="true">Software Developer</span><span class="typing-cursor" aria-hidden="true"></span></p>
           <h1>Ghareeb Aljurdabi</h1>
-          <p class="home-location with-icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Bahrain - Northern Governorate</p>
+          <p class="home-location with-icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Northern Governorate, Bahrain</p>
           <p class="home-bio">Computer Science student at the University of Bahrain and a software development trainee at Reboot01. I learn best by building, and I bring experience from both software projects and volunteer work.</p>
           <div class="home-actions">
             <a class="home-explore with-icon" href="#projects">Explore my work<svg class="icon icon-arrow-right" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
@@ -147,48 +158,48 @@
         <div class="journey-scroll" tabindex="0" role="region" aria-label="Journey timeline">
           <ol class="journey-timeline">
             <li class="journey-item">
-              <p class="journey-date">2023 - Present</p>
-              <div class="journey-heading"><h3>Started Computer Science</h3>
+              <p class="journey-date">2023 – Present</p>
+              <div class="journey-heading"><h3>Started studying Computer Science</h3>
               <span class="journey-place">University of Bahrain</span></div>
               <p class="journey-description">Studying for a bachelor's degree in Computer Science.</p>
               <span class="journey-badge">in progress</span>
             </li>
             <li class="journey-item">
-              <p class="journey-date">13 Jul 2026 - 25 Jul 2026</p>
+              <p class="journey-date">13 Jul 2026 – 25 Jul 2026</p>
               <div class="journey-heading"><h3>Selection Pool</h3>
               <span class="journey-place">Reboot01</span></div>
               <p class="journey-description">Completed the Reboot01 selection pool and earned a place in the program.</p>
             </li>
             <li class="journey-item">
-              <p class="journey-date">16 Aug 2026 - Present</p>
+              <p class="journey-date">16 Aug 2026 – Present</p>
               <div class="journey-heading"><h3>Go Phase</h3>
               <span class="journey-place">Reboot01</span></div>
               <p class="journey-description">Learning programming fundamentals and building projects in Go.</p>
               <span class="journey-badge">in progress</span>
             </li>
             <li class="journey-item journey-upcoming">
-              <p class="journey-date">6 Feb 2027 - 6 Mar 2027</p>
+              <p class="journey-date">6 Feb 2027 – 6 Mar 2027</p>
               <div class="journey-heading"><h3>JavaScript Piscine</h3>
               <span class="journey-place">Reboot01</span></div>
               <p class="journey-description">An intensive introduction to JavaScript.</p>
               <span class="journey-badge"><svg class="journey-lock" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>coming soon<span class="journey-badge-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></span>
             </li>
             <li class="journey-item journey-upcoming">
-              <p class="journey-date">7 Mar 2027 - 11 Sep 2027</p>
+              <p class="journey-date">7 Mar 2027 – 11 Sep 2027</p>
               <div class="journey-heading"><h3>JavaScript Phase</h3>
               <span class="journey-place">Reboot01</span></div>
-              <p class="journey-description">Web projects across frontend and backend.</p>
+              <p class="journey-description">Frontend and backend web projects.</p>
               <span class="journey-badge"><svg class="journey-lock" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>coming soon<span class="journey-badge-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></span>
             </li>
             <li class="journey-item journey-upcoming">
-              <p class="journey-date">11 Sep 2027 - 11 Oct 2027</p>
+              <p class="journey-date">11 Sep 2027 – 11 Oct 2027</p>
               <div class="journey-heading"><h3>Rust Piscine</h3>
               <span class="journey-place">Reboot01</span></div>
               <p class="journey-description">An intensive introduction to Rust.</p>
               <span class="journey-badge"><svg class="journey-lock" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>coming soon<span class="journey-badge-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></span>
             </li>
             <li class="journey-item journey-upcoming">
-              <p class="journey-date">12 Oct 2027 - 18 Mar 2028</p>
+              <p class="journey-date">12 Oct 2027 – 18 Mar 2028</p>
               <div class="journey-heading"><h3>Rust Phase</h3>
               <span class="journey-place">Reboot01</span></div>
               <p class="journey-description">Systems and networking projects in Rust.</p>
@@ -200,14 +211,14 @@
         <div class="journey-education">
           <p class="journey-label section-label" role="img" aria-label="// education"><span class="label-full" aria-hidden="true">// education</span></p>
           <div class="journey-education-row">
-            <h3>University of Bahrain</h3>
-            <p>Computer Science</p>
-            <p class="journey-years">2023 - Expected June 2028</p>
-          </div>
-          <div class="journey-education-row">
             <h3>Reboot01</h3>
             <p>Software Development Program</p>
-            <p class="journey-years">2026 - Expected August 2028</p>
+            <p class="journey-years">2026 – expected Aug 2028</p>
+          </div>
+          <div class="journey-education-row">
+            <h3>University of Bahrain</h3>
+            <p>Computer Science</p>
+            <p class="journey-years">2023 – expected Jun 2028</p>
           </div>
         </div>
       </div>
@@ -219,12 +230,12 @@
         <h2>Beyond the code.</h2>
         <div class="volunteering-list">
           <div class="volunteering-row">
-            <p class="volunteering-date">May 2026</p>
+            <p class="volunteering-date">Nov 2026</p>
             <div>
-              <h3>StartUp Bahrain</h3>
-              <p class="volunteering-role">Volunteer, Registration</p>
+              <h3>College of IT Society (COITS), University of Bahrain</h3>
+              <p class="volunteering-role">Volunteer Photographer</p>
             </div>
-            <p class="volunteering-description">Registered and welcomed attendees.</p>
+            <p class="volunteering-description">Photographed the society's event.</p>
           </div>
           <div class="volunteering-row">
             <p class="volunteering-date">Sep 2026</p>
@@ -235,12 +246,12 @@
             <p class="volunteering-description">Registered attendees and hosted guests.</p>
           </div>
           <div class="volunteering-row">
-            <p class="volunteering-date">Nov 2026</p>
+            <p class="volunteering-date">May 2026</p>
             <div>
-              <h3>College of IT Society (COITS), University of Bahrain</h3>
-              <p class="volunteering-role">Volunteer Photographer</p>
+              <h3>StartUp Bahrain</h3>
+              <p class="volunteering-role">Volunteer, Registration</p>
             </div>
-            <p class="volunteering-description">Photographed the society's event.</p>
+            <p class="volunteering-description">Registered and welcomed attendees.</p>
           </div>
         </div>
       </div>
@@ -306,10 +317,10 @@
   <script defer src="js/active-link.js"></script>
   <script defer src="js/status.js"></script>
   <script defer src="js/label-typing.js"></script>
-  <script defer src="js/navbar-scroll.js"></script>
   <script defer src="js/scroll-hint.js"></script>
   <script defer src="js/journey-scroll.js"></script>
   <script defer src="js/project-deck.js"></script>
+  <script defer src="js/intro.js"></script>
 </body>
 </html>
 

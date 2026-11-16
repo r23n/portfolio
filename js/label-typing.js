@@ -1,4 +1,5 @@
-﻿const labelMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+﻿function startIntroLabels() {
+const labelMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const sectionLabels = document.querySelectorAll(".section-label");
 const labelTimers = [];
 
@@ -45,4 +46,12 @@ if (!labelMotion.matches && "IntersectionObserver" in window) {
       label.querySelectorAll(".label-output, .label-cursor").forEach(function (element) { element.remove(); });
     });
   });
+}
+
+}
+
+if (document.documentElement.classList.contains("intro")) {
+  document.addEventListener("intro-end", startIntroLabels, { once: true });
+} else {
+  startIntroLabels();
 }
