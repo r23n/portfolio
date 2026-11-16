@@ -48,27 +48,51 @@
 .skills-editor-dots span:nth-child(3) {
   background: var(--available);
 }
-.skills-code-scroll {
-  overflow-x: auto;
-  padding: var(--size-24px) var(--size-20px);
+.skills-editor .skills-code-scroll {
+  overflow-x: visible;
+  padding: var(--size-24px)
+    min(var(--size-20px), max(var(--size-4px), calc(100vw - 350px)));
 }
 .skills-code {
   display: block;
-  width: max-content;
-  min-width: 100%;
+  width: 100%;
+  min-width: 0;
   font-family: var(--font-mono);
   font-size: var(--size-0-875rem);
   line-height: 2;
   color: var(--muted);
 }
 .skills-line {
-  display: flex;
-  white-space: pre;
+  display: grid;
+  grid-template-columns: var(--size-3ch) minmax(0, 1fr);
+  column-gap: var(--size-20px);
+  align-items: start;
+}
+.skills-line > span:last-child {
+  min-width: 0;
+  padding-left: var(--code-indent, 0ch);
+  text-indent: calc(-1 * var(--code-indent, 0ch));
+  white-space: pre-wrap;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.skills-line:nth-child(2) {
+  --code-indent: 14ch;
+}
+.skills-line:nth-child(3) {
+  --code-indent: 13ch;
+}
+.skills-line:nth-child(4) {
+  --code-indent: 12ch;
+}
+.skills-line:nth-child(5) {
+  --code-indent: 10ch;
+}
+.skills-line:nth-child(6) {
+  --code-indent: 11ch;
 }
 .skills-line-number {
   width: var(--size-3ch);
-  margin-right: var(--size-20px);
-  flex-shrink: 0;
   color: var(--muted);
   text-align: right;
   user-select: none;
@@ -77,6 +101,8 @@
   color: var(--text);
 }
 .skills-string {
+  white-space: nowrap;
+  text-indent: 0;
   color: var(--accent-light);
 }
 .skills-keyword {

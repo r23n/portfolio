@@ -70,10 +70,10 @@ Features: Reads the map from a file | Finds the best paths | Moves all ants in t
 - StartUp Bahrain | Volunteer, Registration | May 2026 | Registered and welcomed attendees.
 
 # Skills
-Languages: Go, Java, JavaScript, Python, SQL
+Languages: Java, Python
 Frontend: HTML, CSS, JavaScript
 Backend: Go, SQL, Supabase
-Tools: Git, Docker, Netlify
+Tools: Git, GitHub, Gitea, VS Code, Docker, Netlify
 
 # Contact
 Email: ghareebaljurdabi@gmail.com
@@ -158,7 +158,7 @@ LinkedIn: https://www.linkedin.com/in/ghareeb-aljurdabi-18585b353/
 - Journey timeline
 - Portrait of Ghareeb Aljurdabi
 - Software Developer, Computer Science Student, Volunteer
-- Skills. Languages: Go, Java, JavaScript, Python, SQL. Frontend: HTML, CSS, JavaScript. Backend: Go, SQL, Supabase. Tools: Git, Docker, Netlify. Spoken languages: Arabic, English.
+- Skills. Languages: Java, Python. Frontend: HTML, CSS, JavaScript. Backend: Go, SQL, Supabase. Tools: Git, GitHub, Gitea, VS Code, Docker, Netlify. Spoken languages: Arabic, English.
 
 # Scenes
 

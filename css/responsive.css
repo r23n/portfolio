@@ -81,16 +81,57 @@
     display: flex;
     margin-top: var(--size-12px);
   }
+  #home {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-block: var(--size-96px) calc(var(--size-96px) + var(--size-8px));
+  }
   #home > .container {
-    grid-template-columns: minmax(0, 1fr);
-    row-gap: var(--size-12px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: calc(100vh - 2 * var(--size-96px) - var(--size-8px));
+    min-height: calc(100svh - 2 * var(--size-96px) - var(--size-8px));
+    gap: 0;
+  }
+  #home > .container > .status-line {
+    flex-shrink: 0;
+    margin-bottom: var(--size-36px);
+  }
+  .home-content {
+    order: 2;
+    height: auto;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    gap: var(--size-8px);
+    margin-top: var(--size-8px);
+    margin-bottom: auto;
   }
   #home h1 {
-    font-size: clamp(var(--size-2-25rem), 7vw, var(--size-4rem));
+    font-size: clamp(var(--size-1-75rem), 8vw, var(--size-3rem));
+  }
+  .home-bio {
+    font-size: var(--size-1rem);
+    line-height: 1.45;
+  }
+  .home-actions {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  #home .status-text {
+    height: var(--size-1-6em);
   }
   .portrait-block {
-    grid-row: 2;
-    width: min(100%, var(--size-416px));
+    order: 1;
+    align-self: center;
+    flex-shrink: 0;
+    margin-top: auto;
+    width: min(100%, var(--size-416px), 40vh, max(var(--size-120px), calc(100vh - 580px)));
+    width: min(100%, var(--size-416px), 40svh, max(var(--size-120px), calc(100svh - 580px)));
+  }
+  .scroll-hint {
+    bottom: var(--size-36px);
   }
   .portrait-tag {
     padding: var(--size-5px) var(--size-8px);
@@ -219,40 +260,12 @@
   .intro-content {
     gap: var(--size-24px);
   }
-  #home {
-    min-height: 100vh;
-    min-height: 100svh;
-    padding-block: var(--size-96px) var(--size-64px);
-  }
-  #home > .container {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-    min-height: calc(100vh - var(--size-160px));
-    min-height: calc(100svh - var(--size-160px));
-    gap: var(--size-3px);
-  }
-  .home-content {
-    display: contents;
-  }
-  .home-content > * {
-    order: 2;
-    flex-shrink: 0;
-  }
   .home-location {
     padding-top: var(--size-8px);
     font-size: var(--size-0-75rem);
   }
-  .home-bio {
-    font-size: var(--size-1rem);
-    line-height: 1.45;
-  }
   .home-explore {
     padding: var(--size-12px) var(--size-16px);
-  }
-  #home h1 {
-    font-size: clamp(var(--size-1-75rem), 8vw, var(--size-3rem));
   }
   .home-title {
     font-size: 0.7rem;
@@ -261,38 +274,11 @@
     max-width: 100%;
   }
   .home-actions {
-    order: 3;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
     gap: var(--size-20px);
     font-size: var(--size-0-875rem);
   }
-  .status-text {
-    height: var(--size-1-6em);
-  }
   .status-line {
     font-size: clamp(var(--size-0-6rem), 2.5vw, var(--size-0-875rem));
-  }
-  .portrait-block {
-    order: 1;
-    align-self: center;
-    flex-shrink: 0;
-    width: min(
-      100%,
-      var(--size-416px),
-      48vh,
-      max(var(--size-120px), calc(100vh - var(--size-450px)))
-    );
-    width: min(
-      100%,
-      var(--size-416px),
-      48svh,
-      max(var(--size-120px), calc(100svh - var(--size-450px)))
-    );
-  }
-  .scroll-hint {
-    bottom: var(--size-36px);
   }
   #about .about-intro h2,
   .reboot-intro h1 {
@@ -333,6 +319,39 @@
   }
   .skills-label {
     margin-bottom: var(--size-28px);
+  }
+  .skills-editor .skills-code-scroll {
+    padding-inline: var(--size-12px);
+  }
+  .skills-code {
+    font-size: clamp(var(--size-12px), calc(100vw / 30), var(--size-13px));
+    letter-spacing: -0.06em;
+  }
+  .skills-line {
+    grid-template-columns: var(--size-24px) minmax(0, 1fr);
+    column-gap: var(--size-4px);
+  }
+  .skills-line-number {
+    width: var(--size-24px);
+  }
+  .skills-line:nth-child(2) {
+    --code-indent: calc(14 * (1ch - 0.06em));
+  }
+  .skills-line:nth-child(3) {
+    --code-indent: calc(13 * (1ch - 0.06em));
+  }
+  .skills-line:nth-child(4) {
+    --code-indent: calc(12 * (1ch - 0.06em));
+  }
+  .skills-line:nth-child(5) {
+    --code-indent: calc(10 * (1ch - 0.06em));
+  }
+  .skills-line:nth-child(6) {
+    --code-indent: calc(11 * (1ch - 0.06em));
+  }
+  .skills-line:nth-child(5) .skills-string:nth-of-type(5)::before {
+    content: "\a";
+    white-space: pre;
   }
   #contact h2 {
     font-size: clamp(var(--size-1-75rem), 7vw, var(--size-2-5rem));

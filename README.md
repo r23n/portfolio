@@ -1,78 +1,60 @@
-# Ghareeb Aljurdabi portfolio
+﻿# Ghareeb Aljurdabi | Portfolio
 
-A personal portfolio built with plain HTML, CSS and JavaScript. Open `index.html` in a browser or serve this folder with a local web server. `content.md` is the source of the website text. No build step or dependencies are required.
+My personal portfolio website as a software developer.
 
-## Pages and content
+## Live site
 
-- `index.html`: portfolio home page and sections.
-- `projects/reboot01.html`: detailed Reboot01 projects and scenes.
-- `404.html`: missing-page screen.
-- `content.md`: portfolio, interface and scene text.
-- `cv.pdf`: downloadable CV.
-- `README.md`: usage and folder structure.
-- `REFACTOR_REPORT.md`: cleanup inventory, line counts and browser checks.
+Coming soon
 
-## Styles (`css/`)
+![Portfolio preview](images/preview.png)
 
-Load order: variables, reset, fonts, layout, shared components, page sections, effects, reduced motion, then responsive overrides.
+## Features
 
-- `variables.css`: colors, font stacks, logo typography and repeated dimensions and durations.
-- `reset.css`: browser spacing, box sizing and form/link defaults.
-- `fonts.css`: local web fonts and metric-matched fallback fonts.
-- `layout.css`: containers, page defaults, heading fonts, wrapping and anchor offsets.
-- `buttons.css`: shared primary button colors.
-- `tags.css`: shared technology lists and tag styles.
-- `pills.css`: shared logo typography and navbar pill surfaces.
-- `labels.css`: section label typography, reserved space and typing cursor.
-- `icons.css`: shared inline SVG sizing and alignment.
-- `accessibility.css`: focus outlines, skip link and screen-reader helpers.
-- `navbar.css`: floating navbar, active indicator and menu button.
-- `home.css`: home content, title, location and actions.
-- `portrait.css`: portrait, rotating square and floating tags.
-- `status.css`: status text, reserved space and availability ring.
-- `about.css`: introduction and statistics.
-- `projects.css`: main project collection panel and file deck.
-- `journey.css`: timeline, badges, edge fades and education rows.
-- `volunteering.css`: volunteering rows and hover colors.
-- `skills.css`: skills editor and syntax colors.
-- `contact.css`: contact heading, email, copy button and links.
-- `footer.css`: footer alignment and typography.
-- `reboot.css`: detailed project layout and project text.
-- `project-scenes.css`: decorative scenes and their keyframes.
-- `not-found.css`: missing-page content.
-- `scroll-hint.css`: home scroll hint and arrow motion.
-- `intro.css`: intro appearance, flight and safety fallback.
-- `reveal.css`: progressive scroll reveals.
-- `progress.css`: fixed scroll progress bar.
-- `hover.css`: shared arrow, button and underline hover effects.
-- `transitions.css`: cross-page view transitions.
-- `motion.css`: reduced-motion overrides.
-- `responsive.css`: screen-size overrides grouped in page order.
+- A welcome intro that plays once per browser session.
+- Five animated project scenes on the Reboot01 projects page.
+- A journey timeline that scrolls horizontally on desktop and stacks vertically on smaller screens.
+- A responsive layout with a mobile navigation menu.
+- Keyboard navigation, visible focus styles and reduced-motion support.
+- Readable content and navigation without JavaScript.
 
-## Scripts (`js/`)
+## Built with
 
-- `intro.js`: welcome typing and flight to the navbar logo.
-- `navbar.js`: mobile menu and active pill positioning.
-- `active-link.js`: current-section navbar selection.
-- `typing.js`: home title typing after the intro.
-- `status.js`: status text cycling.
-- `counter.js`: one-time statistic counters.
-- `label-typing.js`: one-time section label typing.
-- `reveal.js`: section reveals and staggered groups.
-- `progress.js`: scroll progress updates.
-- `scroll-hint.js`: hides the home hint after scrolling.
-- `journey-scroll.js`: timeline edge fade updates.
-- `project-deck.js`: one-time touch-device deck spread.
-- `project-scenes.js`: scene visibility, pointer effects and turn counter.
-- `copy-email.js`: email copying and accessible feedback.
+HTML, CSS and JavaScript, with no frameworks or libraries. IBM Plex Sans and JetBrains Mono fonts are self-hosted.
 
-## Assets
+## Run locally
 
-- `images/portrait.jpg`: portrait used in the home, navbar and intro.
-- `images/favicon.svg`: standalone favicon.
-- `fonts/ibm-plex-sans.woff2`: body and logo font.
-- `fonts/jetbrains-mono.woff2`: headings, labels and code font.
-- `fonts/ibm-plex-sans-OFL.txt`: IBM Plex Sans license.
-- `fonts/jetbrains-mono-OFL.txt`: JetBrains Mono license.
+1. Replace `<repository-url>` with this repository's clone URL and run:
 
-HTML retains readable defaults when scripts fail. Animations respect reduced motion, and layout space stays reserved for changing text and artwork.
+   ```sh
+   git clone <repository-url> portfolio
+   cd portfolio
+   ```
+
+2. Open the folder in VS Code.
+3. Install the Live Server extension, then right-click `index.html` and select **Open with Live Server**. You can also serve the folder with any static server and open its local URL in your browser.
+
+No build step or package installation is required.
+
+## Project structure
+
+```text
+portfolio/
+|-- index.html    Main portfolio page
+|-- projects/     Detailed project pages
+|-- css/          Styles and responsive layouts
+|-- js/           Interactive features
+|-- images/       Portrait, favicon and preview
+|-- fonts/        Local fonts and licenses
+`-- content.md    All site text
+```
+
+## Content
+
+All the site text lives in `content.md`.
+
+## Contact
+
+- Email: [ghareebaljurdabi@gmail.com](mailto:ghareebaljurdabi@gmail.com)
+- LinkedIn: [Ghareeb Aljurdabi](https://www.linkedin.com/in/ghareeb-aljurdabi-18585b353/)
+
+The code is free to read and learn from. The text, photo and CV are my own.
