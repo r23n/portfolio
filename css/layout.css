@@ -1,29 +1,53 @@
-﻿html {
+html {
   scroll-behavior: smooth;
 }
-
 body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
   line-height: 1.6;
 }
-
 .container {
-  width: min(100% - 40px, 1200px);
+  width: min(100% - var(--size-40px), 1200px);
   margin-inline: auto;
 }
-
 section {
-  padding-block: 96px;
-  scroll-margin-top: 120px;
+  padding-block: var(--size-96px);
 }
-
 h1,
 h2,
 h3 {
   font-family: var(--font-heading);
 }
-
-
-
+html,
+body {
+  width: 100%;
+  overflow-x: clip;
+}
+main,
+section,
+.container,
+.container > div {
+  min-width: 0;
+}
+h1,
+h2,
+h3,
+p,
+a {
+  overflow-wrap: anywhere;
+}
+.portfolio-page body {
+  display: flow-root;
+}
+html.portfolio-page {
+  scrollbar-gutter: stable;
+}
+section[id],
+.reboot-project[id] {
+  scroll-margin-top: var(--size-88px);
+}
+section,
+.reboot-project {
+  scroll-margin-top: var(--size-96px);
+}

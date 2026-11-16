@@ -1,4 +1,4 @@
-﻿.section-label {
+.section-label {
   position: relative;
   width: max-content;
   max-width: 100%;
@@ -6,30 +6,38 @@
   font-family: var(--font-mono);
   white-space: pre;
 }
-
 .label-typing .label-full {
   visibility: hidden;
 }
-
 .label-output {
   position: absolute;
   top: 0;
   left: 0;
 }
-
 .label-cursor {
   position: absolute;
-  top: 0.3em;
+  top: var(--size-0-3em);
   left: 0;
-  width: 0.6em;
-  height: 1em;
+  width: var(--size-0-6em);
+  height: var(--size-1em);
   background: var(--accent);
-  transform: translateX(calc(var(--label-length, 0) * 1ch));
-  animation: label-blink 1s step-end infinite;
+  transform: translateX(calc(var(--label-length, 0) * var(--size-1ch)));
+  animation: label-blink var(--time-1s) step-end infinite;
 }
-
 @keyframes label-blink {
   50% {
     opacity: 0;
   }
+}
+.journey-label {
+  font-size: var(--size-0-8rem);
+}
+
+.about-label,
+.projects-label,
+.volunteering-label,
+.skills-label,
+.contact-label,
+.reboot-label {
+  font-size: var(--size-0-875rem);
 }

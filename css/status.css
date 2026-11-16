@@ -1,29 +1,26 @@
-﻿.status-line {
+.status-line {
   position: relative;
-  top: 12px;
+  top: var(--size-12px);
   width: 100%;
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  font-size: 0.875rem;
+  gap: var(--size-10px);
+  font-size: var(--size-0-875rem);
   line-height: 1.6;
 }
-
 .status-dot {
   position: relative;
-  width: 7px;
-  height: 7px;
-  margin-top: 7px;
+  width: var(--size-7px);
+  height: var(--size-7px);
+  margin-top: var(--size-7px);
   flex-shrink: 0;
   border-radius: 50%;
   background: var(--available);
 }
-
 .status-label {
   font-family: var(--font-mono);
   color: var(--muted);
 }
-
 .status-text {
   position: relative;
   flex: 1;
@@ -33,28 +30,24 @@
   font-family: var(--font-body);
   color: var(--text);
 }
-
 .status-current,
 .status-next {
   position: absolute;
   inset: 0;
 }
-
 .status-next {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(var(--size-20px));
 }
-
 .status-running .status-dot::after {
   content: "";
   position: absolute;
   inset: -2px;
-  border: 1px solid var(--available);
+  border: var(--size-1px) solid var(--available);
   border-radius: 50%;
   pointer-events: none;
-  animation: status-ring 2s ease-out infinite;
+  animation: status-ring var(--time-2s) ease-out infinite;
 }
-
 @keyframes status-ring {
   from {
     transform: scale(1);
@@ -65,4 +58,3 @@
     opacity: 0;
   }
 }
-

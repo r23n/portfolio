@@ -1,35 +1,30 @@
-﻿.icon-arrow-right,
+.icon-arrow-right,
 .icon-arrow-left,
 .icon-arrow-up,
 .icon-arrow-down {
-  transition: transform 0.25s;
+  transition: transform var(--time-0-25s);
 }
-
 a:hover .icon-arrow-right {
-  transform: translateX(4px);
+  transform: translateX(var(--size-4px));
 }
-
 a:hover .icon-arrow-left {
-  transform: translateX(-4px);
+  transform: translateX(var(--size-negative-4px));
 }
-
 a:hover .icon-arrow-up {
-  transform: translateY(-4px);
+  transform: translateY(var(--size-negative-4px));
 }
-
 a:hover .icon-arrow-down {
-  transform: translateY(4px);
+  transform: translateY(var(--size-4px));
 }
-
 .home-explore {
-  transition: background-color 0.25s, color 0.25s;
+  transition:
+    background-color var(--time-0-25s),
+    color var(--time-0-25s);
 }
-
 .home-explore:hover {
   background: var(--accent-hover);
   color: var(--on-accent);
 }
-
 .home-cv,
 .reboot-back,
 .footer-content > a,
@@ -38,13 +33,12 @@ a:hover .icon-arrow-down {
   background-image: linear-gradient(currentColor, currentColor);
   background-repeat: no-repeat;
   background-position: left bottom;
-  background-size: 0% 1px;
-  transition: background-size 0.25s;
+  background-size: 0% var(--size-1px);
+  transition: background-size var(--time-0-25s);
 }
-
 .home-cv:hover,
 .reboot-back:hover,
 .footer-content > a:hover,
 .not-found a:hover {
-  background-size: 100% 1px;
+  background-size: 100% var(--size-1px);
 }

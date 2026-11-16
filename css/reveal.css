@@ -1,0 +1,12 @@
+.js .reveal {
+  transform: translateY(0);
+  transition:
+    opacity var(--time-0-6s),
+    transform var(--time-0-6s),
+    border-left-color var(--time-0-3s);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.js .reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(var(--size-20px));
+}

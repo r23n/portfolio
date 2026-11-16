@@ -18,7 +18,10 @@ function setupScenes() {
   if (scenesMotion.matches || !("IntersectionObserver" in window)) return;
   scenesObserver = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
-      entry.target.classList.toggle("scene-running", entry.isIntersecting && !document.hidden);
+      entry.target.classList.toggle(
+        "scene-running",
+        entry.isIntersecting && !document.hidden,
+      );
     });
   });
   scenePanels.forEach(function (panel) {
@@ -29,7 +32,12 @@ function setupScenes() {
 
 scenePanels.forEach(function (panel) {
   panel.addEventListener("pointermove", function (event) {
-    if (scenesMotion.matches || !scenesMouse.matches || event.pointerType === "touch") return;
+    if (
+      scenesMotion.matches ||
+      !scenesMouse.matches ||
+      event.pointerType === "touch"
+    )
+      return;
     const rect = panel.getBoundingClientRect();
     const x = (event.clientX - rect.left) / rect.width;
     const y = (event.clientY - rect.top) / rect.height;
@@ -39,7 +47,9 @@ scenePanels.forEach(function (panel) {
     panel.style.setProperty("--tilt-y", (x - 0.5) * 5 + "deg");
     panel.style.setProperty("--spotlight", "1");
   });
-  panel.addEventListener("pointerleave", function () { resetSceneTilt(panel); });
+  panel.addEventListener("pointerleave", function () {
+    resetSceneTilt(panel);
+  });
 });
 
 scenesMotion.addEventListener("change", setupScenes);
@@ -49,11 +59,16 @@ scenesMouse.addEventListener("change", function () {
 document.addEventListener("visibilitychange", function () {
   scenePanels.forEach(function (panel) {
     const rect = panel.getBoundingClientRect();
-    panel.classList.toggle("scene-running", !document.hidden && !scenesMotion.matches && rect.bottom > 0 && rect.top < window.innerHeight);
+    panel.classList.toggle(
+      "scene-running",
+      !document.hidden &&
+        !scenesMotion.matches &&
+        rect.bottom > 0 &&
+        rect.top < window.innerHeight,
+    );
   });
 });
 setupScenes();
-
 
 const antPanel = document.querySelector('[data-scene="lem-in"]');
 if (antPanel) {
@@ -84,11 +99,14 @@ if (antPanel) {
       previousTurn = turn;
       if (turnPulse) turnPulse.cancel();
       if (!scenesMotion.matches) {
-        turnPulse = number.animate([
-          { transform: "scale(1)" },
-          { transform: "scale(1.15)" },
-          { transform: "scale(1)" }
-        ], { duration: 200, easing: "ease-out" });
+        turnPulse = number.animate(
+          [
+            { transform: "scale(1)" },
+            { transform: "scale(1.15)" },
+            { transform: "scale(1)" },
+          ],
+          { duration: 200, easing: "ease-out" },
+        );
       }
     }
     if (scenesMotion.matches && turnPulse) turnPulse.cancel();

@@ -1,69 +1,52 @@
-﻿#contact {
+#contact {
   background: var(--card);
   color: var(--text);
 }
-
-.contact-label {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-}
-
 #contact h2 {
-  margin-top: 32px;
-  font-family: var(--font-heading);
-  font-size: clamp(2.25rem, 6vw, 5rem);
+  margin-top: var(--size-32px);
+  font-size: clamp(var(--size-2-25rem), 6vw, var(--size-5rem));
   line-height: 1.2;
 }
-
 .contact-email-row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 40px;
+  gap: var(--size-20px);
+  margin-top: var(--size-40px);
   font-family: var(--font-mono);
 }
-
 #contact-email {
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(var(--size-1rem), 3vw, var(--size-2rem));
   overflow-wrap: anywhere;
 }
-
 #copy-email {
-  padding: 8px 14px;
+  padding: var(--size-8px) var(--size-14px);
   background: transparent;
-  border: 1px solid var(--text);
+  border: var(--size-1px) solid var(--text);
   color: var(--text);
-  font-size: 0.875rem;
+  font-size: var(--size-0-875rem);
   cursor: pointer;
 }
-
 .contact-links {
-  margin-top: 48px;
+  margin-top: var(--size-48px);
 }
-
 .contact-links a {
   display: flex;
   justify-content: space-between;
-  gap: 24px;
-  padding: 24px 12px;
+  gap: var(--size-24px);
+  padding: var(--size-24px) var(--size-12px);
   color: var(--text);
   text-decoration: none;
 }
-
 .contact-links a + a {
-  border-top: 1px solid var(--text);
+  border-top: var(--size-1px) solid var(--text);
 }
-
 .contact-links a span {
   transition: transform 0.2s;
 }
-
 .contact-links a span:last-child {
   font-family: var(--font-mono);
 }
-
 .contact-links a:hover span {
-  transform: translateX(6px);
+  transform: translateX(var(--size-6px));
 }
-

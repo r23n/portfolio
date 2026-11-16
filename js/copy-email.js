@@ -18,4 +18,3 @@ copyEmailButton.addEventListener("click", async function () {
     copyEmailLabel.textContent = "copy";
   }
 });
-

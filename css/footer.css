@@ -1,20 +1,17 @@
-﻿.footer {
-  padding-block: 32px;
+.footer {
+  padding-block: var(--size-32px);
   background: var(--bg);
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--size-0-75rem);
 }
-
 .footer-content {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 24px;
+  gap: var(--size-24px);
 }
-
 .footer-content > a {
   justify-self: end;
-  text-underline-offset: 4px;
+  text-underline-offset: var(--size-4px);
 }
-

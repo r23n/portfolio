@@ -1,274 +1,688 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>
-    window.finishIntro = function () {
-      if (!document.documentElement.classList.contains("intro")) return;
-      document.documentElement.classList.remove("intro");
-      document.querySelector(".intro-screen")?.remove();
-      document.dispatchEvent(new Event("intro-end"));
-    };
-    try {
-      if (!matchMedia("(prefers-reduced-motion: reduce)").matches && !sessionStorage.getItem("portfolio-intro")) {
-        sessionStorage.setItem("portfolio-intro", "seen");
-        document.documentElement.classList.add("intro");
-        setTimeout(window.finishIntro, 4000);
-      }
-    } catch {}
-  </script>
-  <title>Ghareeb Aljurdabi | Software Developer</title>
-  <meta name="description" content="Ghareeb Aljurdabi | Software Developer. Computer Science student at the University of Bahrain and a software development trainee at Reboot01.">
-  <link rel="preload" href="fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/ibm-plex-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/intro.css">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/portrait.css">
-  <link rel="stylesheet" href="css/status.css">
-  <link rel="stylesheet" href="css/about.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="css/about.css"></noscript>
-  <link rel="stylesheet" href="css/projects.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="css/projects.css"></noscript>
-  <link rel="stylesheet" href="css/journey.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="css/journey.css"></noscript>
-  <link rel="stylesheet" href="css/volunteering.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="css/volunteering.css"></noscript>
-  <link rel="stylesheet" href="css/skills.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="css/skills.css"></noscript>
-  <link rel="stylesheet" href="css/contact.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="css/contact.css"></noscript>
-  <link rel="stylesheet" href="css/footer.css" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="css/footer.css"></noscript>
-  <link rel="stylesheet" href="css/icons.css">
-  <link rel="stylesheet" href="css/labels.css">
-  <link rel="stylesheet" href="css/hover.css">
-  <link rel="stylesheet" href="css/transitions.css">
-  <link rel="stylesheet" href="css/scroll-hint.css">
-  <link rel="stylesheet" href="css/motion.css">
-  <link rel="stylesheet" href="css/accessibility.css">
-  <link rel="stylesheet" href="css/responsive.css?v=3">
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
-  <div class="intro-screen" aria-hidden="true">
-    <div class="intro-content">
-      <img class="intro-photo" src="images/portrait.jpg" width="110" height="110" alt="" fetchpriority="high">
-      <div class="intro-word"><span class="intro-name"></span><span class="intro-dot"></span><span class="intro-cursor"></span></div>
+<!doctype html>
+<html lang="en" class="portfolio-page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      window.finishIntro = function () {
+        if (!document.documentElement.classList.contains("intro")) return;
+        document.documentElement.classList.remove("intro");
+        document.querySelector(".intro-screen")?.remove();
+        document.dispatchEvent(new Event("intro-end"));
+      };
+      try {
+        if (
+          !matchMedia("(prefers-reduced-motion: reduce)").matches &&
+          !sessionStorage.getItem("portfolio-intro")
+        ) {
+          sessionStorage.setItem("portfolio-intro", "seen");
+          document.documentElement.classList.add("intro");
+          setTimeout(window.finishIntro, 4000);
+        }
+      } catch {}
+    </script>
+    <title>Ghareeb Aljurdabi | Software Developer</title>
+    <meta
+      name="description"
+      content="Ghareeb Aljurdabi | Software Developer. Computer Science student at the University of Bahrain and a software development trainee at Reboot01."
+    />
+    <link
+      rel="preload"
+      href="fonts/jetbrains-mono.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/ibm-plex-sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/buttons.css" />
+    <link rel="stylesheet" href="css/tags.css" />
+    <link rel="stylesheet" href="css/pills.css" />
+    <link rel="stylesheet" href="css/labels.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/accessibility.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/portrait.css" />
+    <link rel="stylesheet" href="css/status.css" />
+    <link
+      rel="stylesheet"
+      href="css/about.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript><link rel="stylesheet" href="css/about.css" /></noscript>
+    <link
+      rel="stylesheet"
+      href="css/projects.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript><link rel="stylesheet" href="css/projects.css" /></noscript>
+    <link
+      rel="stylesheet"
+      href="css/journey.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript><link rel="stylesheet" href="css/journey.css" /></noscript>
+    <link
+      rel="stylesheet"
+      href="css/volunteering.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript><link rel="stylesheet" href="css/volunteering.css" /></noscript>
+    <link
+      rel="stylesheet"
+      href="css/skills.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript><link rel="stylesheet" href="css/skills.css" /></noscript>
+    <link
+      rel="stylesheet"
+      href="css/contact.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript><link rel="stylesheet" href="css/contact.css" /></noscript>
+    <link
+      rel="stylesheet"
+      href="css/footer.css"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript><link rel="stylesheet" href="css/footer.css" /></noscript>
+    <link rel="stylesheet" href="css/intro.css" />
+    <link rel="stylesheet" href="css/scroll-hint.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/progress.css" />
+    <link rel="stylesheet" href="css/hover.css" />
+    <link rel="stylesheet" href="css/transitions.css" />
+    <link rel="stylesheet" href="css/motion.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="intro-screen" aria-hidden="true">
+      <div class="intro-content">
+        <img
+          class="intro-photo"
+          src="images/portrait.jpg"
+          width="110"
+          height="110"
+          alt=""
+          fetchpriority="high"
+        />
+        <div class="intro-word"
+          ><span class="intro-name"></span><span class="intro-dot"></span
+          ><span class="intro-cursor"></span
+        ></div>
+      </div>
     </div>
-  </div>
-  <header class="navbar">
-    <nav class="container navbar-content" aria-label="Main navigation">
-      <a class="navbar-logo" href="#home"><img src="images/portrait.jpg" width="36" height="36" alt="">ghareeb.</a>
-      <div class="navbar-links" id="navbar-links"><a data-section="about" href="#about">About</a><a data-section="projects" href="#projects">Projects</a><a data-section="journey" href="#journey">Journey</a><a data-section="volunteering" href="#volunteering">Volunteering</a><a data-section="skills" href="#skills">Skills</a><a data-section="contact" href="#contact">Contact</a><div class="navbar-mobile-actions"><a class="navbar-download with-icon" href="cv.pdf"><svg class="icon icon-arrow-down" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></svg>Download CV</a><a class="navbar-talk" href="#contact">Let's talk</a></div></div>
-      <div class="navbar-actions"><a class="navbar-download with-icon" href="cv.pdf"><svg class="icon icon-arrow-down" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></svg>Download CV</a><a class="navbar-talk" href="#contact">Let's talk</a></div>
-      <button class="navbar-menu" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navbar-links"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
-    </nav>
-  </header>
-  <main id="main-content" tabindex="-1">
-    <section id="home">
-      <div class="container">
-      <div class="status-line">
-        <span class="status-dot" aria-hidden="true"></span>
-        <span class="status-label">now</span>
-        <div class="status-text" aria-live="off">
-          <span class="sr-only">Currently in the Go phase at Reboot01</span>
-          <span class="status-current" aria-hidden="true">Currently in the Go phase at Reboot01</span>
-          <span class="status-next" aria-hidden="true"></span>
-        </div>
-      </div>
-        <div class="home-content">
-          <p class="home-title" role="img" aria-label="Software Developer, Computer Science Student, Volunteer"><span aria-hidden="true">&gt;&nbsp;</span><span id="typing-text" aria-hidden="true">Software Developer</span><span class="typing-cursor" aria-hidden="true"></span></p>
-          <h1>Ghareeb Aljurdabi</h1>
-          <p class="home-location with-icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Northern Governorate, Bahrain</p>
-          <p class="home-bio">Computer Science student at the University of Bahrain and a software development trainee at Reboot01. I learn best by building, and I bring experience from both software projects and volunteer work.</p>
-          <div class="home-actions">
-            <a class="home-explore with-icon" href="#projects">Explore my work<svg class="icon icon-arrow-right" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
-            <a class="home-cv with-icon" href="cv.pdf"><svg class="icon icon-arrow-down" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></svg>Download CV</a>
-          </div>
-          </div>
-        <div class="portrait-block">
-          <div class="portrait-square" aria-hidden="true"></div>
-          <img class="portrait-photo" src="images/portrait.jpg" width="300" height="300" alt="Portrait of Ghareeb Aljurdabi" fetchpriority="high">
-          <span class="portrait-tag portrait-tag-go" aria-hidden="true">&lt;/&gt; Go</span>
-          <span class="portrait-tag portrait-tag-python" aria-hidden="true">Python</span>
-          <span class="portrait-tag portrait-tag-java" aria-hidden="true">Java · SQL</span>
-        </div>
-      </div>
-      <a class="scroll-hint" href="#about" aria-label="Scroll to about"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a>
-    </section>
-
-    <section id="about">
-      <div class="container">
-        <p class="about-label section-label" role="img" aria-label="// about"><span class="label-full" aria-hidden="true">// about</span></p>
-        <div class="about-intro">
-          <h2>I learn best by building.</h2>
-          <p>I study Computer Science at the University of Bahrain and train as a software developer at Reboot01. Outside of code, I volunteer at startup and community events in Bahrain.</p>
-        </div>
-        <div class="about-stats">
-          <div class="about-stat">
-            <span class="about-number" data-count="3">3</span>
-            <p>Years studying Computer Science</p>
-          </div>
-          <div class="about-stat">
-            <span class="about-number" data-count="5">5</span>
-            <p>Programming languages</p>
-          </div>
-          <div class="about-stat">
-            <span class="about-number" data-count="3">3</span>
-            <p>Volunteer events</p>
-          </div>
-          <div class="about-stat">
-            <span class="about-number" data-count="2">2</span>
-            <p>Spoken languages</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <p class="projects-label section-label" role="img" aria-label="// projects"><span class="label-full" aria-hidden="true">// projects</span></p>
-        <h2>Things I've built.</h2>
-        <a class="projects-collection" href="projects/reboot01.html">
-          <div class="collection-copy">
-            <span class="collection-number">01</span>
-            <p class="collection-category">Reboot01 program</p>
-            <h3>Reboot01 Projects</h3>
-            <p class="collection-description">The projects I built during the Go phase at Reboot01, from command-line tools to a chat server and a web app.</p>
-            <ul class="projects-tech"><li>Go</li><li>HTML</li><li>CSS</li><li>TCP</li><li>REST API</li></ul>
-            <span class="collection-button">Open projects -&gt;</span>
-          </div>
-          <div class="project-deck" aria-hidden="true"><div class="deck-file" style="--file:0"><span class="deck-dots"><i></i><i></i><i></i></span>go-reloaded.go</div><div class="deck-file" style="--file:1"><span class="deck-dots"><i></i><i></i><i></i></span>ascii-art-web.go</div><div class="deck-file" style="--file:2"><span class="deck-dots"><i></i><i></i><i></i></span>groupie-tracker.go</div><div class="deck-file" style="--file:3"><span class="deck-dots"><i></i><i></i><i></i></span>net-cat.go</div><div class="deck-file" style="--file:4"><span class="deck-dots"><i></i><i></i><i></i></span>lem-in.go</div></div>
-        </a>
-      </div>
-    </section>
-
-    <section id="journey">
-      <div class="container">
-        <p class="journey-label section-label" role="img" aria-label="// journey"><span class="label-full" aria-hidden="true">// journey</span></p>
-        <h2>How I got here.</h2>
-        <div class="journey-window">
-        <div class="journey-scroll" tabindex="0" role="region" aria-label="Journey timeline">
-          <ol class="journey-timeline">
-            <li class="journey-item">
-              <p class="journey-date">2023 – Present</p>
-              <div class="journey-heading"><h3>Started studying Computer Science</h3>
-              <span class="journey-place">University of Bahrain</span></div>
-              <p class="journey-description">Studying for a bachelor's degree in Computer Science.</p>
-              <span class="journey-badge">in progress</span>
-            </li>
-            <li class="journey-item">
-              <p class="journey-date">13 Jul 2026 – 25 Jul 2026</p>
-              <div class="journey-heading"><h3>Selection Pool</h3>
-              <span class="journey-place">Reboot01</span></div>
-              <p class="journey-description">Completed the Reboot01 selection pool and earned a place in the program.</p>
-            </li>
-            <li class="journey-item">
-              <p class="journey-date">16 Aug 2026 – Present</p>
-              <div class="journey-heading"><h3>Go Phase</h3>
-              <span class="journey-place">Reboot01</span></div>
-              <p class="journey-description">Learning programming fundamentals and building projects in Go.</p>
-              <span class="journey-badge">in progress</span>
-            </li>
-            <li class="journey-item journey-upcoming">
-              <p class="journey-date">6 Feb 2027 – 6 Mar 2027</p>
-              <div class="journey-heading"><h3>JavaScript Piscine</h3>
-              <span class="journey-place">Reboot01</span></div>
-              <p class="journey-description">An intensive introduction to JavaScript.</p>
-              <span class="journey-badge"><svg class="journey-lock" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>coming soon<span class="journey-badge-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></span>
-            </li>
-            <li class="journey-item journey-upcoming">
-              <p class="journey-date">7 Mar 2027 – 11 Sep 2027</p>
-              <div class="journey-heading"><h3>JavaScript Phase</h3>
-              <span class="journey-place">Reboot01</span></div>
-              <p class="journey-description">Frontend and backend web projects.</p>
-              <span class="journey-badge"><svg class="journey-lock" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>coming soon<span class="journey-badge-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></span>
-            </li>
-            <li class="journey-item journey-upcoming">
-              <p class="journey-date">11 Sep 2027 – 11 Oct 2027</p>
-              <div class="journey-heading"><h3>Rust Piscine</h3>
-              <span class="journey-place">Reboot01</span></div>
-              <p class="journey-description">An intensive introduction to Rust.</p>
-              <span class="journey-badge"><svg class="journey-lock" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>coming soon<span class="journey-badge-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></span>
-            </li>
-            <li class="journey-item journey-upcoming">
-              <p class="journey-date">12 Oct 2027 – 18 Mar 2028</p>
-              <div class="journey-heading"><h3>Rust Phase</h3>
-              <span class="journey-place">Reboot01</span></div>
-              <p class="journey-description">Systems and networking projects in Rust.</p>
-              <span class="journey-badge"><svg class="journey-lock" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>coming soon<span class="journey-badge-dots" aria-hidden="true"><span>.</span><span>.</span><span>.</span></span></span>
-            </li>
-          </ol>
-        </div>
-        </div>
-        <div class="journey-education">
-          <p class="journey-label section-label" role="img" aria-label="// education"><span class="label-full" aria-hidden="true">// education</span></p>
-          <div class="journey-education-row">
-            <h3>Reboot01</h3>
-            <p>Software Development Program</p>
-            <p class="journey-years">2026 – expected Aug 2028</p>
-          </div>
-          <div class="journey-education-row">
-            <h3>University of Bahrain</h3>
-            <p>Computer Science</p>
-            <p class="journey-years">2023 – expected Jun 2028</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="volunteering">
-      <div class="container">
-        <p class="volunteering-label section-label" role="img" aria-label="// volunteering"><span class="label-full" aria-hidden="true">// volunteering</span></p>
-        <h2>Beyond the code.</h2>
-        <div class="volunteering-list">
-          <div class="volunteering-row">
-            <p class="volunteering-date">Nov 2026</p>
-            <div>
-              <h3>College of IT Society (COITS), University of Bahrain</h3>
-              <p class="volunteering-role">Volunteer Photographer</p>
+    <header class="navbar">
+      <nav class="container navbar-content" aria-label="Main navigation">
+        <a class="navbar-logo" href="#home"
+          ><img
+            src="images/portrait.jpg"
+            width="36"
+            height="36"
+            alt=""
+          />ghareeb.</a
+        >
+        <div class="navbar-links" id="navbar-links"
+          ><a data-section="about" href="#about">About</a
+          ><a data-section="projects" href="#projects">Projects</a
+          ><a data-section="journey" href="#journey">Journey</a
+          ><a data-section="volunteering" href="#volunteering">Volunteering</a
+          ><a data-section="skills" href="#skills">Skills</a
+          ><a data-section="contact" href="#contact">Contact</a
+          ><div class="navbar-mobile-actions"
+            ><a class="navbar-download with-icon" href="cv.pdf"
+              ><svg
+                class="icon icon-arrow-down"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5" /></svg
+              >Download CV</a
+            ><a class="navbar-talk" href="#contact">Let's talk</a></div
+          ></div
+        >
+        <div class="navbar-actions"
+          ><a class="navbar-download with-icon" href="cv.pdf"
+            ><svg
+              class="icon icon-arrow-down"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5" /></svg
+            >Download CV</a
+          ><a class="navbar-talk" href="#contact">Let's talk</a></div
+        >
+        <button
+          class="navbar-menu"
+          type="button"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="navbar-links"
+          ><span aria-hidden="true"></span><span aria-hidden="true"></span
+          ><span aria-hidden="true"></span
+        ></button>
+      </nav>
+    </header>
+    <main id="main-content" tabindex="-1">
+      <section id="home">
+        <div class="container">
+          <div class="status-line">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span class="status-label">now</span>
+            <div class="status-text" aria-live="off">
+              <span class="sr-only">Currently in the Go phase at Reboot01</span>
+              <span class="status-current" aria-hidden="true"
+                >Currently in the Go phase at Reboot01</span
+              >
+              <span class="status-next" aria-hidden="true"></span>
             </div>
-            <p class="volunteering-description">Photographed the society's event.</p>
           </div>
-          <div class="volunteering-row">
-            <p class="volunteering-date">Sep 2026</p>
-            <div>
-              <h3>StartUp Bahrain</h3>
-              <p class="volunteering-role">Volunteer, Registration and Hospitality</p>
+          <div class="home-content">
+            <p
+              class="home-title"
+              role="img"
+              aria-label="Software Developer, Computer Science Student, Volunteer"
+              ><span aria-hidden="true">&gt;&nbsp;</span
+              ><span id="typing-text" aria-hidden="true"
+                >Software Developer</span
+              ><span class="typing-cursor" aria-hidden="true"></span
+            ></p>
+            <h1>Ghareeb Aljurdabi</h1>
+            <p class="home-location with-icon"
+              ><svg
+                class="icon"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z" />
+                <circle cx="12" cy="10" r="2.5" /></svg
+              >Northern Governorate, Bahrain</p
+            >
+            <p class="home-bio"
+              >Computer Science student at the University of Bahrain and a
+              software development trainee at Reboot01. I learn best by
+              building, and I bring experience from both software projects and
+              volunteer work.</p
+            >
+            <div class="home-actions">
+              <a class="home-explore with-icon" href="#projects"
+                >Explore my work<svg
+                  class="icon icon-arrow-right"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M4 12h16m-6-6 6 6-6 6" /></svg
+              ></a>
+              <a class="home-cv with-icon" href="cv.pdf"
+                ><svg
+                  class="icon icon-arrow-down"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5" /></svg
+                >Download CV</a
+              >
             </div>
-            <p class="volunteering-description">Registered attendees and hosted guests.</p>
           </div>
-          <div class="volunteering-row">
-            <p class="volunteering-date">May 2026</p>
-            <div>
-              <h3>StartUp Bahrain</h3>
-              <p class="volunteering-role">Volunteer, Registration</p>
-            </div>
-            <p class="volunteering-description">Registered and welcomed attendees.</p>
+          <div class="portrait-block">
+            <div class="portrait-square" aria-hidden="true"></div>
+            <img
+              class="portrait-photo"
+              src="images/portrait.jpg"
+              width="300"
+              height="300"
+              alt="Portrait of Ghareeb Aljurdabi"
+              fetchpriority="high"
+            />
+            <span class="portrait-tag portrait-tag-go" aria-hidden="true"
+              >&lt;/&gt; Go</span
+            >
+            <span class="portrait-tag portrait-tag-python" aria-hidden="true"
+              >Python</span
+            >
+            <span class="portrait-tag portrait-tag-java" aria-hidden="true"
+              >Java · SQL</span
+            >
           </div>
         </div>
-      </div>
-    </section>
+        <a class="scroll-hint" href="#about" aria-label="Scroll to about"
+          ><svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M12 4v16m-6-6 6 6 6-6" /></svg
+        ></a>
+      </section>
 
-    <section id="skills">
-      <div class="container">
-        <p class="skills-label section-label" role="img" aria-label="// skills"><span class="label-full" aria-hidden="true">// skills</span></p>
-        <div class="skills-layout">
-          <h2>What I work with.</h2>
-          <div class="skills-editor">
-            <div class="skills-editor-bar">
-              <div class="skills-editor-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-              <span>skills.js</span>
+      <section id="about">
+        <div class="container">
+          <p class="about-label section-label" role="img" aria-label="// about"
+            ><span class="label-full" aria-hidden="true">// about</span></p
+          >
+          <div class="about-intro">
+            <h2>I learn best by building.</h2>
+            <p
+              >I study Computer Science at the University of Bahrain and train
+              as a software developer at Reboot01. Outside of code, I volunteer
+              at startup and community events in Bahrain.</p
+            >
+          </div>
+          <div class="about-stats">
+            <div class="about-stat">
+              <span class="about-number" data-count="3">3</span>
+              <p>Years studying Computer Science</p>
             </div>
-            <div class="skills-code-scroll" tabindex="0" role="region" aria-label="Skills. Languages: Go, Java, JavaScript, Python, SQL. Frontend: HTML, CSS, JavaScript. Backend: Go, SQL, Supabase. Tools: Git, Docker, Netlify. Spoken languages: Arabic, English.">
-              <code class="skills-code" aria-hidden="true">
+            <div class="about-stat">
+              <span class="about-number" data-count="5">5</span>
+              <p>Programming languages</p>
+            </div>
+            <div class="about-stat">
+              <span class="about-number" data-count="3">3</span>
+              <p>Volunteer events</p>
+            </div>
+            <div class="about-stat">
+              <span class="about-number" data-count="2">2</span>
+              <p>Spoken languages</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <p
+            class="projects-label section-label"
+            role="img"
+            aria-label="// projects"
+            ><span class="label-full" aria-hidden="true">// projects</span></p
+          >
+          <h2>Things I've built.</h2>
+          <a class="projects-collection" href="projects/reboot01.html">
+            <div class="collection-copy">
+              <span class="collection-number">01</span>
+              <p class="collection-category">Reboot01 program</p>
+              <h3>Reboot01 Projects</h3>
+              <p class="collection-description"
+                >The projects I built during the Go phase at Reboot01, from
+                command-line tools to a chat server and a web app.</p
+              >
+              <ul class="projects-tech"
+                ><li>Go</li
+                ><li>HTML</li
+                ><li>CSS</li
+                ><li>TCP</li
+                ><li>REST API</li></ul
+              >
+              <span class="collection-button">Open projects -&gt;</span>
+            </div>
+            <div class="project-deck" aria-hidden="true"
+              ><div class="deck-file" style="--file: 0"
+                ><span class="deck-dots"><i></i><i></i><i></i></span
+                >go-reloaded.go</div
+              ><div class="deck-file" style="--file: 1"
+                ><span class="deck-dots"><i></i><i></i><i></i></span
+                >ascii-art-web.go</div
+              ><div class="deck-file" style="--file: 2"
+                ><span class="deck-dots"><i></i><i></i><i></i></span
+                >groupie-tracker.go</div
+              ><div class="deck-file" style="--file: 3"
+                ><span class="deck-dots"><i></i><i></i><i></i></span
+                >net-cat.go</div
+              ><div class="deck-file" style="--file: 4"
+                ><span class="deck-dots"><i></i><i></i><i></i></span
+                >lem-in.go</div
+              ></div
+            >
+          </a>
+        </div>
+      </section>
+
+      <section id="journey">
+        <div class="container">
+          <p
+            class="journey-label section-label"
+            role="img"
+            aria-label="// journey"
+            ><span class="label-full" aria-hidden="true">// journey</span></p
+          >
+          <h2>How I got here.</h2>
+          <div class="journey-window">
+            <div
+              class="journey-scroll"
+              tabindex="0"
+              role="region"
+              aria-label="Journey timeline"
+            >
+              <ol class="journey-timeline">
+                <li class="journey-item">
+                  <p class="journey-date">2023 – Present</p>
+                  <div class="journey-heading"
+                    ><h3>Started studying Computer Science</h3>
+                    <span class="journey-place"
+                      >University of Bahrain</span
+                    ></div
+                  >
+                  <p class="journey-description"
+                    >Studying for a bachelor's degree in Computer Science.</p
+                  >
+                  <span class="journey-badge">in progress</span>
+                </li>
+                <li class="journey-item">
+                  <p class="journey-date">13 Jul 2026 – 25 Jul 2026</p>
+                  <div class="journey-heading"
+                    ><h3>Selection Pool</h3>
+                    <span class="journey-place">Reboot01</span></div
+                  >
+                  <p class="journey-description"
+                    >Completed the Reboot01 selection pool and earned a place in
+                    the program.</p
+                  >
+                </li>
+                <li class="journey-item">
+                  <p class="journey-date">16 Aug 2026 – Present</p>
+                  <div class="journey-heading"
+                    ><h3>Go Phase</h3>
+                    <span class="journey-place">Reboot01</span></div
+                  >
+                  <p class="journey-description"
+                    >Learning programming fundamentals and building projects in
+                    Go.</p
+                  >
+                  <span class="journey-badge">in progress</span>
+                </li>
+                <li class="journey-item journey-upcoming">
+                  <p class="journey-date">6 Feb 2027 – 6 Mar 2027</p>
+                  <div class="journey-heading"
+                    ><h3>JavaScript Piscine</h3>
+                    <span class="journey-place">Reboot01</span></div
+                  >
+                  <p class="journey-description"
+                    >An intensive introduction to JavaScript.</p
+                  >
+                  <span class="journey-badge"
+                    ><svg
+                      class="journey-lock"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <rect x="5" y="10" width="14" height="11" rx="2" />
+                      <path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg
+                    >coming soon<span
+                      class="journey-badge-dots"
+                      aria-hidden="true"
+                      ><span>.</span><span>.</span><span>.</span></span
+                    ></span
+                  >
+                </li>
+                <li class="journey-item journey-upcoming">
+                  <p class="journey-date">7 Mar 2027 – 11 Sep 2027</p>
+                  <div class="journey-heading"
+                    ><h3>JavaScript Phase</h3>
+                    <span class="journey-place">Reboot01</span></div
+                  >
+                  <p class="journey-description"
+                    >Frontend and backend web projects.</p
+                  >
+                  <span class="journey-badge"
+                    ><svg
+                      class="journey-lock"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <rect x="5" y="10" width="14" height="11" rx="2" />
+                      <path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg
+                    >coming soon<span
+                      class="journey-badge-dots"
+                      aria-hidden="true"
+                      ><span>.</span><span>.</span><span>.</span></span
+                    ></span
+                  >
+                </li>
+                <li class="journey-item journey-upcoming">
+                  <p class="journey-date">11 Sep 2027 – 11 Oct 2027</p>
+                  <div class="journey-heading"
+                    ><h3>Rust Piscine</h3>
+                    <span class="journey-place">Reboot01</span></div
+                  >
+                  <p class="journey-description"
+                    >An intensive introduction to Rust.</p
+                  >
+                  <span class="journey-badge"
+                    ><svg
+                      class="journey-lock"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <rect x="5" y="10" width="14" height="11" rx="2" />
+                      <path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg
+                    >coming soon<span
+                      class="journey-badge-dots"
+                      aria-hidden="true"
+                      ><span>.</span><span>.</span><span>.</span></span
+                    ></span
+                  >
+                </li>
+                <li class="journey-item journey-upcoming">
+                  <p class="journey-date">12 Oct 2027 – 18 Mar 2028</p>
+                  <div class="journey-heading"
+                    ><h3>Rust Phase</h3>
+                    <span class="journey-place">Reboot01</span></div
+                  >
+                  <p class="journey-description"
+                    >Systems and networking projects in Rust.</p
+                  >
+                  <span class="journey-badge"
+                    ><svg
+                      class="journey-lock"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <rect x="5" y="10" width="14" height="11" rx="2" />
+                      <path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg
+                    >coming soon<span
+                      class="journey-badge-dots"
+                      aria-hidden="true"
+                      ><span>.</span><span>.</span><span>.</span></span
+                    ></span
+                  >
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="journey-education">
+            <p
+              class="journey-label section-label"
+              role="img"
+              aria-label="// education"
+              ><span class="label-full" aria-hidden="true"
+                >// education</span
+              ></p
+            >
+            <div class="journey-education-row">
+              <h3>Reboot01</h3>
+              <p>Software Development Program</p>
+              <p class="journey-years">2026 – expected Aug 2028</p>
+            </div>
+            <div class="journey-education-row">
+              <h3>University of Bahrain</h3>
+              <p>Computer Science</p>
+              <p class="journey-years">2023 – expected Jun 2028</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="volunteering">
+        <div class="container">
+          <p
+            class="volunteering-label section-label"
+            role="img"
+            aria-label="// volunteering"
+            ><span class="label-full" aria-hidden="true"
+              >// volunteering</span
+            ></p
+          >
+          <h2>Beyond the code.</h2>
+          <div class="volunteering-list">
+            <div class="volunteering-row">
+              <p class="volunteering-date">Nov 2026</p>
+              <div>
+                <h3>College of IT Society (COITS), University of Bahrain</h3>
+                <p class="volunteering-role">Volunteer Photographer</p>
+              </div>
+              <p class="volunteering-description"
+                >Photographed the society's event.</p
+              >
+            </div>
+            <div class="volunteering-row">
+              <p class="volunteering-date">Sep 2026</p>
+              <div>
+                <h3>StartUp Bahrain</h3>
+                <p class="volunteering-role"
+                  >Volunteer, Registration and Hospitality</p
+                >
+              </div>
+              <p class="volunteering-description"
+                >Registered attendees and hosted guests.</p
+              >
+            </div>
+            <div class="volunteering-row">
+              <p class="volunteering-date">May 2026</p>
+              <div>
+                <h3>StartUp Bahrain</h3>
+                <p class="volunteering-role">Volunteer, Registration</p>
+              </div>
+              <p class="volunteering-description"
+                >Registered and welcomed attendees.</p
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="container">
+          <p
+            class="skills-label section-label"
+            role="img"
+            aria-label="// skills"
+            ><span class="label-full" aria-hidden="true">// skills</span></p
+          >
+          <div class="skills-layout">
+            <h2>What I work with.</h2>
+            <div class="skills-editor">
+              <div class="skills-editor-bar">
+                <div class="skills-editor-dots" aria-hidden="true"
+                  ><span></span><span></span><span></span
+                ></div>
+                <span>skills.js</span>
+              </div>
+              <div
+                class="skills-code-scroll"
+                tabindex="0"
+                role="region"
+                aria-label="Skills. Languages: Go, Java, JavaScript, Python, SQL. Frontend: HTML, CSS, JavaScript. Backend: Go, SQL, Supabase. Tools: Git, Docker, Netlify. Spoken languages: Arabic, English."
+              >
+                <code class="skills-code" aria-hidden="true">
                 <span class="skills-line"><span class="skills-line-number" aria-hidden="true">1</span><span><span class="skills-keyword">const</span> <span class="skills-key">skills</span> = {</span></span>
                 <span class="skills-line"><span class="skills-line-number" aria-hidden="true">2</span><span>  <span class="skills-key">languages</span>: [<span class="skills-string">"Go"</span>, <span class="skills-string">"Java"</span>, <span class="skills-string">"JavaScript"</span>, <span class="skills-string">"Python"</span>, <span class="skills-string">"SQL"</span>],</span></span>
                 <span class="skills-line"><span class="skills-line-number" aria-hidden="true">3</span><span>  <span class="skills-key">frontend</span>: [<span class="skills-string">"HTML"</span>, <span class="skills-string">"CSS"</span>, <span class="skills-string">"JavaScript"</span>],</span></span>
@@ -277,61 +691,174 @@
                 <span class="skills-line"><span class="skills-line-number" aria-hidden="true">6</span><span>  <span class="skills-key">spoken</span>: [<span class="skills-string">"Arabic"</span>, <span class="skills-string">"English"</span>]</span></span>
                 <span class="skills-line"><span class="skills-line-number" aria-hidden="true">7</span><span>};</span></span>
               </code>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact">
-      <div class="container">
-        <p class="contact-label section-label" role="img" aria-label="// contact"><span class="label-full" aria-hidden="true">// contact</span></p>
-        <h2>Got an opportunity?<br>Let's talk.</h2>
-        <div class="contact-email-row">
-          <span id="contact-email">ghareebaljurdabi@gmail.com</span>
-          <button id="copy-email" class="with-icon" type="button"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M15 8V4H4v11h4"/></svg><span id="copy-email-label">copy</span></button>
-          <span id="copy-status" class="sr-only" aria-live="polite" aria-atomic="true"></span>
+      <section id="contact">
+        <div class="container">
+          <p
+            class="contact-label section-label"
+            role="img"
+            aria-label="// contact"
+            ><span class="label-full" aria-hidden="true">// contact</span></p
+          >
+          <h2>Got an opportunity?<br />Let's talk.</h2>
+          <div class="contact-email-row">
+            <span id="contact-email">ghareebaljurdabi@gmail.com</span>
+            <button id="copy-email" class="with-icon" type="button"
+              ><svg
+                class="icon"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="8" y="8" width="12" height="12" rx="2" />
+                <path d="M15 8V4H4v11h4" /></svg
+              ><span id="copy-email-label">copy</span></button
+            >
+            <span
+              id="copy-status"
+              class="sr-only"
+              aria-live="polite"
+              aria-atomic="true"
+            ></span>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:ghareebaljurdabi@gmail.com"
+              ><span class="with-icon"
+                ><svg
+                  class="icon"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m3 6 9 7 9-7" /></svg
+                >Email</span
+              ><span aria-hidden="true">-&gt;</span></a
+            >
+            <a
+              href="https://github.com/r23n"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="with-icon"
+                ><svg
+                  class="icon"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M9 19c-4 1-4-2-6-2m14 4v-4c0-1-.3-1.8-1-2.3 3-.4 5-1.5 5-5a4 4 0 0 0-1-2.8 4 4 0 0 0-.1-3S18.7 3.5 16 5a11 11 0 0 0-8 0C5.3 3.5 4.1 4 4.1 4a4 4 0 0 0-.1 3A4 4 0 0 0 3 9.7c0 3.5 2 4.6 5 5-.7.5-1 1.3-1 2.3v4"
+                  /></svg
+                >GitHub</span
+              ><span aria-hidden="true">-&gt;</span></a
+            >
+            <a
+              href="https://www.linkedin.com/in/ghareeb-aljurdabi-18585b353/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span class="with-icon"
+                ><svg
+                  class="icon"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <path d="M7 10v7m0-10v.1M11 17v-7m0 3c0-4 6-4 6 0v4" /></svg
+                >LinkedIn</span
+              ><span aria-hidden="true">-&gt;</span></a
+            >
+            <a href="cv.pdf"
+              ><span class="with-icon"
+                ><svg
+                  class="icon icon-arrow-down"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5" /></svg
+                >Download CV</span
+              ><span aria-hidden="true">-&gt;</span></a
+            >
+          </div>
         </div>
-        <div class="contact-links">
-          <a href="mailto:ghareebaljurdabi@gmail.com"><span class="with-icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>Email</span><span aria-hidden="true">-&gt;</span></a>
-          <a href="https://github.com/r23n" target="_blank" rel="noopener noreferrer"><span class="with-icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 19c-4 1-4-2-6-2m14 4v-4c0-1-.3-1.8-1-2.3 3-.4 5-1.5 5-5a4 4 0 0 0-1-2.8 4 4 0 0 0-.1-3S18.7 3.5 16 5a11 11 0 0 0-8 0C5.3 3.5 4.1 4 4.1 4a4 4 0 0 0-.1 3A4 4 0 0 0 3 9.7c0 3.5 2 4.6 5 5-.7.5-1 1.3-1 2.3v4"/></svg>GitHub</span><span aria-hidden="true">-&gt;</span></a>
-          <a href="https://www.linkedin.com/in/ghareeb-aljurdabi" target="_blank" rel="noopener noreferrer"><span class="with-icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7m0-10v.1M11 17v-7m0 3c0-4 6-4 6 0v4"/></svg>LinkedIn</span><span aria-hidden="true">-&gt;</span></a>
-          <a href="cv.pdf"><span class="with-icon"><svg class="icon icon-arrow-down" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3v12m-5-5 5 5 5-5M4 15v5h16v-5"/></svg>Download CV</span><span aria-hidden="true">-&gt;</span></a>
-        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© 2026 Ghareeb Aljurdabi</p>
+        <p>Built with HTML, CSS and JavaScript</p>
+        <a href="#home" class="with-icon"
+          ><svg
+            class="icon icon-arrow-up"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M12 20V4m-6 6 6-6 6 6" /></svg
+          >Back to top</a
+        >
       </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="container footer-content">
-      <p>© 2026 Ghareeb Aljurdabi</p>
-      <p>Built with HTML, CSS and JavaScript</p>
-      <a href="#home" class="with-icon"><svg class="icon icon-arrow-up" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20V4m-6 6 6-6 6 6"/></svg>Back to top</a>
-    </div>
-  </footer>
-  <script defer src="js/typing.js"></script>
-  <script defer src="js/counter.js"></script>
-  <script defer src="js/copy-email.js"></script>
-  <script defer src="js/navbar.js"></script>
-  <script defer src="js/reveal.js"></script>
-  <script defer src="js/progress.js"></script>
-  <script defer src="js/active-link.js"></script>
-  <script defer src="js/status.js"></script>
-  <script defer src="js/label-typing.js"></script>
-  <script defer src="js/scroll-hint.js"></script>
-  <script defer src="js/journey-scroll.js"></script>
-  <script defer src="js/project-deck.js"></script>
-  <script defer src="js/intro.js"></script>
-</body>
+    </footer>
+    <script defer src="js/typing.js"></script>
+    <script defer src="js/counter.js"></script>
+    <script defer src="js/copy-email.js"></script>
+    <script defer src="js/navbar.js"></script>
+    <script defer src="js/reveal.js"></script>
+    <script defer src="js/progress.js"></script>
+    <script defer src="js/active-link.js"></script>
+    <script defer src="js/status.js"></script>
+    <script defer src="js/label-typing.js"></script>
+    <script defer src="js/scroll-hint.js"></script>
+    <script defer src="js/journey-scroll.js"></script>
+    <script defer src="js/project-deck.js"></script>
+    <script defer src="js/intro.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

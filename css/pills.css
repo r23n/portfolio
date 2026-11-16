@@ -1,0 +1,18 @@
+.navbar-logo,
+.intro-word {
+  font-family: var(--logo-font-family);
+  font-weight: var(--logo-font-weight);
+  letter-spacing: var(--logo-letter-spacing);
+  color: var(--logo-color);
+}
+.navbar-logo,
+.navbar-links,
+.navbar-download,
+.navbar-menu {
+  border: var(--size-1px) solid var(--tag);
+  border-radius: var(--size-999px);
+  background: color-mix(in srgb, var(--editor-bg) 80%, transparent);
+  backdrop-filter: blur(var(--size-12px));
+  -webkit-backdrop-filter: blur(var(--size-12px));
+  pointer-events: auto;
+}

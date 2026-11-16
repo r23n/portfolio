@@ -78,7 +78,7 @@ Tools: Git, Docker, Netlify
 # Contact
 Email: ghareebaljurdabi@gmail.com
 GitHub: https://github.com/r23n
-LinkedIn: https://www.linkedin.com/in/ghareeb-aljurdabi
+LinkedIn: https://www.linkedin.com/in/ghareeb-aljurdabi-18585b353/
 
 # Status
 - Currently in the Go phase at Reboot01

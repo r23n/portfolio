@@ -14,7 +14,8 @@ function updateNavbarIndicator() {
   navbarIndicator.hidden = false;
   navbarIndicator.style.width = active.offsetWidth + "px";
   navbarIndicator.style.height = active.offsetHeight + "px";
-  navbarIndicator.style.transform = "translate(" + active.offsetLeft + "px," + active.offsetTop + "px)";
+  navbarIndicator.style.transform =
+    "translate(" + active.offsetLeft + "px," + active.offsetTop + "px)";
   navbarLinks.classList.add("has-indicator");
 }
 

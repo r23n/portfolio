@@ -1,0 +1,6 @@
+.home-explore,
+.collection-button,
+.navbar-talk {
+  background: var(--accent);
+  color: var(--on-accent);
+}

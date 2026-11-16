@@ -1,7 +1,7 @@
 ﻿const statusLines = [
   "Currently in the Go phase at Reboot01",
   "Studying Computer Science at the University of Bahrain",
-  "Open to internship opportunities"
+  "Open to internship opportunities",
 ];
 const statusLine = document.querySelector(".status-line");
 const statusCurrent = document.querySelector(".status-current");
@@ -13,7 +13,9 @@ let statusAnimations = [];
 
 function resetStatus() {
   clearInterval(statusTimer);
-  statusAnimations.forEach(function (animation) { animation.cancel(); });
+  statusAnimations.forEach(function (animation) {
+    animation.cancel();
+  });
   statusAnimations = [];
   statusIndex = 0;
   statusCurrent.textContent = statusLines[0];
@@ -25,12 +27,26 @@ function resetStatus() {
     statusIndex = (statusIndex + 1) % statusLines.length;
     statusNext.textContent = statusLines[statusIndex];
     const options = { duration: 400, easing: "ease", fill: "forwards" };
-    const outgoing = statusCurrent.animate([{ opacity: 1, transform: "translateY(0)" }, { opacity: 0, transform: "translateY(-20px)" }], options);
-    const incoming = statusNext.animate([{ opacity: 0, transform: "translateY(20px)" }, { opacity: 1, transform: "translateY(0)" }], options);
+    const outgoing = statusCurrent.animate(
+      [
+        { opacity: 1, transform: "translateY(0)" },
+        { opacity: 0, transform: "translateY(-20px)" },
+      ],
+      options,
+    );
+    const incoming = statusNext.animate(
+      [
+        { opacity: 0, transform: "translateY(20px)" },
+        { opacity: 1, transform: "translateY(0)" },
+      ],
+      options,
+    );
     statusAnimations = [outgoing, incoming];
     incoming.onfinish = function () {
       statusCurrent.textContent = statusLines[statusIndex];
-      statusAnimations.forEach(function (animation) { animation.cancel(); });
+      statusAnimations.forEach(function (animation) {
+        animation.cancel();
+      });
     };
   }, 3500);
 }

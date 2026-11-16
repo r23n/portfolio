@@ -1,33 +1,31 @@
-﻿#journey {
+#journey {
   background: var(--card);
   color: var(--text);
 }
-
-.journey-label,
+.journey-date {
+  min-height: 3.2em;
+}
 .journey-date,
 .journey-place,
 .journey-badge,
 .journey-years {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: var(--size-0-8rem);
 }
-
 #journey h2 {
-  margin-top: 24px;
-  font-size: clamp(2.25rem, 5vw, 4rem);
+  margin-top: var(--size-24px);
+  font-size: clamp(var(--size-2-25rem), 5vw, var(--size-4rem));
   line-height: 1.2;
 }
-
 .journey-scroll {
   overflow-x: auto;
   margin-top: 0;
-  padding-bottom: 16px;
+  padding-bottom: var(--size-16px);
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
   scrollbar-color: color-mix(in srgb, var(--text) 40%, transparent) transparent;
-  padding-top: 8px;
+  padding-top: var(--size-8px);
 }
-
 .journey-timeline {
   display: grid;
   grid-auto-flow: column;
@@ -36,213 +34,202 @@
   min-width: 0;
   list-style: none;
 }
-
 .journey-item {
   grid-column: auto;
   scroll-snap-align: start;
   min-width: 0;
-  border-top: 1px solid var(--text);
+  border-top: var(--size-1px) solid var(--text);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  padding: 32px 24px 12px 0;
+  padding: var(--size-32px) var(--size-24px) var(--size-12px) 0;
 }
-
 .journey-item::before {
   content: "";
   position: absolute;
-  top: -7px;
+  top: var(--size-negative-7px);
   left: 0;
-  width: 13px;
-  height: 13px;
+  width: var(--size-13px);
+  height: var(--size-13px);
   border-radius: 50%;
   background: var(--text);
 }
-
 .journey-item h3 {
   display: inline-block;
   max-width: 100%;
-  margin-right: 8px;
+  margin-right: var(--size-8px);
   vertical-align: middle;
-  font-size: 1.25rem;
+  font-size: var(--size-1-25rem);
   line-height: 1.4;
 }
-
 .journey-heading {
   min-height: 7em;
   width: 100%;
-  margin-block: 16px;
+  margin-block: var(--size-16px);
 }
-
 .journey-place {
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
-  padding: 4px 8px;
-  border: 1px solid var(--text);
+  padding: var(--size-4px) var(--size-8px);
+  border: var(--size-1px) solid var(--text);
 }
-
 .journey-description {
-  margin-top: 20px;
+  margin-top: var(--size-20px);
   color: var(--muted);
 }
-
 .journey-badge {
   display: inline-block;
   margin-top: auto;
-  padding: 4px 8px;
+  padding: var(--size-4px) var(--size-8px);
   background: var(--accent);
   color: var(--on-accent);
 }
-
 .journey-upcoming .journey-place {
   border-style: dashed;
 }
-
 .journey-upcoming .journey-badge {
   position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 12px;
+  gap: var(--size-6px);
+  padding: var(--size-5px) var(--size-12px);
   overflow: hidden;
-  border: 1px solid var(--accent-light);
-  border-radius: 999px;
+  border: var(--size-1px) solid var(--accent-light);
+  border-radius: var(--size-999px);
   background: color-mix(in srgb, var(--accent-light) 10%, transparent);
   color: var(--accent-light);
   white-space: nowrap;
 }
-
 .journey-lock {
-  width: 14px;
-  height: 14px;
+  width: var(--size-14px);
+  height: var(--size-14px);
   flex-shrink: 0;
 }
-
 .journey-badge-dots {
   display: inline-flex;
-  width: 3ch;
+  width: var(--size-3ch);
   gap: 0;
 }
-
 .journey-badge-dots span {
-  width: 1ch;
+  width: var(--size-1ch);
   opacity: 1;
   animation: journey-dot-one 1.5s step-end infinite;
 }
-
 .journey-badge-dots span:nth-child(2) {
   animation-name: journey-dot-two;
 }
-
 .journey-badge-dots span:nth-child(3) {
   animation-name: journey-dot-three;
 }
-
 .journey-upcoming .journey-badge::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(110deg, transparent 20%, color-mix(in srgb, var(--accent-light) 18%, transparent) 50%, transparent 80%);
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    color-mix(in srgb, var(--accent-light) 18%, transparent) 50%,
+    transparent 80%
+  );
   pointer-events: none;
   transform: translateX(-120%);
   animation: journey-shimmer 4.5s ease-in-out infinite;
 }
-
 @keyframes journey-dot-one {
-  0%, 90% { opacity: 0; }
-  20% { opacity: 1; }
+  0%,
+  90% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
 }
-
 @keyframes journey-dot-two {
-  0%, 90% { opacity: 0; }
-  40% { opacity: 1; }
+  0%,
+  90% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
 }
-
 @keyframes journey-dot-three {
-  0%, 90% { opacity: 0; }
-  60% { opacity: 1; }
+  0%,
+  90% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
 }
-
 @keyframes journey-shimmer {
-  0%, 60% { transform: translateX(-120%); }
-  90%, 100% { transform: translateX(120%); }
+  0%,
+  60% {
+    transform: translateX(-120%);
+  }
+  90%,
+  100% {
+    transform: translateX(120%);
+  }
 }
-
 .journey-upcoming::before {
   background: var(--card);
-  border: 1px dashed var(--text);
+  border: var(--size-1px) dashed var(--text);
 }
-
 .journey-education {
-  margin-top: 64px;
+  margin-top: var(--size-64px);
 }
-
 .journey-education > .journey-label {
-  margin-bottom: 24px;
+  margin-bottom: var(--size-24px);
 }
-
 .journey-education-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  gap: 24px;
-  padding-block: 24px;
-  border-top: 1px solid var(--text);
+  gap: var(--size-24px);
+  padding-block: var(--size-24px);
+  border-top: var(--size-1px) solid var(--text);
 }
-
 .journey-education-row h3 {
-  font-size: 1rem;
+  font-size: var(--size-1rem);
 }
-
 .journey-years {
   text-align: right;
 }
-
-.journey-date {
-  min-height: 3.2em;
-}
-
-
 .journey-window {
   position: relative;
   min-width: 0;
-  margin-top: 56px;
+  margin-top: var(--size-56px);
 }
-
 .journey-window::before,
 .journey-window::after {
   content: "";
   position: absolute;
   top: 0;
-  bottom: 16px;
-  width: 40px;
+  bottom: var(--size-16px);
+  width: var(--size-40px);
   z-index: 2;
   pointer-events: none;
 }
-
 .journey-window::before {
   left: 0;
   background: linear-gradient(to right, var(--card), transparent);
   opacity: var(--journey-fade-left, 0);
 }
-
 .journey-window::after {
   right: 0;
   background: linear-gradient(to left, var(--card), transparent);
   opacity: var(--journey-fade-right, 0);
 }
-
 .journey-scroll::-webkit-scrollbar {
-  height: 6px;
+  height: var(--size-6px);
 }
-
 .journey-scroll::-webkit-scrollbar-track {
   background: transparent;
 }
-
 .journey-scroll::-webkit-scrollbar-thumb {
   background: color-mix(in srgb, var(--text) 40%, transparent);
-  border-radius: 3px;
+  border-radius: var(--size-3px);
 }

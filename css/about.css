@@ -1,64 +1,50 @@
-﻿#about {
+#about {
   background: var(--light-bg);
   color: var(--dark-text);
 }
-
 .about-label {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  margin-bottom: 40px;
+  margin-bottom: var(--size-40px);
 }
-
 .about-intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  gap: var(--size-64px);
   align-items: center;
 }
-
 .about-intro h2 {
-  font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(var(--size-2-5rem), 5vw, 4.5rem);
   line-height: 1.15;
   overflow-wrap: break-word;
 }
-
 .about-intro > p {
   font-family: var(--font-body);
-  font-size: 1.125rem;
+  font-size: var(--size-1-125rem);
 }
-
 .about-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 72px;
+  margin-top: var(--size-72px);
 }
-
 .about-stat {
-  padding-inline: 28px;
+  padding-inline: var(--size-28px);
 }
-
 .about-stat:first-child {
   padding-left: 0;
 }
-
 .about-stat + .about-stat {
-  border-left: 1px solid var(--dark-text);
+  border-left: var(--size-1px) solid var(--dark-text);
 }
-
 .about-number {
-  min-width: 2ch;
+  min-width: var(--size-2ch);
   font-variant-numeric: tabular-nums;
   display: block;
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(var(--size-3rem), 6vw, var(--size-5rem));
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: 12px;
+  margin-bottom: var(--size-12px);
 }
-
 .about-stat p {
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--size-0-875rem);
 }
-

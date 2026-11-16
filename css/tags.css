@@ -1,0 +1,25 @@
+.projects-tech,
+.reboot-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-8px);
+  margin-top: var(--size-24px);
+  list-style: none;
+  font-family: var(--font-mono);
+}
+.projects-tech li,
+.reboot-tech li {
+  background: var(--tag);
+  color: var(--text);
+}
+
+.projects-tech {
+  font-size: var(--size-0-875rem);
+}
+.projects-tech li {
+  padding: var(--size-4px) var(--size-8px);
+  font-size: var(--size-0-75rem);
+}
+.reboot-tech li {
+  padding: var(--size-4px) var(--size-10px);
+}

@@ -1,21 +1,17 @@
-﻿@view-transition {
+@view-transition {
   navigation: auto;
 }
-
 ::view-transition-old(root) {
-  animation: page-fade-out 0.3s ease both;
+  animation: page-fade-out var(--time-0-3s) ease both;
 }
-
 ::view-transition-new(root) {
-  animation: page-fade-in 0.3s ease both;
+  animation: page-fade-in var(--time-0-3s) ease both;
 }
-
 @keyframes page-fade-out {
   to {
     opacity: 0;
   }
 }
-
 @keyframes page-fade-in {
   from {
     opacity: 0;

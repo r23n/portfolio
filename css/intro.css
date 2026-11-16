@@ -1,36 +1,11 @@
-﻿:root {
-  --logo-font-family: var(--font-body);
-  --logo-font-weight: 700;
-  --logo-letter-spacing: normal;
-  --logo-color: var(--text);
-}
-
-.navbar-logo,
-.intro-word {
-  font-family: var(--logo-font-family);
-  font-weight: var(--logo-font-weight);
-  letter-spacing: var(--logo-letter-spacing);
-  color: var(--logo-color);
-}
-
-body {
-  display: flow-root;
-}
-
-html {
-  scrollbar-gutter: stable;
-}
-
 .intro-screen {
   display: none;
 }
-
 html.intro,
 .intro body {
   overflow: hidden;
-  animation: intro-unlock 4s step-end forwards;
+  animation: intro-unlock var(--time-4s) step-end forwards;
 }
-
 .intro .intro-screen {
   position: fixed;
   inset: 0;
@@ -39,54 +14,47 @@ html.intro,
   align-items: center;
   justify-content: center;
   background: transparent;
-  animation: intro-safety 0.6s 3.4s ease forwards;
+  animation: intro-safety var(--time-0-6s) 3.4s ease forwards;
 }
-
 .intro-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: var(--size-32px);
+  position: relative;
+  z-index: 1;
 }
-
 .intro-photo {
   display: block;
-  width: 150px;
-  height: 150px;
+  width: var(--size-150px);
+  height: var(--size-150px);
   object-fit: cover;
   object-position: top;
-  border: 1px solid var(--tag);
-  border-radius: 36px;
-  animation: intro-photo-in 0.35s ease both;
+  border: var(--size-1px) solid var(--tag);
+  border-radius: var(--size-36px);
+  animation: intro-photo-in var(--time-0-35s) ease both;
 }
-
 .intro-word {
   position: relative;
   width: 9ch;
   height: 1.2em;
-  font-family: var(--logo-font-family);
-  font-size: 36px;
-  font-weight: 700;
+  font-size: var(--size-36px);
   line-height: 1.2;
   white-space: nowrap;
-  color: var(--text);
 }
-
 .intro-dot {
   color: var(--logo-color);
 }
-
 .intro-cursor {
   position: absolute;
   top: 0.1em;
   left: 0;
-  width: 0.6em;
-  height: 1em;
+  width: var(--size-0-6em);
+  height: var(--size-1em);
   background: var(--accent);
   transform: translateX(var(--intro-cursor-x, 0px));
-  animation: intro-blink 1s step-end infinite;
+  animation: intro-blink var(--time-1s) step-end infinite;
 }
-
 .intro .portrait-square,
 .intro .portrait-tag,
 .intro .typing-cursor,
@@ -94,35 +62,33 @@ html.intro,
 .intro .scroll-hint svg {
   animation-play-state: paused;
 }
-
 @keyframes intro-photo-in {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
-
 @keyframes intro-blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
-
 @keyframes intro-safety {
-  to { transform: translateY(-100%); visibility: hidden; pointer-events: none; }
+  to {
+    transform: translateY(-100%);
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
-
 @keyframes intro-unlock {
-  to { overflow: auto; }
+  to {
+    overflow: auto;
+  }
 }
-
-@media (max-width: 600px) {
-  .intro-photo { width: 120px; height: 120px; }
-  .intro-word { font-size: 28px; }
-  .intro-content { gap: 24px; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html.intro, .intro body { overflow: auto; animation: none; }
-  .intro .intro-screen { display: none; }
-}
-
 .intro-screen::before {
   content: "";
   position: absolute;
@@ -131,12 +97,24 @@ html.intro,
   opacity: 1;
   transition: opacity 0.9s;
 }
-.intro-content { position: relative; z-index: 1; }
-.intro-photo, .intro-word { transform-origin: left top; }
-.intro .intro-flying::before { opacity: 0; }
-.intro-flying .intro-cursor { display: none; }
-.intro-flying .intro-dot { color: inherit; }
-#home > .container, .navbar-actions, .navbar-links, .navbar-menu, .scroll-hint {
+.intro-photo,
+.intro-word {
+  transform-origin: left top;
+}
+.intro .intro-flying::before {
+  opacity: 0;
+}
+.intro-flying .intro-cursor {
+  display: none;
+}
+.intro-flying .intro-dot {
+  color: inherit;
+}
+#home > .container,
+.navbar-actions,
+.navbar-links,
+.navbar-menu,
+.scroll-hint {
   transition: opacity 0.4s;
 }
 .intro #home > .container,
@@ -147,20 +125,33 @@ html.intro,
 .intro .navbar-logo img {
   opacity: 0;
   pointer-events: none;
-  animation: intro-show-safety 0s 4s forwards;
+  animation: intro-show-safety var(--time-0s) var(--time-4s) forwards;
 }
 .intro .navbar-logo {
   color: transparent;
-  animation: intro-logo-safety 0s 4s forwards;
+  animation: intro-logo-safety var(--time-0s) var(--time-4s) forwards;
 }
-@keyframes intro-show-safety { to { opacity: 1; pointer-events: auto; } }
-@keyframes intro-logo-safety { to { color: var(--text); } }
-
+@keyframes intro-show-safety {
+  to {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+@keyframes intro-logo-safety {
+  to {
+    color: var(--text);
+  }
+}
 .intro-pausing .intro-cursor {
-  animation: intro-pause-blink 0.3s step-end 1;
+  animation: intro-pause-blink var(--time-0-3s) step-end 1;
 }
-
 @keyframes intro-pause-blink {
-  0%, 66%, 100% { opacity: 1; }
-  33% { opacity: 0; }
+  0%,
+  66%,
+  100% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
 }

@@ -1,10 +1,9 @@
-﻿.portrait-block {
+.portrait-block {
   position: relative;
-  width: 480px;
+  width: var(--size-480px);
   aspect-ratio: 1;
   justify-self: center;
 }
-
 .portrait-photo {
   position: absolute;
   top: 18.75%;
@@ -13,58 +12,50 @@
   height: 62.5%;
   object-fit: cover;
   object-position: top;
-  border: 1px solid var(--tag);
-  border-radius: 24px;
+  border: var(--size-1px) solid var(--tag);
+  border-radius: var(--size-24px);
 }
-
 .portrait-square {
   position: absolute;
   inset: 15.625%;
   background: var(--soft);
-  border-radius: 32px;
+  border-radius: var(--size-32px);
   transform: rotate(-18deg);
   animation: portrait-rotate 30s linear infinite;
 }
-
 .portrait-tag {
   position: absolute;
-  padding: 8px 12px;
+  padding: var(--size-8px) var(--size-12px);
   background: var(--editor-bg);
-  border: 1px solid var(--tag);
-  border-radius: 8px;
+  border: var(--size-1px) solid var(--tag);
+  border-radius: var(--size-8px);
   color: var(--text);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: var(--size-0-75rem);
   white-space: nowrap;
-  animation: portrait-float 4s ease-in-out infinite alternate;
+  animation: portrait-float var(--time-4s) ease-in-out infinite alternate;
 }
-
 .portrait-tag-go {
   top: 17%;
   left: 12%;
 }
-
 .portrait-tag-python {
   top: 46%;
   right: 8%;
   animation-duration: 5s;
 }
-
 .portrait-tag-java {
   bottom: 16%;
   left: 12%;
   animation-duration: 6s;
 }
-
 @keyframes portrait-rotate {
   to {
     transform: rotate(342deg);
   }
 }
-
 @keyframes portrait-float {
   to {
     transform: translateY(-6px);
   }
 }
-

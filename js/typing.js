@@ -29,7 +29,10 @@ function typeTitle() {
 function resetTyping() {
   clearTimeout(typingTimer);
   typingText.textContent = titles[0];
-  typingText.parentElement.style.setProperty("--typing-length", titles[0].length);
+  typingText.parentElement.style.setProperty(
+    "--typing-length",
+    titles[0].length,
+  );
   titleIndex = 0;
   characterIndex = titles[0].length;
   deleting = true;

@@ -1,104 +1,84 @@
-﻿#skills {
+#skills {
   background: var(--bg);
   color: var(--text);
 }
-
 .skills-label {
-  font-family: var(--font-mono);
-  font-size: 0.875rem;
-  margin-bottom: 40px;
+  margin-bottom: var(--size-40px);
 }
-
 .skills-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  gap: 48px;
+  gap: var(--size-48px);
   align-items: start;
 }
-
 .skills-layout h2 {
-  font-family: var(--font-heading);
-  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-size: clamp(var(--size-2-25rem), 4vw, 3.5rem);
   line-height: 1.2;
 }
-
 .skills-editor {
   min-width: 0;
   background: var(--editor-bg);
-  border: 1px solid var(--tag);
-  border-radius: 8px;
+  border: var(--size-1px) solid var(--tag);
+  border-radius: var(--size-8px);
   overflow: hidden;
 }
-
 .skills-editor-bar {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 16px 20px;
-  border-bottom: 1px solid var(--tag);
+  gap: var(--size-20px);
+  padding: var(--size-16px) var(--size-20px);
+  border-bottom: var(--size-1px) solid var(--tag);
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: var(--size-0-8rem);
   color: var(--muted);
 }
-
 .skills-editor-dots {
   display: flex;
-  gap: 8px;
+  gap: var(--size-8px);
 }
-
 .skills-editor-dots span {
-  width: 10px;
-  height: 10px;
+  width: var(--size-10px);
+  height: var(--size-10px);
   border-radius: 50%;
   background: var(--accent);
 }
-
 .skills-editor-dots span:nth-child(2) {
   background: var(--accent-light);
 }
-
 .skills-editor-dots span:nth-child(3) {
   background: var(--available);
 }
-
 .skills-code-scroll {
   overflow-x: auto;
-  padding: 24px 20px;
+  padding: var(--size-24px) var(--size-20px);
 }
-
 .skills-code {
   display: block;
   width: max-content;
   min-width: 100%;
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--size-0-875rem);
   line-height: 2;
   color: var(--muted);
 }
-
 .skills-line {
   display: flex;
   white-space: pre;
 }
-
 .skills-line-number {
-  width: 3ch;
-  margin-right: 20px;
+  width: var(--size-3ch);
+  margin-right: var(--size-20px);
   flex-shrink: 0;
   color: var(--muted);
   text-align: right;
   user-select: none;
 }
-
 .skills-key {
   color: var(--text);
 }
-
 .skills-string {
   color: var(--accent-light);
 }
-
-
 .skills-keyword {
   color: var(--accent);
 }

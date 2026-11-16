@@ -1,52 +1,23 @@
-﻿.js .reveal {
-  transform: translateY(0);
-  transition: opacity 0.6s, transform 0.6s, border-left-color 0.3s;
-  transition-delay: var(--reveal-delay, 0ms);
-}
-
-.js .reveal:not(.is-visible) {
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  z-index: 20;
-  background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: reduce) {
-.journey-upcoming .journey-badge::before {
+  .journey-upcoming .journey-badge::before {
     display: none;
   }
-
   .journey-badge-dots span {
     opacity: 1;
   }
-
   @view-transition {
     navigation: none;
   }
-
   ::view-transition-old(root),
   ::view-transition-new(root) {
     animation: none;
   }
-
   a:hover .icon-arrow-right,
   a:hover .icon-arrow-left,
   a:hover .icon-arrow-up,
   a:hover .icon-arrow-down {
     transform: none;
   }
-
   *,
   *::before,
   *::after {
@@ -54,36 +25,42 @@
     transition: none !important;
     scroll-behavior: auto !important;
   }
-
   .js .reveal:not(.is-visible) {
     opacity: revert;
     transform: none;
   }
-
   .label-typing .label-full {
     visibility: visible;
   }
-
   .label-output,
   .label-cursor {
     display: none;
   }
-
   .status-dot::after {
     display: none;
   }
-
-  .status-dot {
-    animation: none !important;
-  }
-
   .scroll-progress,
   .typing-cursor {
     display: none;
   }
+  html.intro,
+  .intro body {
+    overflow: auto;
+  }
+  .intro .intro-screen {
+    display: none;
+  }
+  .project-scene {
+    transform: none;
+  }
+  .project-scene::after {
+    display: none;
+  }
+  .project-scene .demo-muted.scene-animate {
+    opacity: 0;
+  }
+  .projects-collection:is(:hover, :focus-visible, .deck-spread) .deck-file {
+    transform: translateY(calc(var(--file) * var(--size-12px)))
+      rotate(calc((var(--file) - 2) * 4deg));
+  }
 }
-
-
-
-
-

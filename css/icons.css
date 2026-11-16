@@ -1,13 +1,12 @@
-﻿.icon {
+.icon {
   display: inline-block;
-  width: 18px;
-  height: 18px;
+  width: var(--size-18px);
+  height: var(--size-18px);
   flex-shrink: 0;
   vertical-align: middle;
 }
-
 .with-icon {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--size-8px);
 }
