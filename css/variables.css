@@ -20,7 +20,6 @@
   --on-accent: #0f1220;
   --accent-hover: #98a5ff;
   --size-negative-4px: -4px;
-  --size-negative-7px: -7px;
   --time-0-25s: 0.25s;
   --time-0-35s: 0.35s;
   --size-0-3em: 0.3em;
@@ -141,20 +140,12 @@
   --home-hint-bottom: clamp(36px, calc(29.33333px + 2.08333vw), 56px);
   --home-bottom: calc(var(--home-hint-bottom) + 68px);
   --home-content-gap: clamp(8px, calc(2.66667px + 1.66667vw), 24px);
-  --home-status-gap: clamp(36px, calc(32px + 1.25vw), 48px);
   --portrait-desktop-width: clamp(320px, 37.5vw, 480px);
-  --portrait-mobile-width-vh: clamp(192px, calc(100vh - 580px), 416px);
-  --portrait-mobile-width: clamp(192px, calc(100svh - 580px), 416px);
   --intro-photo-size: clamp(88px, min(calc(72px + 6vw), 30svh), 150px);
   --scene-max: 720px;
   --timeline-column: 360px;
   --journey-control-size: 40px;
   --journey-mobile-control-size: 34px;
-  --text-journey-compact: clamp(
-    1.125rem,
-    calc(10vw - 1.03125rem),
-    var(--text-section)
-  );
   --text-journey-counter: clamp(
     0.78125rem,
     calc(0.77083rem + 0.05208vw),

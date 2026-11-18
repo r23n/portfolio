@@ -113,8 +113,7 @@ html.intro,
 #home > .container,
 .navbar-actions,
 .navbar-links,
-.navbar-menu,
-.scroll-hint {
+.navbar-menu {
   transition: opacity 0.4s;
 }
 .intro #home > .container,

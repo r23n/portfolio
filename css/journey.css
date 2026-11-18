@@ -14,7 +14,6 @@
 }
 #journey h2 {
   margin-top: 0;
-  font-size: var(--text-section);
   line-height: 1.2;
   white-space: nowrap;
 }
@@ -296,7 +295,6 @@
 .journey-window {
   position: relative;
   min-width: 0;
-  margin-top: var(--space-56);
 }
 .journey-window::after {
   content: "";
