@@ -95,8 +95,8 @@
 
 @media (max-width: 600px) {
   #home {
-    min-height: 100vh;
-    min-height: 100svh;
+    min-height: calc(100vh + 8vh);
+    min-height: calc(100svh + 8svh);
     padding-block: var(--home-top) var(--size-32px);
   }
   #home > .container {
