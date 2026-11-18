@@ -1,11 +1,14 @@
 .footer {
-  padding-block: var(--size-32px);
+  padding-top: var(--size-40px);
+  padding-bottom: var(--size-32px);
   background: var(--bg);
   color: var(--muted);
   font-family: var(--font-mono);
   font-size: var(--size-0-75rem);
 }
 .footer-content {
+  border-top: var(--size-1px) solid var(--tag);
+  padding-top: var(--size-40px);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;

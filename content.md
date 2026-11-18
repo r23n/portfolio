@@ -27,26 +27,31 @@ Page link: projects/reboot01.html
 Note: Source code is hosted on Reboot01's private Git server and is available on request.
 
 ## go-reloaded
+Track: Go
 Description: A command-line tool that edits and auto-corrects text files.
 Tech: Go, CLI
 Features: Converts hex and binary numbers | Fixes letter case and punctuation | Reads and writes files
 
 ## ascii-art-web
+Track: Go
 Description: A web app that turns text into ASCII art and lets users choose a banner style.
 Tech: Go, HTML, CSS, HTTP
 Features: Go web server | Several banner styles | Form input and error pages
 
 ## groupie-tracker
+Track: Go
 Description: A website that reads data from an API and shows bands, their concert dates and locations.
 Tech: Go, HTML, CSS, REST API
 Features: Go web server | Data from an external API | Artist pages with dates and locations
 
 ## net-cat
+Track: Go
 Description: A TCP group chat server where several people connect and talk in real time.
 Tech: Go, TCP, Goroutines
 Features: Multiple clients at once | Join and leave notifications | Message history for new users
 
 ## lem-in
+Track: Go
 Description: A program that finds the fastest way to move a colony of ants through a network of rooms and tunnels.
 Tech: Go, Graph algorithms
 Features: Reads the map from a file | Finds the best paths | Moves all ants in the fewest turns
@@ -215,3 +220,36 @@ ali has joined the chat...
 File name: lem-in.go
 Room labels: start, end
 Counter labels: turn 1, turn 2, turn 3, turn 4, turn 5, turn 6, turn 7, turn 8
+
+# Reboot01 progress
+Label: // progress
+Heading: Where I am in the program.
+
+Go track:
+- Go Reloaded | completed | 31 Aug 2026
+- ASCII Art | completed | 7 Sep 2026
+- ASCII Art Web | completed | 16 Sep 2026
+- Groupie Tracker | completed | 5 Nov 2026
+- Net Cat | completed | 9 Nov 2026
+- Lem In | in audit | due 26 Dec 2026
+- Forum | planned | due 6 Feb 2027
+
+JavaScript track:
+- JavaScript Piscine | planned | due 6 Mar 2027
+- Make Your Game | planned | due 3 Apr 2027
+- Real Time Forum | planned | due 8 May 2027
+- Typing In Progress | planned | due 15 May 2027
+- GraphQL | planned | due 5 Jun 2027
+- Social Network | planned | due 17 Jul 2027
+- Mini Framework | planned | due 14 Aug 2027
+- Bomberman DOM | planned | due 28 Aug 2027
+- Guidely | planned | due 11 Sep 2027
+
+Rust track:
+- Rust Piscine | planned | due 9 Oct 2027
+- Smart Road | planned | due 6 Nov 2027
+- Filler | planned | due 27 Nov 2027
+- RT | planned | due 1 Jan 2028
+- Localhost | planned | due 29 Jan 2028
+- Multiplayer FPS | planned | due 4 Mar 2028
+- 0 Shell | planned | due 18 Mar 2028

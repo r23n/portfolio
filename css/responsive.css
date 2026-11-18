@@ -27,9 +27,18 @@
     scroll-margin-top: var(--size-88px);
   }
   .navbar-actions {
+    display: flex;
+    margin-left: auto;
+  }
+  .navbar-actions .navbar-download {
     display: none;
   }
+  .navbar-actions .navbar-talk {
+    padding-inline: var(--size-12px);
+    font-size: var(--size-11px);
+  }
   .navbar-links {
+    order: 3;
     position: absolute;
     top: var(--size-60px);
     left: 0;
@@ -46,6 +55,7 @@
   }
   .navbar-content {
     position: relative;
+    gap: var(--size-8px);
   }
   .navbar-ready .navbar-menu {
     display: flex;
@@ -232,11 +242,14 @@
   .reboot-intro h1 {
     font-size: clamp(var(--size-2-25rem), 6vw, var(--size-4rem));
   }
+  .tracker-panels {
+    grid-template-columns: minmax(0, 1fr);
+  }
   .reboot-project,
   .reboot-project:nth-child(even) {
     grid-template-columns: minmax(0, 1fr);
   }
-  .reboot-project:nth-child(even) .project-scene {
+  .reboot-project:nth-child(even) .reboot-visual {
     order: 0;
   }
   .reboot-list {
@@ -371,5 +384,14 @@
   }
   .reboot-note {
     padding: var(--size-16px);
+  }
+}
+
+@media (max-width: 359px) {
+  .navbar-logo {
+    width: var(--size-48px);
+    padding: var(--size-5px);
+    gap: 0;
+    font-size: 0;
   }
 }

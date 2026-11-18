@@ -29,7 +29,7 @@ navbarMenu.addEventListener("click", function () {
   navbarMenu.setAttribute("aria-expanded", open);
   updateNavbarIndicator();
 });
-navbarLinks.querySelectorAll("a").forEach(function (link) {
+document.querySelectorAll(".navbar-links a, .navbar-actions .navbar-talk").forEach(function (link) {
   link.addEventListener("click", closeNavbarMenu);
 });
 navbarLinks.addEventListener("keydown", function (event) {

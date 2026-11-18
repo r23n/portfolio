@@ -34,18 +34,41 @@
   font-size: var(--size-0-875rem);
 }
 .reboot-list {
+  --reboot-divider-space: clamp(var(--size-40px), 6vw, var(--size-56px));
   padding-bottom: var(--size-96px);
   padding-top: 0;
 }
 .reboot-project + .reboot-project {
   border-top: var(--size-1px) solid var(--tag);
+  padding-top: calc(
+    var(--reboot-divider-space) + 1.2 * var(--size-14px) + var(--size-12px)
+  );
+}
+.reboot-project:not(:last-child) {
+  padding-bottom: var(--reboot-divider-space);
+}
+.reboot-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+  min-width: 0;
 }
 .reboot-number {
+  position: absolute;
+  bottom: calc(100% + var(--size-12px));
+  left: 0;
   color: var(--muted);
-  font-size: var(--size-1-25rem);
+  font-size: var(--size-14px);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.reboot-track {
+  color: var(--accent);
 }
 .reboot-project h2 {
-  margin-top: var(--size-16px);
+  margin-top: 0;
   font-size: clamp(var(--size-1-75rem), 4vw, var(--size-3rem));
   line-height: 1.2;
   overflow-wrap: anywhere;
@@ -78,7 +101,7 @@
 .reboot-project:nth-child(even) {
   grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
 }
-.reboot-project:nth-child(even) .project-scene {
+.reboot-project:nth-child(even) .reboot-visual {
   order: 2;
 }
 .reboot-copy {
