@@ -1,12 +1,29 @@
-.scroll-progress {
+html,
+body {
+  background-color: var(--bg);
+}
+.scroll-progress-track {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: var(--size-3px);
-  z-index: 20;
-  background: var(--accent);
+  z-index: 101;
+  background-color: var(--bg);
+}
+.scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--size-3px);
+  background-color: var(--accent);
   transform: scaleX(0);
   transform-origin: left;
   pointer-events: none;
+}
+@supports (-webkit-touch-callout: none) {
+  .scroll-progress-track {
+    height: var(--size-10px);
+  }
 }

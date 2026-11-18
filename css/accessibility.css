@@ -6,10 +6,10 @@ button:focus-visible,
 }
 .skip-link {
   position: fixed;
-  top: var(--size-8px);
-  left: var(--size-8px);
+  top: calc(var(--safe-top) + var(--size-8px));
+  left: calc(var(--safe-left) + var(--size-8px));
   z-index: 30;
-  padding: var(--size-12px) var(--size-16px);
+  padding: var(--space-12) var(--space-16);
   background: var(--bg);
   color: var(--text);
   transform: translateY(-200%);

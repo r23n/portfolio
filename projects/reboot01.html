@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f1220" />
     <title>Ghareeb Aljurdabi | Software Developer</title>
     <meta
       name="description"
@@ -54,6 +55,9 @@
   </head>
   <body id="top">
     <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="scroll-progress-track" aria-hidden="true">
+      <div class="scroll-progress"></div>
+    </div>
     <header class="navbar">
       <nav class="container navbar-content" aria-label="Main navigation">
         <a class="navbar-logo" href="../index.html#home"
@@ -225,7 +229,7 @@
                 <span class="tracker-count" aria-hidden="true"><span data-completed="0">0</span> / 9</span>
               </header>
               <div class="tracker-bar" role="img" aria-label="JavaScript track: 0 of 9 completed">
-                <span class="tracker-segment tracker-segment-planned" aria-hidden="true"><span class="tracker-segment-fill"></span></span>
+                <span class="tracker-segment tracker-segment-in-progress" aria-hidden="true"><span class="tracker-segment-fill"></span></span>
                 <span class="tracker-segment tracker-segment-planned" aria-hidden="true"><span class="tracker-segment-fill"></span></span>
                 <span class="tracker-segment tracker-segment-planned" aria-hidden="true"><span class="tracker-segment-fill"></span></span>
                 <span class="tracker-segment tracker-segment-planned" aria-hidden="true"><span class="tracker-segment-fill"></span></span>
@@ -236,9 +240,9 @@
                 <span class="tracker-segment tracker-segment-planned" aria-hidden="true"><span class="tracker-segment-fill"></span></span>
               </div>
               <ul class="tracker-items">
-                <li class="tracker-item tracker-item-planned">
-                  <svg class="tracker-status" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="3" y="3" width="10" height="10" rx="1" fill="none" stroke="currentColor" /></svg>
-                  <div class="tracker-name"><span>JavaScript Piscine</span><span class="sr-only"> planned</span></div>
+                <li class="tracker-item tracker-item-in-progress">
+                  <svg class="tracker-status" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="4" fill="currentColor" /></svg>
+                  <div class="tracker-name"><span>JavaScript Piscine</span> <span class="tracker-badge">in progress</span></div>
                   <time datetime="2027-03-06">due 6 Mar 2027</time>
                 </li>
                 <li class="tracker-item tracker-item-planned">

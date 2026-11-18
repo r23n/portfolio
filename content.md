@@ -60,7 +60,7 @@ Features: Reads the map from a file | Finds the best paths | Moves all ants in t
 - 2023 – Present | University of Bahrain | Started studying Computer Science | Studying for a bachelor's degree in Computer Science.
 - 13 Jul 2026 – 25 Jul 2026 | Reboot01 | Selection Pool | Completed the Reboot01 selection pool and earned a place in the program.
 - 16 Aug 2026 – Present | Reboot01 | Go Phase | Learning programming fundamentals and building projects in Go.
-- 6 Feb 2027 – 6 Mar 2027 | Reboot01 | JavaScript Piscine | An intensive introduction to JavaScript. | coming soon
+- Nov 2026 – Present | Reboot01 | JavaScript Piscine | Learning JavaScript through an intensive piscine. | in progress
 - 7 Mar 2027 – 11 Sep 2027 | Reboot01 | JavaScript Phase | Frontend and backend web projects. | coming soon
 - 11 Sep 2027 – 11 Oct 2027 | Reboot01 | Rust Piscine | An intensive introduction to Rust. | coming soon
 - 12 Oct 2027 – 18 Mar 2028 | Reboot01 | Rust Phase | Systems and networking projects in Rust. | coming soon
@@ -164,6 +164,8 @@ LinkedIn: https://www.linkedin.com/in/ghareeb-aljurdabi-18585b353/
 - Portrait of Ghareeb Aljurdabi
 - Software Developer, Computer Science Student, Volunteer
 - Skills. Languages: Java, Python. Frontend: HTML, CSS, JavaScript. Backend: Go, SQL, Supabase. Tools: Git, GitHub, Gitea, VS Code, Docker, Netlify. Spoken languages: Arabic, English.
+- Previous
+- Next
 
 # Scenes
 
@@ -222,6 +224,13 @@ Room labels: start, end
 Counter labels: turn 1, turn 2, turn 3, turn 4, turn 5, turn 6, turn 7, turn 8
 
 # Reboot01 progress
+
+Note (permanent project rule):
+- The dates in the progress tracker on projects/reboot01.html are the official Reboot01 schedule. Never change them, add to them or remove them, for any reason.
+- When I say a project is completed, in audit or in progress, change only its status, its icon, its segment in the progress bar and the track count. Keep the date next to it exactly as it is, even if I finished earlier or later than that date.
+- The journey section on index.html is different: its dates and badges follow my real progress, and I will tell you when to update them.
+- If one of my requests would change a date in the progress tracker, do not do it. Tell me instead.
+
 Label: // progress
 Heading: Where I am in the program.
 
@@ -235,7 +244,7 @@ Go track:
 - Forum | planned | due 6 Feb 2027
 
 JavaScript track:
-- JavaScript Piscine | planned | due 6 Mar 2027
+- JavaScript Piscine | in progress | due 6 Mar 2027
 - Make Your Game | planned | due 3 Apr 2027
 - Real Time Forum | planned | due 8 May 2027
 - Typing In Progress | planned | due 15 May 2027

@@ -1,4 +1,7 @@
 :root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
   --font-heading: "JetBrains Mono", "Mono Fallback", monospace;
   --font-body: "IBM Plex Sans", "Body Fallback", sans-serif;
   --font-mono: "JetBrains Mono", "Mono Fallback", monospace;
@@ -23,39 +26,28 @@
   --size-0-3em: 0.3em;
   --time-0-3s: 0.3s;
   --size-0-6em: 0.6em;
-  --size-0-6rem: 0.6rem;
-  --time-0-6s: 0.6s;
-  --size-0-75rem: 0.75rem;
   --size-0-875rem: 0.875rem;
-  --size-0-8rem: 0.8rem;
+  --time-0-6s: 0.6s;
   --time-0s: 0s;
-  --size-1-125rem: 1.125rem;
-  --size-1-25rem: 1.25rem;
-  --size-1-5rem: 1.5rem;
   --size-1-6em: 1.6em;
-  --size-1-75rem: 1.75rem;
+  --size-1-125rem: 1.125rem;
   --size-10px: 10px;
   --size-115px: 115px;
-  --size-11px: 11px;
   --size-120px: 120px;
   --size-12px: 12px;
   --size-13px: 13px;
   --size-145px: 145px;
   --size-14px: 14px;
-  --size-150px: 150px;
   --size-160px: 160px;
   --size-165px: 165px;
   --size-16px: 16px;
   --size-185px: 185px;
-  --size-18px: 18px;
   --size-192px: 192px;
+  --size-18px: 18px;
   --size-1ch: 1ch;
   --size-1em: 1em;
   --size-1px: 1px;
-  --size-1rem: 1rem;
   --time-1s: 1s;
-  --size-2-25rem: 2.25rem;
-  --size-2-5rem: 2.5rem;
   --size-205px: 205px;
   --size-20px: 20px;
   --size-24px: 24px;
@@ -63,7 +55,6 @@
   --size-28px: 28px;
   --size-2ch: 2ch;
   --size-2px: 2px;
-  --size-2rem: 2rem;
   --time-2s: 2s;
   --size-32px: 32px;
   --size-35px: 35px;
@@ -73,23 +64,16 @@
   --size-3px: 3px;
   --size-3rem: 3rem;
   --size-40px: 40px;
-  --size-416px: 416px;
-  --size-450px: 450px;
-  --size-480px: 480px;
   --size-48px: 48px;
+  --size-480px: 480px;
   --size-4px: 4px;
-  --size-4rem: 4rem;
   --time-4s: 4s;
   --size-50px: 50px;
-  --size-56px: 56px;
   --size-57px: 57px;
   --size-5px: 5px;
-  --size-5rem: 5rem;
   --size-60px: 60px;
-  --size-64px: 64px;
   --size-6px: 6px;
   --size-70px: 70px;
-  --size-72px: 72px;
   --size-7px: 7px;
   --size-88px: 88px;
   --size-8px: 8px;
@@ -100,4 +84,84 @@
   --logo-font-weight: 700;
   --logo-letter-spacing: normal;
   --logo-color: var(--text);
+
+  --text-body: clamp(1rem, calc(0.95833rem + 0.20833vw), 1.125rem);
+  --text-small: clamp(0.75rem, calc(0.70833rem + 0.20833vw), 0.875rem);
+  --text-tiny: clamp(0.6875rem, calc(0.66667rem + 0.10417vw), 0.75rem);
+  --text-label: clamp(0.71875rem, calc(0.6875rem + 0.15625vw), 0.8125rem);
+  --text-micro: clamp(0.6rem, calc(0.58125rem + 0.09375vw), 0.65625rem);
+  --text-lead: clamp(1rem, calc(0.95833rem + 0.20833vw), 1.125rem);
+  --text-subheading: clamp(1.125rem, calc(1.08333rem + 0.20833vw), 1.25rem);
+  --text-home: clamp(1.875rem, calc(0.5rem + 6.875vw), 6rem);
+  --text-section: clamp(1.75rem, calc(1rem + 3.75vw), 4rem);
+  --text-about: clamp(1.75rem, calc(0.83333rem + 4.58333vw), 4.5rem);
+  --text-skills: clamp(1.75rem, calc(1.16667rem + 2.91667vw), 3.5rem);
+  --text-contact: clamp(1.75rem, calc(0.66667rem + 5.41667vw), 5rem);
+  --text-page: clamp(1.75rem, calc(0.33333rem + 7.08333vw), 6rem);
+  --text-not-found: clamp(2rem, calc(1rem + 5vw), 5rem);
+  --text-project: clamp(1.5rem, calc(1rem + 2.5vw), 3rem);
+  --text-collection: clamp(1.625rem, calc(1.25rem + 1.875vw), 2.75rem);
+  --text-stat: clamp(3rem, calc(2.33333rem + 3.33333vw), 5rem);
+  --text-number: clamp(2.5rem, calc(2.33333rem + 0.83333vw), 3rem);
+  --text-logo: clamp(1rem, calc(0.95833rem + 0.20833vw), 1.125rem);
+  --text-nav: clamp(0.6875rem, calc(0.66667rem + 0.10417vw), 0.75rem);
+  --text-home-label: clamp(0.625rem, calc(0.54167rem + 0.41667vw), 0.875rem);
+  --text-status: clamp(0.5625rem, calc(0.45833rem + 0.52083vw), 0.875rem);
+  --text-portrait: clamp(0.625rem, calc(0.58333rem + 0.20833vw), 0.75rem);
+  --text-intro: clamp(1.5rem, calc(1.25rem + 1.25vw), 2.25rem);
+  --text-email: clamp(0.875rem, calc(0.54167rem + 1.66667vw), 1.875rem);
+  --text-deck: clamp(0.5625rem, calc(0.5rem + 0.3125vw), 0.75rem);
+  --text-counter: clamp(0.875rem, calc(0.85417rem + 0.10417vw), 0.9375rem);
+  --text-scene-10: clamp(0.59375rem, calc(0.58333rem + 0.05208vw), 0.625rem);
+  --text-scene-11: clamp(0.65312rem, calc(0.64167rem + 0.05729vw), 0.6875rem);
+  --text-scene-12: clamp(0.7125rem, calc(0.7rem + 0.0625vw), 0.75rem);
+  --text-scene-13: clamp(0.77187rem, calc(0.75833rem + 0.06771vw), 0.8125rem);
+  --text-scene-16: clamp(0.95rem, calc(0.93333rem + 0.08333vw), 1rem);
+  --space-8: clamp(6px, calc(5.33333px + 0.20833vw), 8px);
+  --space-12: clamp(8px, calc(6.66667px + 0.41667vw), 12px);
+  --space-14: clamp(8px, calc(6px + 0.625vw), 14px);
+  --space-16: clamp(8px, calc(5.33333px + 0.83333vw), 16px);
+  --space-18: clamp(10px, calc(7.33333px + 0.83333vw), 18px);
+  --space-20: clamp(12px, calc(9.33333px + 0.83333vw), 20px);
+  --space-24: clamp(12px, calc(8px + 1.25vw), 24px);
+  --space-28: clamp(12px, calc(6.66667px + 1.66667vw), 28px);
+  --space-32: clamp(16px, calc(10.66667px + 1.66667vw), 32px);
+  --space-40: clamp(24px, calc(18.66667px + 1.66667vw), 40px);
+  --space-48: clamp(24px, calc(16px + 2.5vw), 48px);
+  --space-56: clamp(40px, calc(34.66667px + 1.66667vw), 56px);
+  --space-64: clamp(32px, calc(21.33333px + 3.33333vw), 64px);
+  --space-72: clamp(40px, calc(29.33333px + 3.33333vw), 72px);
+  --space-96: clamp(48px, calc(32px + 5vw), 96px);
+  --text-code: clamp(0.75rem, 3.33333vw, 0.875rem);
+  --container-max: 1200px;
+  --container-gutter: clamp(16px, calc(14.66667px + 0.41667vw), 20px);
+  --home-top: calc(
+    var(--safe-top) + clamp(96px, calc(93.33333px + 0.83333vw), 104px)
+  );
+  --home-hint-bottom: clamp(36px, calc(29.33333px + 2.08333vw), 56px);
+  --home-bottom: calc(var(--home-hint-bottom) + 68px);
+  --home-content-gap: clamp(8px, calc(2.66667px + 1.66667vw), 24px);
+  --home-status-gap: clamp(36px, calc(32px + 1.25vw), 48px);
+  --portrait-desktop-width: clamp(320px, 37.5vw, 480px);
+  --portrait-mobile-width-vh: clamp(192px, calc(100vh - 580px), 416px);
+  --portrait-mobile-width: clamp(192px, calc(100svh - 580px), 416px);
+  --intro-photo-size: clamp(88px, min(calc(72px + 6vw), 30svh), 150px);
+  --scene-max: 720px;
+  --timeline-column: 360px;
+  --journey-control-size: 40px;
+  --journey-mobile-control-size: 34px;
+  --text-journey-compact: clamp(
+    1.125rem,
+    calc(10vw - 1.03125rem),
+    var(--text-section)
+  );
+  --text-journey-counter: clamp(
+    0.78125rem,
+    calc(0.77083rem + 0.05208vw),
+    0.8125rem
+  );
+  --code-padding: clamp(12px, calc(-4px + 4vw), 20px);
+  --code-number-width: clamp(24px, calc(16px + 2vw), 32px);
+  --code-gap: clamp(4px, calc(-4px + 2.5vw), 20px);
+  --code-tracking: clamp(-0.06em, calc(-1.8px + 0.3vw), 0px);
 }

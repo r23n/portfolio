@@ -3,16 +3,16 @@
   color: var(--text);
 }
 .skills-label {
-  margin-bottom: var(--size-40px);
+  margin-bottom: var(--space-40);
 }
 .skills-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  gap: var(--size-48px);
+  gap: var(--space-48);
   align-items: start;
 }
 .skills-layout h2 {
-  font-size: clamp(var(--size-2-25rem), 4vw, 3.5rem);
+  font-size: var(--text-skills);
   line-height: 1.2;
 }
 .skills-editor {
@@ -25,16 +25,16 @@
 .skills-editor-bar {
   display: flex;
   align-items: center;
-  gap: var(--size-20px);
-  padding: var(--size-16px) var(--size-20px);
+  gap: var(--space-20);
+  padding: var(--space-16) var(--space-20);
   border-bottom: var(--size-1px) solid var(--tag);
   font-family: var(--font-mono);
-  font-size: var(--size-0-8rem);
+  font-size: var(--text-label);
   color: var(--muted);
 }
 .skills-editor-dots {
   display: flex;
-  gap: var(--size-8px);
+  gap: var(--space-8);
 }
 .skills-editor-dots span {
   width: var(--size-10px);
@@ -50,22 +50,22 @@
 }
 .skills-editor .skills-code-scroll {
   overflow-x: visible;
-  padding: var(--size-24px)
-    min(var(--size-20px), max(var(--size-4px), calc(100vw - 350px)));
+  padding: var(--space-24) var(--code-padding);
 }
 .skills-code {
   display: block;
   width: 100%;
   min-width: 0;
   font-family: var(--font-mono);
-  font-size: var(--size-0-875rem);
+  font-size: var(--text-code);
+  letter-spacing: var(--code-tracking);
   line-height: 2;
   color: var(--muted);
 }
 .skills-line {
   display: grid;
-  grid-template-columns: var(--size-3ch) minmax(0, 1fr);
-  column-gap: var(--size-20px);
+  grid-template-columns: var(--code-number-width) minmax(0, 1fr);
+  column-gap: var(--code-gap);
   align-items: start;
 }
 .skills-line > span:last-child {
@@ -77,22 +77,22 @@
   word-break: normal;
 }
 .skills-line:nth-child(2) {
-  --code-indent: 14ch;
+  --code-indent: calc(14 * (1ch + var(--code-tracking)));
 }
 .skills-line:nth-child(3) {
-  --code-indent: 13ch;
+  --code-indent: calc(13 * (1ch + var(--code-tracking)));
 }
 .skills-line:nth-child(4) {
-  --code-indent: 12ch;
+  --code-indent: calc(12 * (1ch + var(--code-tracking)));
 }
 .skills-line:nth-child(5) {
-  --code-indent: 10ch;
+  --code-indent: calc(10 * (1ch + var(--code-tracking)));
 }
 .skills-line:nth-child(6) {
-  --code-indent: 11ch;
+  --code-indent: calc(11 * (1ch + var(--code-tracking)));
 }
 .skills-line-number {
-  width: var(--size-3ch);
+  width: var(--code-number-width);
   color: var(--muted);
   text-align: right;
   user-select: none;

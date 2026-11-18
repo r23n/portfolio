@@ -1,5 +1,5 @@
 .not-found {
-  padding-top: var(--size-96px);
+  padding-top: var(--home-top);
   min-height: 100svh;
   display: flex;
   align-items: center;
@@ -9,8 +9,8 @@
   font-family: var(--font-mono);
 }
 .not-found h1 {
-  margin-block: var(--size-24px);
-  font-size: clamp(var(--size-2rem), 6vw, var(--size-5rem));
+  margin-block: var(--space-24);
+  font-size: var(--text-not-found);
   line-height: 1.2;
 }
 .not-found a {

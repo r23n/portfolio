@@ -1,8 +1,5 @@
 ﻿const progressMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const progressBar = document.createElement("div");
-progressBar.className = "scroll-progress";
-progressBar.setAttribute("aria-hidden", "true");
-document.body.appendChild(progressBar);
+const progressBar = document.querySelector(".scroll-progress-track > .scroll-progress");
 
 function updateProgress() {
   if (progressMotion.matches) return;

@@ -6,13 +6,16 @@ body {
   color: var(--text);
   font-family: var(--font-body);
   line-height: 1.6;
+  font-size: var(--text-body);
 }
 .container {
-  width: min(100% - var(--size-40px), 1200px);
+  padding-left: var(--safe-left);
+  padding-right: var(--safe-right);
+  width: min(100% - 2 * var(--container-gutter), var(--container-max));
   margin-inline: auto;
 }
 section {
-  padding-block: var(--size-96px);
+  padding-block: var(--space-96);
 }
 h1,
 h2,
@@ -45,9 +48,21 @@ html.portfolio-page {
 }
 section[id],
 .reboot-project[id] {
-  scroll-margin-top: var(--size-88px);
+  scroll-margin-top: calc(var(--safe-top) + var(--size-88px));
 }
 section,
 .reboot-project {
-  scroll-margin-top: var(--size-96px);
+  scroll-margin-top: calc(var(--safe-top) + var(--size-96px));
+}
+h1 {
+  font-size: var(--text-page);
+}
+h2 {
+  font-size: var(--text-section);
+}
+h3 {
+  font-size: var(--text-subheading);
+}
+img {
+  max-width: 100%;
 }

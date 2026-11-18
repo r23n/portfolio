@@ -5,22 +5,22 @@
 .volunteering-date,
 .volunteering-role {
   font-family: var(--font-mono);
-  font-size: var(--size-0-875rem);
+  font-size: var(--text-small);
 }
 #volunteering h2 {
-  margin-top: var(--size-24px);
-  font-size: clamp(var(--size-2-25rem), 5vw, var(--size-4rem));
+  margin-top: var(--space-24);
+  font-size: var(--text-section);
   line-height: 1.2;
 }
 .volunteering-list {
-  margin-top: var(--size-56px);
+  margin-top: var(--space-56);
 }
 .volunteering-row {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
   align-items: center;
-  gap: var(--size-32px);
-  padding: var(--size-32px) var(--size-24px);
+  gap: var(--space-32);
+  padding: var(--space-32) var(--space-24);
   transition:
     background-color var(--time-0-3s),
     color var(--time-0-3s);
@@ -33,11 +33,11 @@
   color: var(--text);
 }
 .volunteering-row h3 {
-  font-size: var(--size-1-25rem);
+  font-size: var(--text-subheading);
   line-height: 1.4;
 }
 .volunteering-role {
-  margin-top: var(--size-8px);
+  margin-top: var(--space-8);
 }
 .volunteering-description {
   font-family: var(--font-body);

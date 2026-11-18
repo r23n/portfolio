@@ -30,14 +30,13 @@
   }
 }
 .journey-label {
-  font-size: var(--size-0-8rem);
+  font-size: var(--text-label);
 }
-
 .about-label,
 .projects-label,
 .volunteering-label,
 .skills-label,
 .contact-label,
 .reboot-label {
-  font-size: var(--size-0-875rem);
+  font-size: var(--text-small);
 }

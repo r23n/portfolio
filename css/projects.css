@@ -5,20 +5,20 @@
 .collection-category,
 .collection-button {
   font-family: var(--font-mono);
-  font-size: var(--size-0-875rem);
+  font-size: var(--text-small);
 }
 #projects h2 {
-  margin-top: var(--size-24px);
-  font-size: clamp(var(--size-2-25rem), 5vw, var(--size-4rem));
+  margin-top: var(--space-24);
+  font-size: var(--text-section);
   line-height: 1.2;
 }
 .projects-collection {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: var(--size-32px);
+  gap: var(--space-32);
   align-items: center;
-  margin-top: var(--size-40px);
-  padding: var(--size-40px);
+  margin-top: var(--space-40);
+  padding: var(--space-40);
   border: var(--size-1px) solid var(--tag);
   border-radius: var(--size-12px);
   background: var(--editor-bg);
@@ -35,26 +35,26 @@
 }
 .collection-number {
   font-family: var(--font-heading);
-  font-size: var(--size-3rem);
+  font-size: var(--text-number);
   color: var(--muted);
 }
 .collection-category {
-  margin-top: var(--size-12px);
+  margin-top: var(--space-12);
   color: var(--muted);
 }
 .collection-copy h3 {
-  margin-top: var(--size-20px);
-  font-size: clamp(var(--size-1-75rem), 3vw, 2.75rem);
+  margin-top: var(--space-20);
+  font-size: var(--text-collection);
   line-height: 1.2;
 }
 .collection-description {
-  margin-top: var(--size-20px);
+  margin-top: var(--space-20);
   color: var(--muted);
 }
 .collection-button {
   display: inline-block;
-  margin-top: var(--size-32px);
-  padding: var(--size-12px) var(--size-18px);
+  margin-top: var(--space-32);
+  padding: var(--space-12) var(--space-18);
 }
 .project-deck {
   position: relative;
@@ -67,12 +67,12 @@
   left: 10%;
   width: 80%;
   height: 130px;
-  padding: var(--size-18px) var(--size-12px);
+  padding: var(--space-18) var(--space-12);
   border: var(--size-1px) solid var(--tag);
   border-radius: var(--size-8px);
   background: var(--editor-bg);
   font-family: var(--font-mono);
-  font-size: clamp(var(--size-0-6rem), 1vw, var(--size-0-8rem));
+  font-size: var(--text-deck);
   color: var(--muted);
   transform: translateY(calc(var(--file) * var(--size-12px)))
     rotate(calc((var(--file) - 2) * 4deg));
@@ -81,7 +81,7 @@
 .deck-dots {
   display: flex;
   gap: var(--size-5px);
-  margin-bottom: var(--size-14px);
+  margin-bottom: var(--space-14);
 }
 .deck-dots i {
   width: var(--size-6px);

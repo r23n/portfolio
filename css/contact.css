@@ -3,38 +3,39 @@
   color: var(--text);
 }
 #contact h2 {
-  margin-top: var(--size-32px);
-  font-size: clamp(var(--size-2-25rem), 6vw, var(--size-5rem));
+  margin-top: var(--space-32);
+  font-size: var(--text-contact);
   line-height: 1.2;
 }
 .contact-email-row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: var(--size-20px);
-  margin-top: var(--size-40px);
+  gap: var(--space-20);
+  margin-top: var(--space-40);
   font-family: var(--font-mono);
 }
 #contact-email {
-  font-size: clamp(var(--size-1rem), 3vw, var(--size-2rem));
+  max-width: 100%;
+  font-size: var(--text-email);
   overflow-wrap: anywhere;
 }
 #copy-email {
-  padding: var(--size-8px) var(--size-14px);
+  padding: var(--space-8) var(--space-14);
   background: transparent;
   border: var(--size-1px) solid var(--text);
   color: var(--text);
-  font-size: var(--size-0-875rem);
+  font-size: var(--text-small);
   cursor: pointer;
 }
 .contact-links {
-  margin-top: var(--size-48px);
+  margin-top: var(--space-48);
 }
 .contact-links a {
   display: flex;
   justify-content: space-between;
-  gap: var(--size-24px);
-  padding: var(--size-24px) var(--size-12px);
+  gap: var(--space-24);
+  padding: var(--space-24) var(--space-12);
   color: var(--text);
   text-decoration: none;
 }

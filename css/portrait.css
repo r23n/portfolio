@@ -1,6 +1,9 @@
 .portrait-block {
+  --portrait-photo-mobile-size: clamp(190px, 52vw, 290px);
+  --portrait-mobile-block-size: calc(var(--portrait-photo-mobile-size) * 1.6);
   position: relative;
-  width: var(--size-480px);
+  width: var(--portrait-desktop-width);
+  max-width: 100%;
   aspect-ratio: 1;
   justify-self: center;
 }
@@ -25,13 +28,13 @@
 }
 .portrait-tag {
   position: absolute;
-  padding: var(--size-8px) var(--size-12px);
+  padding: var(--space-8) var(--space-12);
   background: var(--editor-bg);
   border: var(--size-1px) solid var(--tag);
   border-radius: var(--size-8px);
   color: var(--text);
   font-family: var(--font-mono);
-  font-size: var(--size-0-75rem);
+  font-size: var(--text-portrait);
   white-space: nowrap;
   animation: portrait-float var(--time-4s) ease-in-out infinite alternate;
 }
@@ -57,5 +60,19 @@
 @keyframes portrait-float {
   to {
     transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 600px) {
+  #home .portrait-block {
+    --portrait-photo-mobile-size: clamp(190px, 52vw, 290px);
+    margin-top: calc(var(--portrait-photo-mobile-size) * -0.09);
+    margin-bottom: calc(var(--portrait-photo-mobile-size) * -0.09);
+  }
+}
+
+@media (min-width: 901px) {
+  .portrait-block {
+    width: var(--size-480px);
   }
 }

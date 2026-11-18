@@ -3,23 +3,23 @@
   color: var(--text);
 }
 .tracker-label {
-  font-size: var(--size-0-875rem);
+  font-size: var(--text-small);
 }
 .progress-tracker h2 {
-  margin-top: var(--size-24px);
-  font-size: clamp(var(--size-1-75rem), 4vw, var(--size-3rem));
+  margin-top: var(--space-24);
+  font-size: var(--text-project);
   line-height: 1.2;
 }
 .tracker-panels {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: start;
-  gap: var(--size-24px);
-  margin-top: var(--size-40px);
+  gap: var(--space-24);
+  margin-top: var(--space-40);
 }
 .tracker-panel {
   min-width: 0;
-  padding: var(--size-20px);
+  padding: var(--space-20);
   background: var(--editor-bg);
   border: var(--size-1px) solid var(--tag);
   border-radius: var(--size-12px);
@@ -28,16 +28,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--size-12px);
+  gap: var(--space-12);
 }
 .tracker-header h3 {
-  font-size: var(--size-1-25rem);
+  font-size: var(--text-subheading);
 }
 .tracker-count {
   flex-shrink: 0;
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: var(--size-0-8rem);
+  font-size: var(--text-label);
   font-variant-numeric: tabular-nums;
 }
 .tracker-count [data-completed] {
@@ -48,7 +48,7 @@
 .tracker-bar {
   display: flex;
   gap: var(--size-4px);
-  margin-top: var(--size-20px);
+  margin-top: var(--space-20);
 }
 .tracker-segment {
   position: relative;
@@ -73,24 +73,26 @@
 .tracker-playing .tracker-segment-completed .tracker-segment-fill {
   animation: tracker-fill var(--time-0-35s) var(--tracker-delay, 0ms) both;
 }
-.tracker-segment-in-audit {
+.tracker-segment-in-audit,
+.tracker-segment-in-progress {
   border-color: var(--accent-light);
 }
-.tracker-segment-in-audit .tracker-segment-fill {
+.tracker-segment-in-audit .tracker-segment-fill,
+.tracker-segment-in-progress .tracker-segment-fill {
   background: var(--accent-light);
   animation: tracker-audit var(--time-2s) ease-in-out infinite;
 }
 .tracker-items {
-  margin-top: var(--size-20px);
+  margin-top: var(--space-20);
   list-style: none;
 }
 .tracker-item {
   display: grid;
   grid-template-columns: var(--size-16px) minmax(0, 1fr) auto;
   align-items: start;
-  column-gap: var(--size-8px);
-  padding-block: var(--size-12px);
-  font-size: var(--size-0-875rem);
+  column-gap: var(--space-8);
+  padding-block: var(--space-12);
+  font-size: var(--text-small);
 }
 .tracker-item + .tracker-item {
   border-top: var(--size-1px) solid var(--tag);
@@ -102,7 +104,8 @@
 .tracker-item-completed .tracker-status {
   color: var(--available);
 }
-.tracker-item-in-audit .tracker-status {
+.tracker-item-in-audit .tracker-status,
+.tracker-item-in-progress .tracker-status {
   color: var(--accent-light);
 }
 .tracker-name {
@@ -111,7 +114,8 @@
 .tracker-name a {
   text-underline-offset: var(--size-4px);
 }
-.tracker-item-in-audit .tracker-name {
+.tracker-item-in-audit .tracker-name,
+.tracker-item-in-progress .tracker-name {
   font-weight: 700;
 }
 .tracker-item-planned .tracker-name {
@@ -124,7 +128,7 @@
   border-radius: var(--size-4px);
   color: var(--accent-light);
   font-family: var(--font-mono);
-  font-size: var(--size-0-6rem);
+  font-size: var(--text-micro);
   font-weight: 400;
   white-space: nowrap;
 }
@@ -132,7 +136,7 @@
   padding-top: var(--size-2px);
   color: var(--muted);
   font-family: var(--font-mono);
-  font-size: var(--size-12px);
+  font-size: var(--text-tiny);
   white-space: nowrap;
   text-align: right;
 }

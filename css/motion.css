@@ -15,7 +15,8 @@
   a:hover .icon-arrow-right,
   a:hover .icon-arrow-left,
   a:hover .icon-arrow-up,
-  a:hover .icon-arrow-down {
+  a:hover .icon-arrow-down,
+  .journey-arrow:hover:not(:disabled) svg {
     transform: none;
   }
   *,

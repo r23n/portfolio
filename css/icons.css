@@ -8,5 +8,5 @@
 .with-icon {
   display: inline-flex;
   align-items: center;
-  gap: var(--size-8px);
+  gap: var(--space-8);
 }

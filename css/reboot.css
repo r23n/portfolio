@@ -9,45 +9,48 @@
   font-family: var(--font-mono);
 }
 .reboot-back {
-  font-size: var(--size-0-875rem);
+  font-size: var(--text-small);
   text-underline-offset: var(--size-5px);
 }
 .reboot-label {
-  margin-top: var(--size-48px);
+  margin-top: var(--space-48);
 }
 .reboot-intro h1 {
-  margin-top: var(--size-24px);
-  font-size: clamp(var(--size-2-5rem), 7vw, 6rem);
+  margin-top: var(--space-24);
+  font-size: var(--text-page);
   line-height: 1.15;
   overflow-wrap: anywhere;
 }
 .reboot-summary {
   max-width: 720px;
-  margin-top: var(--size-32px);
-  font-size: var(--size-1-125rem);
+  margin-top: var(--space-32);
+  font-size: var(--text-lead);
   color: var(--muted);
 }
 .reboot-note {
-  margin-top: var(--size-40px);
-  padding: var(--size-24px);
+  margin-top: var(--space-40);
+  padding: var(--space-24);
   border: var(--size-1px) solid var(--tag);
-  font-size: var(--size-0-875rem);
+  font-size: var(--text-small);
 }
 .reboot-list {
-  --reboot-divider-space: clamp(var(--size-40px), 6vw, var(--size-56px));
-  padding-bottom: var(--size-96px);
+  --reboot-divider-space: var(--space-56);
+  padding-bottom: var(--space-96);
   padding-top: 0;
 }
 .reboot-project + .reboot-project {
   border-top: var(--size-1px) solid var(--tag);
   padding-top: calc(
-    var(--reboot-divider-space) + 1.2 * var(--size-14px) + var(--size-12px)
+    var(--reboot-divider-space) + 1.2 * var(--text-small) + var(--size-12px)
   );
 }
 .reboot-project:not(:last-child) {
   padding-bottom: var(--reboot-divider-space);
 }
 .reboot-visual {
+  width: 100%;
+  max-width: var(--scene-max);
+  justify-self: center;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -60,7 +63,7 @@
   bottom: calc(100% + var(--size-12px));
   left: 0;
   color: var(--muted);
-  font-size: var(--size-14px);
+  font-size: var(--text-small);
   line-height: 1.2;
   text-transform: uppercase;
 }
@@ -69,24 +72,24 @@
 }
 .reboot-project h2 {
   margin-top: 0;
-  font-size: clamp(var(--size-1-75rem), 4vw, var(--size-3rem));
+  font-size: var(--text-project);
   line-height: 1.2;
   overflow-wrap: anywhere;
 }
 .reboot-description {
   max-width: 760px;
-  margin-top: var(--size-24px);
+  margin-top: var(--space-24);
 }
 .reboot-tech {
-  font-size: var(--size-0-875rem);
+  font-size: var(--text-small);
 }
 .reboot-features {
-  margin-top: var(--size-28px);
+  margin-top: var(--space-28);
   list-style: none;
-  font-size: var(--size-0-875rem);
+  font-size: var(--text-small);
 }
 .reboot-features li + li {
-  margin-top: var(--size-12px);
+  margin-top: var(--space-12);
 }
 .reboot-features span {
   color: var(--accent-light);
@@ -95,18 +98,21 @@
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   align-items: center;
-  gap: var(--size-48px);
-  padding-block: var(--size-64px);
+  gap: var(--space-48);
+  padding-block: var(--space-64);
 }
 .reboot-project:nth-child(even) {
   grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
 }
 .reboot-project:nth-child(even) .reboot-visual {
+  width: 100%;
+  max-width: var(--scene-max);
+  justify-self: center;
   order: 2;
 }
 .reboot-copy {
   min-width: 0;
 }
 .reboot-intro {
-  padding-top: var(--size-96px);
+  padding-top: var(--home-top);
 }

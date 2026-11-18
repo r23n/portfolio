@@ -3,30 +3,30 @@
   color: var(--dark-text);
 }
 .about-label {
-  margin-bottom: var(--size-40px);
+  margin-bottom: var(--space-40);
 }
 .about-intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--size-64px);
+  gap: var(--space-64);
   align-items: center;
 }
 .about-intro h2 {
-  font-size: clamp(var(--size-2-5rem), 5vw, 4.5rem);
+  font-size: var(--text-about);
   line-height: 1.15;
   overflow-wrap: break-word;
 }
 .about-intro > p {
   font-family: var(--font-body);
-  font-size: var(--size-1-125rem);
+  font-size: var(--text-lead);
 }
 .about-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: var(--size-72px);
+  margin-top: var(--space-72);
 }
 .about-stat {
-  padding-inline: var(--size-28px);
+  padding-inline: var(--space-28);
 }
 .about-stat:first-child {
   padding-left: 0;
@@ -39,12 +39,12 @@
   font-variant-numeric: tabular-nums;
   display: block;
   font-family: var(--font-heading);
-  font-size: clamp(var(--size-3rem), 6vw, var(--size-5rem));
+  font-size: var(--text-stat);
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: var(--size-12px);
+  margin-bottom: var(--space-12);
 }
 .about-stat p {
   font-family: var(--font-mono);
-  font-size: var(--size-0-875rem);
+  font-size: var(--text-small);
 }

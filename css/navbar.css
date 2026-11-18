@@ -1,6 +1,6 @@
 .navbar {
   position: fixed;
-  top: var(--size-16px);
+  top: calc(var(--safe-top) + var(--size-16px));
   z-index: 10;
   left: 0;
   width: 100%;
@@ -15,10 +15,10 @@
 .navbar-logo {
   display: inline-flex;
   align-items: center;
-  gap: var(--size-8px);
+  gap: var(--space-8);
   height: var(--size-48px);
-  padding: var(--size-5px) var(--size-14px) var(--size-5px) var(--size-5px);
-  font-size: var(--size-1-125rem);
+  padding: var(--size-5px) var(--space-14) var(--size-5px) var(--size-5px);
+  font-size: var(--text-logo);
   flex-shrink: 0;
 }
 .navbar-logo img {
@@ -44,12 +44,12 @@
   align-items: center;
   justify-content: space-between;
   height: var(--size-48px);
-  gap: var(--size-12px);
+  gap: var(--space-12);
 }
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: var(--size-8px);
+  gap: var(--space-8);
   pointer-events: auto;
 }
 .navbar-download,
@@ -58,10 +58,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--size-8px);
+  gap: var(--space-8);
   height: var(--size-48px);
-  padding: 0 var(--size-14px);
-  font-size: var(--size-0-75rem);
+  padding: 0 var(--space-14);
+  font-size: var(--text-nav);
   white-space: nowrap;
 }
 .navbar-talk {
@@ -77,11 +77,11 @@
   display: flex;
   align-items: center;
   min-height: 38px;
-  padding: var(--size-8px) var(--size-10px);
+  padding: var(--space-8) var(--size-10px);
   color: var(--muted);
   border-radius: var(--size-999px);
   white-space: nowrap;
-  font-size: var(--size-0-75rem);
+  font-size: var(--text-nav);
 }
 .navbar-links > a:hover {
   color: var(--text);
@@ -118,7 +118,7 @@
   gap: var(--size-5px);
   width: var(--size-48px);
   height: var(--size-48px);
-  padding: var(--size-12px);
+  padding: var(--space-12);
   color: var(--text);
   cursor: pointer;
   flex-shrink: 0;

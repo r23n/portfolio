@@ -20,14 +20,14 @@ html.intro,
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--size-32px);
+  gap: var(--space-32);
   position: relative;
   z-index: 1;
 }
 .intro-photo {
   display: block;
-  width: var(--size-150px);
-  height: var(--size-150px);
+  width: var(--intro-photo-size);
+  height: var(--intro-photo-size);
   object-fit: cover;
   object-position: top;
   border: var(--size-1px) solid var(--tag);
@@ -38,7 +38,7 @@ html.intro,
   position: relative;
   width: 9ch;
   height: 1.2em;
-  font-size: var(--size-36px);
+  font-size: var(--text-intro);
   line-height: 1.2;
   white-space: nowrap;
 }

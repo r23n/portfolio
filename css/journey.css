@@ -10,79 +10,174 @@
 .journey-badge,
 .journey-years {
   font-family: var(--font-mono);
-  font-size: var(--size-0-8rem);
+  font-size: var(--text-label);
 }
 #journey h2 {
-  margin-top: var(--size-24px);
-  font-size: clamp(var(--size-2-25rem), 5vw, var(--size-4rem));
+  margin-top: 0;
+  font-size: var(--text-section);
   line-height: 1.2;
+  white-space: nowrap;
+}
+.journey-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--size-8px);
+  margin-top: var(--space-24);
+}
+.journey-controls {
+  display: flex;
+  visibility: hidden;
+  pointer-events: none;
+  align-items: center;
+  gap: var(--size-8px);
+  flex-shrink: 0;
+}
+.journey-ready .journey-controls {
+  visibility: visible;
+  pointer-events: auto;
+}
+.journey-counter {
+  margin-right: var(--size-4px);
+  font-family: var(--font-mono);
+  font-size: var(--text-journey-counter);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.journey-current {
+  color: var(--text);
+}
+.journey-total {
+  color: var(--muted);
+}
+.journey-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--journey-control-size);
+  height: var(--journey-control-size);
+  padding: 0;
+  border: var(--size-1px) solid var(--tag);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color var(--time-0-25s);
+}
+.journey-arrow svg {
+  width: var(--size-16px);
+  height: var(--size-16px);
+  transition: transform var(--time-0-25s);
+}
+.journey-arrow:hover:not(:disabled) {
+  border-color: var(--accent);
+}
+.journey-previous:hover:not(:disabled) svg {
+  transform: translateX(-2px);
+}
+.journey-next:hover:not(:disabled) svg {
+  transform: translateX(2px);
+}
+.journey-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.journey-next.is-nudging {
+  animation: journey-nudge 0.8s ease-in-out;
 }
 .journey-scroll {
   overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: auto;
+  touch-action: auto;
+  height: auto;
+  max-height: none;
   margin-top: 0;
-  padding-bottom: var(--size-16px);
+  padding-bottom: var(--size-24px);
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
   scrollbar-color: color-mix(in srgb, var(--text) 40%, transparent) transparent;
-  padding-top: var(--size-8px);
+  padding-top: var(--size-16px);
 }
 .journey-timeline {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 360px;
+  grid-auto-columns: var(--timeline-column);
   width: max-content;
+  padding-right: var(
+    --journey-end-space,
+    max(0px, calc(100% - var(--timeline-column)))
+  );
   min-width: 0;
   list-style: none;
 }
 .journey-item {
   grid-column: auto;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
   min-width: 0;
-  border-top: var(--size-1px) solid var(--text);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  padding: var(--size-32px) var(--size-24px) var(--size-12px) 0;
+  padding: var(--space-32) var(--space-24) var(--space-12) var(--size-8px);
 }
 .journey-item::before {
   content: "";
   position: absolute;
-  top: var(--size-negative-7px);
-  left: 0;
+  top: calc((var(--size-1px) - var(--size-13px)) / 2);
+  left: var(--journey-dot-inset, 0px);
+  z-index: 1;
   width: var(--size-13px);
   height: var(--size-13px);
   border-radius: 50%;
   background: var(--text);
 }
+.journey-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--size-1px);
+  background: var(--text);
+}
+.journey-item:first-child::after {
+  left: calc(var(--journey-dot-inset, 0px) + var(--size-13px) / 2);
+}
+.journey-item:last-child::after {
+  right: calc(100% - var(--journey-dot-inset, 0px) - var(--size-13px) / 2);
+}
 .journey-item h3 {
   display: inline-block;
   max-width: 100%;
-  margin-right: var(--size-8px);
+  margin-right: var(--space-8);
   vertical-align: middle;
-  font-size: var(--size-1-25rem);
+  font-size: var(--text-subheading);
   line-height: 1.4;
 }
 .journey-heading {
   min-height: 7em;
   width: 100%;
-  margin-block: var(--size-16px);
+  margin-block: var(--space-16);
 }
 .journey-place {
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
-  padding: var(--size-4px) var(--size-8px);
+  padding: var(--size-4px) var(--space-8);
   border: var(--size-1px) solid var(--text);
 }
 .journey-description {
-  margin-top: var(--size-20px);
+  margin-top: var(--space-20);
   color: var(--muted);
 }
 .journey-badge {
   display: inline-block;
   margin-top: auto;
-  padding: var(--size-4px) var(--size-8px);
+  padding: var(--size-4px) var(--space-8);
   background: var(--accent);
   color: var(--on-accent);
 }
@@ -94,7 +189,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--size-6px);
-  padding: var(--size-5px) var(--size-12px);
+  padding: var(--size-5px) var(--space-12);
   overflow: hidden;
   border: var(--size-1px) solid var(--accent-light);
   border-radius: var(--size-999px);
@@ -179,21 +274,21 @@
   border: var(--size-1px) dashed var(--text);
 }
 .journey-education {
-  margin-top: var(--size-64px);
+  margin-top: var(--space-64);
 }
 .journey-education > .journey-label {
-  margin-bottom: var(--size-24px);
+  margin-bottom: var(--space-24);
 }
 .journey-education-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
-  gap: var(--size-24px);
-  padding-block: var(--size-24px);
+  gap: var(--space-24);
+  padding-block: var(--space-24);
   border-top: var(--size-1px) solid var(--text);
 }
 .journey-education-row h3 {
-  font-size: var(--size-1rem);
+  font-size: var(--text-body);
 }
 .journey-years {
   text-align: right;
@@ -201,22 +296,16 @@
 .journey-window {
   position: relative;
   min-width: 0;
-  margin-top: var(--size-56px);
+  margin-top: var(--space-56);
 }
-.journey-window::before,
 .journey-window::after {
   content: "";
   position: absolute;
   top: 0;
   bottom: var(--size-16px);
-  width: var(--size-40px);
+  width: min(var(--size-40px), var(--journey-partial-width, 0px));
   z-index: 2;
   pointer-events: none;
-}
-.journey-window::before {
-  left: 0;
-  background: linear-gradient(to right, var(--card), transparent);
-  opacity: var(--journey-fade-left, 0);
 }
 .journey-window::after {
   right: 0;
@@ -232,4 +321,16 @@
 .journey-scroll::-webkit-scrollbar-thumb {
   background: color-mix(in srgb, var(--text) 40%, transparent);
   border-radius: var(--size-3px);
+}
+
+@keyframes journey-nudge {
+  0%,
+  50%,
+  100% {
+    transform: translateX(0);
+  }
+  25%,
+  75% {
+    transform: translateX(6px);
+  }
 }
