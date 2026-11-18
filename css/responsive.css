@@ -209,6 +209,9 @@
   }
 }
 @media (max-width: 600px) {
+  #home > .container > .status-line {
+    margin-bottom: 16.8px;
+  }
   #about .about-stats {
     grid-template-columns: minmax(0, 1fr);
   }
